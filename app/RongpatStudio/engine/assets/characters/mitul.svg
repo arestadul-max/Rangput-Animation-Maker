@@ -1,0 +1,28 @@
+<defs><clipPath id="mitul--hcMitul"><rect x="-300" y="-300" width="1000" height="541"/></clipPath></defs><defs><pattern id="mitul--k-stripe" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="#E3A92B"/><path d="M-5 25 L25 -5 M-5 5 L5 -5 M15 25 L25 15" stroke="#1F7A78" stroke-width="6"/></pattern></defs><g transform="translate(51.0,196.5) scale(0.74)"><g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M184.0 222 L184.0 256 Q196 262 208.0 256 L208.0 222Z" fill="#B07548"/><path d="M168 422 L166 548 L190 548 L192 422Z M200 422 L202 548 L226 548 L224 422Z" fill="#B07548"/><path d="M166 482 L190 482 L190 548 L166 548Z M202 482 L226 482 L226 548 L202 548Z" fill="#FBF5E9"/><path d="M166 482 L190 482 M202 482 L226 482" stroke="#C8341F" stroke-width="5"/><path d="M156 556 Q158 536 178 538 Q200 542 202 556Z" fill="#FBF5E9"/><path d="M152 556 L202 556" stroke-width="6"/><path d="M176 556 Q194 536 214 538 Q236 542 238 556Z" fill="#FBF5E9"/><path d="M188 556 L238 556" stroke-width="6"/><path d="M154 362 L150 434 L194 434 L196 382 L198 434 L242 434 L238 362Z" fill="#2C3E8C"/><path d="M150 252 Q196 244 242 252 Q256 264 252 304 Q256 329.0 250 392 Q196 400 142 392 Q136 329.0 140 304 Q136 264 150 252Z" fill="url(#mitul--k-stripe)"/><g transform="rotate(30 262 332)"><rect x="248" y="132" width="32" height="190" rx="8" fill="#E3C27A"/><rect x="256" y="322" width="16" height="60" fill="#8A3B12"/></g><path d="M148 266 L124 328 L130 388" fill="none" stroke="#1C1410" stroke-width="24"/><path d="M124 328 L130 388" fill="none" stroke="#B07548" stroke-width="16"/><path d="M148 266 L124 328" fill="none" stroke="#E3A92B" stroke-width="18"/><circle cx="130" cy="392" r="11" fill="#B07548"/><path d="M244 266 L268 312 L236 352" fill="none" stroke="#1C1410" stroke-width="24"/><path d="M268 312 L236 352" fill="none" stroke="#B07548" stroke-width="16"/><path d="M244 266 L268 312" fill="none" stroke="#E3A92B" stroke-width="18"/><circle cx="236" cy="356" r="11" fill="#B07548"/></g><g clip-path="url(#mitul--hcMitul)">
+
+
+
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M100 400 Q106 304 156 288 L236 288 Q286 304 292 400Z" fill="url(#mitul--k-stripe)"/>
+<path d="M178 232 L178 294 Q196 302 214 294 L214 232Z" fill="#B07548"/>
+<path d="M164 290 Q196 312 228 290" fill="none" stroke="#C8341F" stroke-width="6"/>
+
+<path d="M126 196 Q96 210 108 244 Q130 252 136 218Z" fill="#1C1410"/><path d="M266 196 Q296 210 284 244 Q262 252 256 218Z" fill="#1C1410"/>
+<path d="M112 232 L96 222 L100 246Z M112 232 L126 248 L104 252Z" fill="#C8341F" stroke-width="3"/>
+<path d="M280 232 L296 222 L292 246Z M280 232 L266 248 L288 252Z" fill="#C8341F" stroke-width="3"/>
+<circle cx="130" cy="184" r="12" fill="#B07548"/><circle cx="262" cy="184" r="12" fill="#B07548"/>
+<ellipse cx="196" cy="178" rx="64" ry="62" fill="#B07548"/>
+<path d="M132 152 Q134 108 196 106 Q258 108 260 152 Q196 132 132 152Z" fill="#1C1410"/>
+<path d="M132 152 Q196 130 260 152 L260 166 Q196 144 132 166Z" fill="#C8341F"/>
+<path d="M152 176 L184 184" stroke-width="6"/><path d="M208 184 L240 176" stroke-width="6"/>
+<path d="M154 192 Q170 180 186 192 Q170 199 154 192Z" fill="#FBF5E9" stroke-width="3"/>
+<path d="M206 192 Q222 180 238 192 Q222 199 206 192Z" fill="#FBF5E9" stroke-width="3"/>
+<circle cx="174" cy="191" r="6" fill="#1C1410" stroke="none"/><circle cx="226" cy="191" r="6" fill="#1C1410" stroke="none"/>
+<path d="M150 190 Q170 176 190 190" fill="none" stroke-width="6"/><path d="M202 190 Q222 176 242 190" fill="none" stroke-width="6"/>
+<path d="M196 190 L192 210 Q196 214 202 211" fill="none"/>
+<path d="M174 220 L218 220 Q214 236 196 236 Q178 236 174 220Z" fill="#FBF5E9"/>
+<path d="M176 228 L216 228" stroke-width="2"/>
+</g>
+<ellipse cx="236" cy="214" rx="9" ry="5" fill="#7A5A3A" opacity="0.5"/>
+<circle cx="176" cy="189" r="2" fill="#FBF5E9"/><circle cx="228" cy="189" r="2" fill="#FBF5E9"/>
+</g><g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"></g></g>

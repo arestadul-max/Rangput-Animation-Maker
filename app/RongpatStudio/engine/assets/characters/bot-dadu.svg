@@ -1,0 +1,23 @@
+<defs>
+<pattern id="bot-dadu--s-root" width="30" height="30" patternUnits="userSpaceOnUse"><rect width="30" height="30" fill="#5A3A22"/><path d="M15 0 Q10 15 15 30 M15 12 Q22 18 26 30 M15 10 Q6 18 4 30" stroke="#8FB35A" stroke-width="2" fill="none"/></pattern>
+<path id="bot-dadu--s-heart" d="M0 7 C-10 -2 -5 -11 0 -4 C5 -11 10 -2 0 7Z" fill="#8FB35A" stroke="#1C1410" stroke-width="2"/>
+</defs><g transform="translate(-19.6,165) scale(1.1)">
+
+
+
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M136 404 Q150 300 150 236 Q150 196 196 192 Q242 196 242 236 Q242 300 256 404Z" fill="url(#bot-dadu--s-root)"/>
+<g fill="#3E7A3A"><circle cx="118" cy="148" r="60"/><circle cx="274" cy="148" r="60"/><circle cx="196" cy="108" r="74"/><circle cx="156" cy="192" r="44"/><circle cx="236" cy="192" r="44"/></g>
+<path d="M90 190 Q84 260 92 340 M106 200 Q100 270 110 360 M290 200 Q296 270 286 360 M304 190 Q310 260 302 340" fill="none" stroke="#5A3A22" stroke-width="5"/>
+<path d="M160 280 Q156 320 166 360 M232 280 Q236 320 226 360 M176 300 Q174 330 180 350 M216 300 Q218 330 212 350" fill="none" stroke="#8A3B12" stroke-width="5"/>
+<path d="M156 236 Q176 226 194 234 M198 234 Q216 226 236 236" fill="none" stroke-width="7"/>
+<path d="M160 252 Q177 238 194 252 Q177 262 160 252Z" fill="#FFC94A" stroke-width="3"/>
+<path d="M198 252 Q215 238 232 252 Q215 262 198 252Z" fill="#FFC94A" stroke-width="3"/>
+<circle cx="177" cy="251" r="6" fill="#1C1410" stroke="none"/><circle cx="215" cy="251" r="6" fill="#1C1410" stroke="none"/>
+<path d="M196 248 L190 282 Q196 288 204 284" fill="none"/>
+<path d="M178 300 Q196 314 214 300 Q196 306 178 300Z" fill="#1C1410"/>
+<path d="M182 404 L182 372 Q196 356 210 372 L210 404Z" fill="#FFC94A"/>
+</g>
+<g><use href="#bot-dadu--s-heart" x="96" y="120"/><use href="#bot-dadu--s-heart" x="140" y="96"/><use href="#bot-dadu--s-heart" x="196" y="70"/><use href="#bot-dadu--s-heart" x="246" y="96"/><use href="#bot-dadu--s-heart" x="292" y="128"/><use href="#bot-dadu--s-heart" x="120" y="172"/><use href="#bot-dadu--s-heart" x="270" y="176"/><use href="#bot-dadu--s-heart" x="170" y="140"/><use href="#bot-dadu--s-heart" x="224" y="138"/><use href="#bot-dadu--s-heart" x="80" y="160"/><use href="#bot-dadu--s-heart" x="312" y="164"/><use href="#bot-dadu--s-heart" x="196" y="112"/></g>
+<circle cx="179" cy="249" r="2" fill="#FBF5E9"/><circle cx="217" cy="249" r="2" fill="#FBF5E9"/>
+</g>

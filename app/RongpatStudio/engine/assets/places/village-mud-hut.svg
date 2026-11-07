@@ -1,0 +1,22 @@
+
+<defs>
+<pattern id="pl-village-mud-hut--hz-thatch" width="10" height="20" patternUnits="userSpaceOnUse"><rect width="10" height="20" fill="#E3A92B"/><path d="M3 0 L5 20 M8 0 L9 20" stroke="#8A3B12" stroke-width="1.5"/></pattern>
+<pattern id="pl-village-mud-hut--hz-alp" width="28" height="32" patternUnits="userSpaceOnUse"><rect width="28" height="32" fill="#B5482A"/><circle cx="14" cy="16" r="7" fill="none" stroke="#FBF5E9" stroke-width="2"/><circle cx="14" cy="16" r="2" fill="#FBF5E9"/><circle cx="14" cy="5" r="1.8" fill="#FBF5E9"/><circle cx="14" cy="27" r="1.8" fill="#FBF5E9"/></pattern>
+</defs>
+<rect width="528" height="330" fill="#3E7A3A"/>
+<rect y="280" width="528" height="50" fill="#C98B5E"/>
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M70 290 L76 170" stroke-width="12"/><path d="M70 290 L76 170" stroke="#9BC45A" stroke-width="6"/>
+<path d="M76 172 Q20 150 10 110 Q50 116 78 168Z M78 168 Q60 110 92 70 Q104 120 80 168Z M80 172 Q130 130 150 132 Q130 170 80 176Z" fill="#7FB34A"/>
+<path d="M78 168 L30 122 M80 166 L90 86 M82 172 L136 140" fill="none" stroke-width="2"/>
+<path d="M440 290 Q420 220 450 186 Q480 220 460 290Z" fill="none"/>
+<path d="M400 290 Q400 210 450 196 Q500 210 500 290Z" fill="#E3A92B"/>
+<path d="M420 250 Q450 236 480 250 M414 272 Q450 256 488 272" fill="none" stroke="#8A3B12" stroke-width="2.5"/>
+<path d="M450 196 L450 170" stroke-width="5"/>
+<rect x="150" y="170" width="230" height="112" fill="#B5482A"/>
+<rect x="150" y="248" width="230" height="34" fill="url(#pl-village-mud-hut--hz-alp)"/>
+<path d="M244 282 L244 214 Q266 196 288 214 L288 282Z" fill="#1C1410"/>
+<path d="M158 182 L158 282 M372 182 L372 282" stroke-width="10"/><path d="M158 182 L158 282 M372 182 L372 282" stroke="#C98B5E" stroke-width="4"/>
+<path d="M118 186 L265 78 L412 186 Q265 202 118 186Z" fill="url(#pl-village-mud-hut--hz-thatch)"/>
+<ellipse cx="318" cy="270" rx="16" ry="14" fill="#B5482A"/><path d="M308 258 L328 258" stroke-width="3"/>
+</g>

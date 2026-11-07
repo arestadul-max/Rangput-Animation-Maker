@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+app/RongpatStudio/python/
+app/RongpatStudio/projects/*/output/
+app/RongpatStudio/library/.cache.json
+*.mp4

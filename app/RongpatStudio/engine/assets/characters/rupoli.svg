@@ -1,0 +1,23 @@
+<defs><pattern id="rupoli--a2-silver" width="16" height="12" patternUnits="userSpaceOnUse"><rect width="16" height="12" fill="#C9D1D6"/><path d="M0 12 Q8 2 16 12" stroke="#6E7B85" stroke-width="1.6" fill="none"/></pattern></defs><g transform="translate(-19.6,165) scale(1.1)">
+
+
+
+<g fill="none" stroke="#1F7A78" stroke-width="5" stroke-linecap="round"><path d="M70 316 Q100 300 130 316 T190 316 T250 316 T310 316"/><path d="M90 340 Q120 324 150 340 T210 340 T270 340 T330 340"/></g>
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M300 204 L362 152 L346 204 L362 258Z" fill="#9AA6AE"/>
+<path d="M160 146 Q196 106 228 150Z" fill="#9AA6AE"/>
+<path d="M56 212 Q130 118 262 168 Q296 182 312 204 Q296 226 262 238 Q130 290 56 212Z" fill="url(#rupoli--a2-silver)"/>
+<path d="M90 236 Q170 270 262 236 Q190 258 120 244Z" fill="#EEF2F4" stroke-width="2"/>
+<path d="M122 160 Q108 210 122 262" fill="none"/>
+<path d="M150 228 Q176 262 200 236 Q178 238 150 228Z" fill="#9AA6AE" stroke-width="3"/>
+<path d="M78 198 Q94 184 110 198 Q94 208 78 198Z" fill="#FBF5E9" stroke-width="3"/>
+<circle cx="96" cy="197" r="6" fill="#1C1410" stroke="none"/>
+<path d="M74 196 Q94 178 114 196" fill="none" stroke-width="6"/>
+<path d="M80 188 L74 178 M88 184 L85 174 M97 183 L98 173 M106 186 L110 177" stroke-width="3"/>
+<path d="M54 206 Q64 200 70 210 Q64 220 54 214Z" fill="#C8341F" stroke-width="3"/>
+<path d="M80 172 L84 154 L92 166 L100 148 L106 166 L114 156 L114 176Z" fill="#E3A92B" stroke-width="3"/>
+</g>
+<circle cx="98" cy="195" r="2" fill="#FBF5E9"/>
+<g fill="#FBF5E9"><path d="M300 100 L304 112 L316 116 L304 120 L300 132 L296 120 L284 116 L296 112Z"/><path d="M150 80 L153 89 L162 92 L153 95 L150 104 L147 95 L138 92 L147 89Z"/><path d="M250 270 L252 277 L259 279 L252 281 L250 288 L248 281 L241 279 L248 277Z"/></g>
+<g fill="none" stroke="#FBF5E9" stroke-width="2.5"><circle cx="44" cy="170" r="7"/><circle cx="34" cy="146" r="5"/><circle cx="42" cy="126" r="3.5"/></g>
+</g>

@@ -1,0 +1,31 @@
+<defs><clipPath id="bagha--hcBagha"><rect x="-300" y="-300" width="1000" height="573"/></clipPath></defs><defs>
+<pattern id="bagha--a1-vein" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#E58A2E"/><path d="M4 36 Q20 20 36 4" stroke="#1C1410" stroke-width="4" fill="none"/><path d="M14 26 L10 18 M14 26 L22 28 M24 16 L20 8 M24 16 L32 18" stroke="#1C1410" stroke-width="2.5"/></pattern>
+<pattern id="bagha--a1-check" width="20" height="20" patternUnits="userSpaceOnUse"><rect width="20" height="20" fill="#FBF5E9"/><rect width="10" height="10" fill="#C8341F" opacity="0.55"/><rect x="10" y="10" width="10" height="10" fill="#C8341F" opacity="0.55"/><path d="M0 5 L20 5 M5 0 L5 20" stroke="#C8341F" stroke-width="2"/></pattern>
+</defs><g transform="translate(9.8,71.1) scale(0.95)"><g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M268 548 Q344 524 334 430 Q330 398 308 408 Q320 430 314 462 Q302 506 262 512" fill="none" stroke-width="30"/><path d="M268 548 Q344 524 334 430 Q330 398 308 408 Q320 430 314 462 Q302 506 262 512" fill="none" stroke="#E58A2E" stroke-width="22"/><path d="M326 450 L340 446 M330 478 L344 480 M316 506 L328 516" stroke-width="5"/><path d="M118 562 Q96 400 146 270 L246 270 Q296 400 274 562Z" fill="url(#bagha--a1-vein)"/><path d="M158 320 Q196 410 234 320 Q240 480 196 528 Q152 480 158 320Z" fill="#FBF5E9"/><path d="M146 410 L144 556 L186 556 L188 410Z M204 410 L206 556 L248 556 L246 410Z" fill="#E58A2E"/><path d="M146 450 L164 446 M146 490 L166 486 M246 450 L228 446 M246 490 L226 486" stroke-width="5"/><ellipse cx="164" cy="558" rx="26" ry="12" fill="#E58A2E"/><ellipse cx="226" cy="558" rx="26" ry="12" fill="#E58A2E"/><path d="M154 556 L154 566 M164 556 L164 568 M174 556 L174 566 M216 556 L216 566 M226 556 L226 568 M236 556 L236 566" stroke-width="2.5"/></g><g clip-path="url(#bagha--hcBagha)">
+
+
+
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+
+
+<path d="M56 400 Q64 298 150 284 L242 284 Q328 298 336 400Z" fill="url(#bagha--a1-vein)"/>
+<circle cx="122" cy="106" r="26" fill="#E58A2E"/><circle cx="122" cy="106" r="13" fill="#FBF5E9" stroke-width="3"/>
+<circle cx="270" cy="106" r="26" fill="#E58A2E"/><circle cx="270" cy="106" r="13" fill="#FBF5E9" stroke-width="3"/>
+<path d="M104 180 Q98 98 196 94 Q294 98 288 180 Q290 252 196 272 Q102 252 104 180Z" fill="#E58A2E"/>
+<path d="M196 102 L196 128 M176 106 L182 128 M216 106 L210 128" stroke-width="6"/>
+<path d="M108 168 L136 176 M122 172 L126 162 M106 196 L136 196 M120 196 L124 186 M112 222 L138 214 M286 168 L258 176 M272 172 L268 162 M288 196 L258 196 M274 196 L270 186 M282 222 L256 214" stroke-width="5"/>
+<path d="M148 200 Q196 180 244 200 Q248 252 196 264 Q144 252 148 200Z" fill="#FBF5E9"/>
+<path d="M146 148 L184 136" stroke-width="7"/><path d="M208 136 L246 148" stroke-width="7"/>
+<path d="M146 166 Q166 150 186 166 Q166 178 146 166Z" fill="#FBF5E9" stroke-width="3"/>
+<path d="M206 166 Q226 150 246 166 Q226 178 206 166Z" fill="#FBF5E9" stroke-width="3"/>
+<circle cx="168" cy="161" r="8" fill="#1C1410" stroke="none"/><circle cx="228" cy="161" r="8" fill="#1C1410" stroke="none"/>
+<path d="M142 164 Q166 146 190 164" fill="none" stroke-width="6"/><path d="M202 164 Q226 146 250 164" fill="none" stroke-width="6"/>
+<path d="M180 200 L212 200 L196 216Z" fill="#1C1410"/>
+<path d="M196 216 L196 228 M174 240 Q185 230 196 236 Q207 230 218 240" fill="none"/>
+<path d="M264 136 Q273 154 264 162 Q255 154 264 136Z" fill="#BFE3EE" stroke-width="3"/>
+<path d="M118 290 Q196 336 274 290 L280 312 Q196 360 112 312Z" fill="url(#bagha--a1-check)"/>
+<path d="M226 324 L250 320 L254 400 L226 400Z" fill="url(#bagha--a1-check)"/>
+</g>
+<circle cx="170" cy="158" r="2.4" fill="#FBF5E9"/><circle cx="230" cy="158" r="2.4" fill="#FBF5E9"/>
+<g fill="#1C1410"><circle cx="170" cy="222" r="2"/><circle cx="162" cy="214" r="2"/><circle cx="222" cy="222" r="2"/><circle cx="230" cy="214" r="2"/></g>
+</g><g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M116 262 Q196 304 276 262 L282 286 Q196 330 110 286Z" fill="url(#bagha--a1-check)"/><path d="M226 296 L252 290 L256 420 L228 420Z" fill="url(#bagha--a1-check)"/></g></g>

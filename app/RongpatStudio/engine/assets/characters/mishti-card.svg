@@ -1,0 +1,26 @@
+<defs><pattern id="mishti-card--a1-fish" width="20" height="14" patternUnits="userSpaceOnUse"><rect width="20" height="14" fill="#E07A2E"/><path d="M0 14 Q10 0 20 14" stroke="#8A3B12" stroke-width="2" fill="none"/></pattern></defs><g transform="translate(-19.6,165) scale(1.1)">
+
+
+
+
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M262 362 Q344 342 322 250 Q314 220 296 230 Q308 252 302 282 Q292 330 250 336Z" fill="url(#mishti-card--a1-fish)"/>
+<ellipse cx="196" cy="318" rx="88" ry="94" fill="url(#mishti-card--a1-fish)"/>
+<path d="M160 244 Q196 312 232 244 Q196 266 160 244Z" fill="#FBF5E9"/>
+<path d="M134 150 L140 80 L184 122Z" fill="#E07A2E"/><path d="M146 136 L148 100 L170 122Z" fill="#E58BA0" stroke-width="2"/>
+<path d="M208 122 L252 80 L258 150Z" fill="#E07A2E"/><path d="M222 124 L244 100 L246 132Z" fill="#E58BA0" stroke-width="2"/>
+<ellipse cx="196" cy="176" rx="74" ry="62" fill="#E07A2E"/>
+<path d="M196 120 L196 136 M182 122 L186 136 M210 122 L206 136" stroke="#8A3B12" stroke-width="5"/>
+<path d="M148 170 Q170 150 192 170 Q170 182 148 170Z" fill="#9BD06A" stroke-width="3"/>
+<path d="M200 170 Q222 150 244 170 Q222 182 200 170Z" fill="#9BD06A" stroke-width="3"/>
+<ellipse cx="172" cy="171" rx="3" ry="8" fill="#1C1410" stroke="none"/><ellipse cx="224" cy="171" rx="3" ry="8" fill="#1C1410" stroke="none"/>
+<path d="M144 168 Q170 148 196 166Z" fill="#E07A2E" stroke-width="5"/>
+<path d="M196 166 Q222 148 248 168Z" fill="#E07A2E" stroke-width="5"/>
+<ellipse cx="196" cy="204" rx="26" ry="16" fill="#FBF5E9" stroke-width="3"/>
+<path d="M187 194 L205 194 L196 203Z" fill="#E58BA0" stroke-width="3"/>
+<path d="M196 203 Q191 213 180 209 M196 203 Q201 213 212 209" fill="none" stroke-width="3"/>
+<path d="M164 200 L110 192 M164 206 L112 212 M228 200 L282 192 M228 206 L280 212" stroke-width="2.5"/>
+<path d="M146 236 Q196 266 246 236" fill="none" stroke-width="14"/><path d="M146 236 Q196 266 246 236" fill="none" stroke="#C8341F" stroke-width="8"/>
+<circle cx="196" cy="260" r="11" fill="#E3A92B"/><path d="M190 262 L202 262" stroke-width="2.5"/>
+</g>
+</g>

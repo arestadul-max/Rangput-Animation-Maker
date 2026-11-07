@@ -1,0 +1,26 @@
+<defs><clipPath id="shiyal--hcShiyalPandit"><rect x="-300" y="-300" width="1000" height="563"/></clipPath></defs><defs><pattern id="shiyal--a2-flame" width="26" height="30" patternUnits="userSpaceOnUse"><rect width="26" height="30" fill="#2C3E8C"/><path d="M13 26 Q4 18 13 4 Q22 18 13 26Z" fill="#E07A2E"/><path d="M13 22 Q9 17 13 11 Q17 17 13 22Z" fill="#E3A92B"/></pattern></defs><g transform="translate(54.9,90.9) scale(0.72)"><g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M182.0 244 L182.0 278 Q196 284 210.0 278 L210.0 244Z" fill="#E07A2E"/><path d="M250 464 Q360 444 340 604 Q330 654 300 664 Q320 614 300 554 Q290 524 246 524" fill="#E07A2E"/><path d="M318 624 Q336 634 330 654 Q312 664 300 662Z" fill="#FBF5E9"/><path d="M159 464 L163 708 L191 708 L193 464Z" fill="#E07A2E"/><path d="M199 464 L201 708 L229 708 L233 464Z" fill="#E07A2E"/><path d="M159 654 L161 708 L191 708 L191 654Z M201 654 L201 708 L231 708 L233 654Z" fill="#1C1410"/><path d="M152 718 Q154 700 174 702 Q198 706 200 718Z" fill="#1C1410"/><path d="M196 718 Q198 700 218 702 Q242 706 244 718Z" fill="#1C1410"/><path d="M146 274 Q196 266 246 274 Q260 286 256 326 Q260 398.3 258 500 Q196 508 134 500 Q132 398.3 136 326 Q132 286 146 274Z" fill="#FBF5E9"/><path d="M140 274 L178 278 L190 424 L136 424Z M252 274 L214 278 L202 424 L256 424Z" fill="url(#shiyal--a2-flame)"/><path d="M180 354 Q196 372 216 350" fill="none" stroke="#E3A92B" stroke-width="4"/><path d="M140 288 L116 384 L132 464" fill="none" stroke="#1C1410" stroke-width="24"/><path d="M140 288 L116 384 L132 464" fill="none" stroke="#FBF5E9" stroke-width="16"/><circle cx="132" cy="468" r="11" fill="#1C1410"/><path d="M252 288 L290 354 L300 294" fill="none" stroke="#1C1410" stroke-width="24"/><path d="M252 288 L290 354 L300 294" fill="none" stroke="#FBF5E9" stroke-width="16"/><circle cx="300" cy="298" r="11" fill="#1C1410"/><g transform="rotate(-14 304 270)"><rect x="282" y="248" width="46" height="28" rx="2" fill="#FBF5E9"/><path d="M288 258 L320 258 M288 266 L310 266" stroke-width="2"/></g></g><g clip-path="url(#shiyal--hcShiyalPandit)">
+
+
+
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M70 400 Q76 306 150 288 L242 288 Q316 306 322 400Z" fill="#FBF5E9"/>
+<path d="M70 400 Q76 306 150 288 L178 302 L172 400Z" fill="url(#shiyal--a2-flame)"/>
+<path d="M322 400 Q316 306 242 288 L214 302 L220 400Z" fill="url(#shiyal--a2-flame)"/>
+<path d="M150 360 Q186 382 228 352" fill="none" stroke="#E3A92B" stroke-width="4"/>
+<path d="M156 254 Q196 316 236 254 Q196 284 156 254Z" fill="#FBF5E9"/>
+<path d="M124 150 L114 62 L178 118Z" fill="#E07A2E"/><path d="M134 136 L126 84 L164 120Z" fill="#1C1410" stroke-width="2"/>
+<path d="M268 150 L278 62 L214 118Z" fill="#E07A2E"/><path d="M258 136 L266 84 L228 120Z" fill="#1C1410" stroke-width="2"/>
+<path d="M118 142 Q124 214 196 262 Q268 214 274 142 Q252 108 196 108 Q140 108 118 142Z" fill="#E07A2E"/>
+<path d="M124 168 Q144 234 196 262 Q178 206 168 186Z" fill="#FBF5E9"/>
+<path d="M268 168 Q248 234 196 262 Q214 206 224 186Z" fill="#FBF5E9"/>
+<path d="M146 168 Q166 154 186 168 Q166 177 146 168Z" fill="#FBF5E9" stroke-width="3"/>
+<path d="M206 168 Q226 154 246 168 Q226 177 206 168Z" fill="#FBF5E9" stroke-width="3"/>
+<circle cx="178" cy="168" r="5.5" fill="#1C1410" stroke="none"/><circle cx="238" cy="168" r="5.5" fill="#1C1410" stroke="none"/>
+<path d="M142 168 Q166 150 190 166Z" fill="#E07A2E" stroke-width="5"/><path d="M202 166 Q226 150 250 168Z" fill="#E07A2E" stroke-width="5"/>
+<path d="M150 148 L186 154 M206 154 L244 146" stroke-width="5"/>
+<circle cx="226" cy="168" r="24" fill="none" stroke="#E3A92B" stroke-width="5"/>
+<path d="M250 172 Q270 240 246 300" fill="none" stroke="#E3A92B" stroke-width="2.5" stroke-dasharray="3 4"/>
+<circle cx="196" cy="250" r="10" fill="#1C1410"/>
+<path d="M172 226 Q194 238 216 222 L222 214" fill="none"/>
+</g>
+</g><g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"></g></g>

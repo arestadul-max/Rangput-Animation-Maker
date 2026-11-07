@@ -1,0 +1,27 @@
+
+<defs>
+<pattern id="pl-chowdhury-mansion--hz-bal" width="20" height="18" patternUnits="userSpaceOnUse"><rect width="20" height="18" fill="#B5482A"/><rect x="6" y="0" width="8" height="18" rx="3" fill="#F3E6C8" stroke="#1C1410" stroke-width="1.5"/></pattern>
+<pattern id="pl-chowdhury-mansion--hz-louv" width="30" height="7" patternUnits="userSpaceOnUse"><rect width="30" height="7" fill="#3E7A3A"/><path d="M0 4 L30 4" stroke="#1E4A20" stroke-width="2"/></pattern>
+</defs>
+<rect width="528" height="330" fill="#B5482A"/>
+<circle cx="452" cy="58" r="34" fill="#E3A92B"/>
+<rect y="288" width="528" height="42" fill="#8A3B12"/>
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<rect x="70" y="92" width="388" height="198" fill="#E9C98A"/>
+<path d="M92 120 Q110 112 118 126 Q108 140 92 134Z M390 240 Q410 232 420 246 Q404 258 392 254Z" fill="#C9A26A" stroke-width="2"/>
+<rect x="56" y="48" width="416" height="8" fill="#F3E6C8"/>
+<rect x="60" y="56" width="408" height="18" fill="url(#pl-chowdhury-mansion--hz-bal)"/>
+<rect x="60" y="74" width="408" height="20" fill="#F3E6C8"/>
+<path d="M234 190 A30 30 0 0 1 294 190Z" fill="#E3A92B"/>
+<path d="M264 190 L264 160 M264 190 L243 169 M264 190 L285 169" stroke-width="3"/>
+<rect x="234" y="190" width="60" height="100" fill="#6B3A1F"/>
+<path d="M264 190 L264 290" stroke-width="3"/>
+<circle cx="256" cy="244" r="3" fill="#E3A92B" stroke-width="2"/><circle cx="272" cy="244" r="3" fill="#E3A92B" stroke-width="2"/>
+<path d="M128 125 A15 15 0 0 1 158 125 L158 166 L128 166Z M128 215 A15 15 0 0 1 158 215 L158 256 L128 256Z M372 125 A15 15 0 0 1 402 125 L402 166 L372 166Z M372 215 A15 15 0 0 1 402 215 L402 256 L372 256Z M198 125 A15 15 0 0 1 228 125 L228 166 L198 166Z M300 125 A15 15 0 0 1 330 125 L330 166 L300 166Z" fill="url(#pl-chowdhury-mansion--hz-louv)"/>
+<g fill="#FBF5E9"><rect x="96" y="102" width="22" height="184"/><rect x="168" y="102" width="22" height="184"/><rect x="338" y="102" width="22" height="184"/><rect x="410" y="102" width="22" height="184"/></g>
+<g fill="#F3E6C8"><rect x="90" y="94" width="34" height="10"/><rect x="162" y="94" width="34" height="10"/><rect x="332" y="94" width="34" height="10"/><rect x="404" y="94" width="34" height="10"/></g>
+<rect x="200" y="286" width="128" height="8" fill="#D9C8A8"/><rect x="190" y="294" width="148" height="8" fill="#D9C8A8"/>
+<path d="M300 186 L310 204 L304 222 L314 238" fill="none" stroke-width="2"/>
+<path d="M446 48 Q444 30 452 20" fill="none" stroke-width="3"/>
+<ellipse cx="440" cy="28" rx="9" ry="5" fill="#3E7A3A" stroke-width="2"/><ellipse cx="460" cy="20" rx="9" ry="5" fill="#3E7A3A" stroke-width="2"/>
+</g>

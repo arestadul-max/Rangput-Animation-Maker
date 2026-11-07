@@ -1,0 +1,29 @@
+
+<defs>
+<pattern id="pl-corner-tea-stall--hz-tin" width="12" height="40" patternUnits="userSpaceOnUse"><rect width="12" height="40" fill="#8C8C9A"/><path d="M6 0 L6 40" stroke="#5A5A66" stroke-width="3"/></pattern>
+<pattern id="pl-corner-tea-stall--hz-wood" width="40" height="18" patternUnits="userSpaceOnUse"><rect width="40" height="18" fill="#6B3A1F"/><path d="M0 17 L40 17" stroke="#1C1410" stroke-width="2"/><path d="M10 8 Q20 4 30 8" stroke="#8A3B12" stroke-width="2" fill="none"/></pattern>
+</defs>
+<rect width="528" height="330" fill="#E3A92B"/>
+<circle cx="270" cy="178" r="64" fill="#FFC94A" opacity="0.6"/>
+<rect y="292" width="528" height="38" fill="#8A3B12"/>
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M112 120 L112 292 M418 104 L418 292" stroke-width="12"/><path d="M112 120 L112 292 M418 104 L418 292" stroke="#C98B5E" stroke-width="5"/>
+<path d="M88 132 L432 90 L446 122 L96 160Z" fill="url(#pl-corner-tea-stall--hz-tin)"/>
+<rect x="200" y="62" width="136" height="36" fill="#C8341F" transform="rotate(-7 268 80)"/>
+<path d="M270 140 L270 160" stroke-width="2"/>
+<circle cx="270" cy="168" r="9" fill="#FFC94A"/>
+<path d="M170 140 L170 160 M190 138 L190 166 M350 130 L350 154 M372 128 L372 158" stroke-width="2"/>
+<rect x="160" y="160" width="20" height="26" fill="#E58BA0" stroke-width="2.5"/><rect x="182" y="166" width="18" height="24" fill="#1F7A78" stroke-width="2.5"/><rect x="340" y="154" width="20" height="26" fill="#E07A2E" stroke-width="2.5"/><rect x="362" y="158" width="20" height="26" fill="#3E7A3A" stroke-width="2.5"/>
+<rect x="130" y="208" width="280" height="84" fill="url(#pl-corner-tea-stall--hz-wood)"/>
+<path d="M140 208 L144 186 L176 186 L180 208Z" fill="#B5482A"/>
+<path d="M146 186 Q144 162 160 160 Q176 162 174 186Z" fill="#C9D1D6"/>
+<path d="M174 172 L188 164" stroke-width="5"/>
+<path d="M156 160 Q150 146 158 138 M164 156 Q172 144 164 134" fill="none" stroke="#FBF5E9" stroke-width="3"/>
+<rect x="250" y="178" width="30" height="30" rx="4" fill="#DCEFF4" opacity="0.9"/><rect x="250" y="170" width="30" height="8" fill="#C8341F"/>
+<rect x="290" y="178" width="30" height="30" rx="4" fill="#DCEFF4" opacity="0.9"/><rect x="290" y="170" width="30" height="8" fill="#1F7A78"/>
+<rect x="330" y="178" width="30" height="30" rx="4" fill="#DCEFF4" opacity="0.9"/><rect x="330" y="170" width="30" height="8" fill="#E3A92B"/>
+<path d="M200 208 L203 196 L215 196 L218 208Z M216 208 L219 196 L231 196 L234 208Z M208 196 L211 184 L223 184 L226 196Z" fill="#B5482A" stroke-width="2.5"/>
+<rect x="30" y="254" width="150" height="12" fill="#C98B5E"/><path d="M42 266 L42 292 M168 266 L168 292" stroke-width="5"/>
+</g>
+<g fill="#E3A92B" stroke="#1C1410" stroke-width="1"><circle cx="258" cy="196" r="4"/><circle cx="270" cy="200" r="4"/><circle cx="264" cy="188" r="4"/><circle cx="298" cy="196" r="4"/><circle cx="310" cy="190" r="4"/><circle cx="340" cy="198" r="4"/><circle cx="350" cy="190" r="4"/></g>
+<text x="268" y="88" text-anchor="middle" transform="rotate(-7 268 80)" font-family="Hind Siliguri, sans-serif" font-size="20" font-weight="700" fill="#FBF5E9">চা · TEA</text>

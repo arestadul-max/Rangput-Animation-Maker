@@ -1,0 +1,29 @@
+
+<defs>
+<pattern id="pl-tulis-room--i1-ripple" width="26" height="26" patternUnits="userSpaceOnUse"><rect width="26" height="26" fill="#2C3E8C"/><circle cx="13" cy="13" r="8" fill="none" stroke="#F3E6C8" stroke-width="2"/><circle cx="13" cy="13" r="2.5" fill="#E3A92B"/></pattern>
+<pattern id="pl-tulis-room--i1-floor" width="80" height="20" patternUnits="userSpaceOnUse"><rect width="80" height="20" fill="#C98B5E"/><path d="M0 19 L80 19 M40 0 L40 19" stroke="#8A3B12" stroke-width="2"/></pattern>
+</defs>
+<rect width="800" height="450" fill="#C9D6E3"/>
+<rect y="340" width="800" height="110" fill="url(#pl-tulis-room--i1-floor)"/>
+<path d="M330 60 L440 60 L560 340 L380 340Z" fill="#FFF3C4" opacity="0.5"/>
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<rect x="330" y="60" width="110" height="140" fill="#FFF3C4"/><path d="M385 60 L385 200 M330 130 L440 130" stroke="#3E7A3A" stroke-width="5"/>
+<rect x="320" y="200" width="130" height="10" fill="#F3E6C8"/>
+<path d="M40 52 Q140 76 240 52" fill="none" stroke-width="2"/>
+<rect x="50" y="70" width="190" height="130" fill="#C98B5E"/>
+<g stroke-width="2.5"><rect x="62" y="82" width="44" height="34" fill="#FBF5E9"/><rect x="116" y="80" width="40" height="46" fill="#E58BA0"/><rect x="166" y="86" width="60" height="36" fill="#FBF5E9"/><rect x="66" y="128" width="54" height="40" fill="#E3A92B"/><rect x="132" y="138" width="44" height="50" fill="#FBF5E9"/><rect x="186" y="132" width="42" height="40" fill="#9CC7C9"/></g>
+<path d="M72 106 Q84 90 96 106 M176 100 L216 112 M140 160 Q154 148 168 160" fill="none" stroke-width="2"/>
+<rect x="40" y="250" width="230" height="14" fill="#6B3A1F"/>
+<path d="M54 264 L54 340 M256 264 L256 340" stroke="#6B3A1F" stroke-width="10"/>
+<path d="M80 250 L80 210 L100 196" fill="none" stroke-width="5"/><path d="M90 186 L120 196 L108 212 Z" fill="#E3A92B"/>
+<rect x="130" y="230" width="60" height="20" fill="#C8341F" stroke-width="3"/><rect x="134" y="216" width="54" height="14" fill="#2C3E8C" stroke-width="3"/>
+<rect x="210" y="226" width="22" height="24" fill="#E07A2E" stroke-width="3"/><path d="M214 226 L210 206 M222 226 L224 204 M228 226 L234 208" stroke-width="3"/>
+<rect x="520" y="240" width="250" height="30" rx="6" fill="#6B3A1F"/>
+<rect x="520" y="270" width="250" height="70" fill="url(#pl-tulis-room--i1-ripple)"/>
+<rect x="740" y="190" width="30" height="80" fill="#6B3A1F"/>
+<rect x="680" y="224" width="70" height="30" rx="10" fill="#FBF5E9"/>
+<path d="M560 268 Q590 238 620 268" fill="none" stroke-width="10"/><path d="M560 268 Q590 238 620 268" fill="none" stroke="#C8341F" stroke-width="5"/>
+<path d="M300 380 Q300 346 330 346 Q360 346 360 380Z" fill="#E3A92B"/>
+<path d="M630 100 L630 180 L700 180 L700 100Z" fill="#E58BA0"/><path d="M640 120 L690 120 M640 140 L680 140" stroke-width="2"/>
+</g>
+<g><circle cx="60" cy="58" r="6" fill="#FFC94A"/><circle cx="100" cy="66" r="6" fill="#FFC94A"/><circle cx="140" cy="68" r="6" fill="#FFC94A"/><circle cx="180" cy="66" r="6" fill="#FFC94A"/><circle cx="220" cy="58" r="6" fill="#FFC94A"/></g>

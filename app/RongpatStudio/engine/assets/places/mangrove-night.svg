@@ -1,0 +1,13 @@
+
+<defs><pattern id="pl-mangrove-night--n3-water" width="60" height="18" patternUnits="userSpaceOnUse"><rect width="60" height="18" fill="#163B44"/><path d="M0 10 Q15 2 30 10 T60 10" stroke="#2F6A6A" stroke-width="2" fill="none"/></pattern></defs>
+<rect width="800" height="450" fill="#14303A"/>
+<circle cx="400" cy="90" r="46" fill="#F3E6C8"/>
+<rect y="300" width="800" height="150" fill="url(#pl-mangrove-night--n3-water)"/>
+<path d="M370 320 L430 320 M378 344 L422 344 M386 368 L414 368 M392 392 L408 392" stroke="#F3E6C8" stroke-width="5" stroke-linecap="round" opacity="0.8"/>
+<g stroke="#0B1A1E" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<g fill="#1E4A32"><ellipse cx="90" cy="120" rx="140" ry="90"/><ellipse cx="250" cy="160" rx="100" ry="70"/><ellipse cx="640" cy="130" rx="130" ry="90"/><ellipse cx="780" cy="170" rx="100" ry="80"/></g>
+<g fill="none" stroke="#2A1A12" stroke-width="12"><path d="M80 200 Q50 260 30 320"/><path d="M80 200 Q90 260 80 324"/><path d="M80 200 Q130 250 150 320"/><path d="M250 220 Q230 270 210 320"/><path d="M250 220 Q280 270 300 320"/><path d="M640 210 Q610 260 590 320"/><path d="M640 210 Q650 270 640 324"/><path d="M640 210 Q690 260 710 320"/><path d="M770 240 Q760 290 750 324"/></g>
+<g fill="none" stroke="#2A1A12" stroke-width="6"><path d="M180 330 L180 306 M196 334 L196 312 M520 330 L520 308 M540 332 L540 312"/></g>
+</g>
+<g><path d="M118 238 Q126 230 134 238 Q126 244 118 238Z M146 238 Q154 230 162 238 Q154 244 146 238Z" fill="#FFC94A"/><circle cx="127" cy="238" r="2.2" fill="#1C1410"/><circle cx="155" cy="238" r="2.2" fill="#1C1410"/></g>
+<g><circle cx="300" cy="250" r="9" fill="#FFC94A" opacity="0.3"/><circle cx="300" cy="250" r="3" fill="#FFC94A"/><circle cx="470" cy="220" r="9" fill="#FFC94A" opacity="0.3"/><circle cx="470" cy="220" r="3" fill="#FFC94A"/><circle cx="560" cy="270" r="9" fill="#FFC94A" opacity="0.3"/><circle cx="560" cy="270" r="3" fill="#FFC94A"/><circle cx="360" cy="200" r="7" fill="#FFC94A" opacity="0.3"/><circle cx="360" cy="200" r="2.5" fill="#FFC94A"/><circle cx="720" cy="260" r="9" fill="#FFC94A" opacity="0.3"/><circle cx="720" cy="260" r="3" fill="#FFC94A"/></g>

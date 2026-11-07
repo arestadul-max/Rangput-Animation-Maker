@@ -1,0 +1,32 @@
+<defs><clipPath id="jhumpa--hcJhumpa"><rect x="-300" y="-300" width="1000" height="543"/></clipPath></defs><defs><pattern id="jhumpa--k-star" width="26" height="26" patternUnits="userSpaceOnUse"><rect width="26" height="26" fill="#2C3E8C"/><path d="M13 5 L15 11 L21 11 L16 15 L18 21 L13 17 L8 21 L10 15 L5 11 L11 11Z" fill="#E3A92B"/></pattern></defs><g transform="translate(51.0,195.0) scale(0.74)"><g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M184.0 224 L184.0 258 Q196 264 208.0 258 L208.0 224Z" fill="#A86F48"/><path d="M168 424 L166 550 L190 550 L192 424Z M200 424 L202 550 L226 550 L224 424Z" fill="#A86F48"/><ellipse cx="176" cy="552" rx="22" ry="10" fill="#A86F48"/><path d="M154 560 L204 560" stroke="#E3A92B" stroke-width="6"/><path d="M170 546 L186 556" stroke="#E3A92B" stroke-width="4"/><ellipse cx="216" cy="552" rx="22" ry="10" fill="#A86F48"/><path d="M190 560 L240 560" stroke="#E3A92B" stroke-width="6"/><path d="M206 546 L222 556" stroke="#E3A92B" stroke-width="4"/><path d="M152 254 Q196 246 240 254 Q254 266 250 306 Q254 364.0 268 454 Q196 462 124 454 Q138 364.0 142 306 Q138 266 152 254Z" fill="url(#jhumpa--k-star)"/><path d="M160 254 Q196 282 232 254" fill="none" stroke="#FBF5E9" stroke-width="6"/><path d="M146 268 L124 334 L130 394" fill="none" stroke="#1C1410" stroke-width="24"/><path d="M124 334 L130 394" fill="none" stroke="#A86F48" stroke-width="16"/><path d="M146 268 L124 334" fill="none" stroke="#2C3E8C" stroke-width="18"/><circle cx="130" cy="398" r="11" fill="#A86F48"/><path d="M246 268 L292 294 L296 244" fill="none" stroke="#1C1410" stroke-width="24"/><path d="M292 294 L296 244" fill="none" stroke="#A86F48" stroke-width="16"/><path d="M246 268 L292 294" fill="none" stroke="#2C3E8C" stroke-width="18"/><circle cx="296" cy="248" r="11" fill="#A86F48"/><path d="M296 244 L262 220" stroke-width="14"/><path d="M296 244 L262 220" stroke="#8A3B12" stroke-width="8"/></g><g clip-path="url(#jhumpa--hcJhumpa)">
+
+
+
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M100 400 Q106 304 156 288 L236 288 Q286 304 292 400Z" fill="url(#jhumpa--k-star)"/>
+<path d="M156 288 Q196 316 236 288" fill="none" stroke="#FBF5E9" stroke-width="6"/>
+<path d="M178 234 L178 294 Q196 302 214 294 L214 234Z" fill="#A86F48"/>
+<path d="M130 202 Q124 110 196 108 Q268 110 262 202 L250 202 L248 150 Q220 134 196 140 Q162 134 144 152 L142 202Z" fill="#1C1410"/>
+<circle cx="132" cy="186" r="11" fill="#A86F48"/>
+<ellipse cx="196" cy="180" rx="60" ry="62" fill="#A86F48"/>
+<path d="M136 172 Q132 112 196 110 Q260 112 256 172 Q244 136 214 130 Q190 140 168 132 Q144 140 136 172Z" fill="#1C1410"/>
+<rect x="226" y="124" width="26" height="9" rx="3" fill="#E3A92B" transform="rotate(-20 239 128)" stroke-width="3"/>
+<path d="M152 160 Q166 150 182 158" fill="none" stroke-width="5"/>
+<path d="M154 178 Q168 166 182 178 Q168 186 154 178Z" fill="#FBF5E9" stroke-width="3"/>
+<circle cx="170" cy="177" r="5.5" fill="#1C1410" stroke="none"/>
+<path d="M150 176 Q168 162 186 176" fill="none" stroke-width="5"/>
+<path d="M190 182 L186 206 Q190 210 197 207" fill="none"/>
+<path d="M170 222 Q190 244 214 222Z" fill="#FBF5E9"/>
+<path d="M174 228 L210 228" stroke="#8C8C9A" stroke-width="3"/>
+<path d="M252 204 L298 268" stroke-width="16"/><path d="M252 204 L298 268" stroke="#8A3B12" stroke-width="9"/>
+<circle cx="228" cy="178" r="42" fill="#DCEFF4"/>
+<path d="M196 178 Q228 144 260 178 Q228 200 196 178Z" fill="#FBF5E9" stroke-width="4"/>
+<circle cx="228" cy="176" r="15" fill="#1C1410" stroke="none"/>
+<path d="M190 176 Q228 136 266 176" fill="none" stroke-width="8"/>
+<circle cx="228" cy="178" r="42" fill="none" stroke="#E3A92B" stroke-width="7"/>
+<circle cx="228" cy="178" r="47" fill="none" stroke-width="3"/>
+</g>
+<circle cx="233" cy="170" r="4.5" fill="#FBF5E9"/><circle cx="172" cy="175" r="1.8" fill="#FBF5E9"/>
+<g fill="#5A3A22"><circle cx="158" cy="196" r="1.8"/><circle cx="166" cy="200" r="1.8"/><circle cx="160" cy="204" r="1.8"/></g>
+<path d="M200 140 Q212 132 222 142" fill="none" stroke="#FBF5E9" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+</g><g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"></g></g>

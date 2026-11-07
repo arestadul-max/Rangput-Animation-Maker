@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rongpat Studio Guide</title>
+<style>
+:root{--ink:#1C1410;--paper:#F3E6C8;--conch:#FBF5E9;--sindoor:#C8341F;--indigo:#2C3E8C;--turmeric:#E3A92B;--muted:#5A3A22}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 "Segoe UI",system-ui,sans-serif}
+main{max-width:920px;margin:0 auto;padding:32px 20px 80px}
+h1{font-family:Georgia,serif;font-size:42px;line-height:1.1;margin:0 0 6px}
+h2{font-family:Georgia,serif;font-size:27px;margin:44px 0 10px;padding-top:10px;border-top:3px solid var(--ink)}
+h3{font-size:18px;margin:24px 0 6px}
+.sub{color:var(--muted);font-size:18px;margin:0 0 24px}
+.steps{counter-reset:s;list-style:none;padding:0}
+.steps li{counter-increment:s;background:var(--conch);border:2px solid var(--ink);border-radius:6px;padding:14px 16px 14px 62px;margin:10px 0;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:14px;top:12px;width:34px;height:34px;border-radius:50%;background:var(--sindoor);color:var(--conch);font-weight:700;display:grid;place-items:center}
+code,kbd{background:var(--conch);border:1px solid #d8c7a0;border-radius:4px;padding:1px 6px;font:14px Consolas,monospace}
+table{border-collapse:collapse;width:100%;background:var(--conch);margin:10px 0;font-size:15px}
+th,td{border:1px solid #d1bf98;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--ink);color:var(--conch)}
+.note{background:#fff7dc;border-left:5px solid var(--turmeric);padding:10px 14px;margin:14px 0}
+.warn{background:#fde8e3;border-left:5px solid var(--sindoor);padding:10px 14px;margin:14px 0}
+.ex{background:var(--ink);color:var(--conch);padding:12px 14px;border-radius:6px;font:14px/1.5 Consolas,monospace;overflow-x:auto;white-space:pre}
+nav a{color:var(--indigo);margin-right:14px;font-weight:600}
+</style>
+</head>
+<body>
+<main>
+<h1>Rongpat Studio</h1>
+<p class="sub">Your offline cartoon maker. Write the story in a spreadsheet, add your voice recordings, double-click, and get a finished YouTube Short in the Rongpat style. No internet, no AI tokens.</p>
+<nav><a href="#start">Quick start</a><a href="#moves">Moves &amp; expressions</a><a href="#sheet">The scene sheet</a><a href="#lists">Lists</a><a href="#fix">Fixing problems</a><a href="#library">Changing the bible</a><a href="#help">Help</a></nav>
+
+<h2 id="start">Quick start</h2>
+<ol class="steps">
+<li>Unzip the whole <b>RongpatStudio</b> folder somewhere simple, for example <code>C:\RongpatStudio</code> or your Desktop. Keep all the folders together.</li>
+<li>Try the demo first: double-click <b>2 - Preview Video (fast)</b>, type the number of <i>Demo - The Last Ball</i>, press Enter twice. In a minute or two the video opens.
+<div class="note">The first time, Windows may say “Windows protected your PC”. Click <b>More info</b> → <b>Run anyway</b>. This happens because the files are new, not because they are unsafe.</div></li>
+<li>Double-click <b>1 - New Project</b> and type a name for your story. A folder opens with <code>scenes.xlsx</code> and empty <code>voice</code>, <code>images</code> and <code>sounds</code> folders.</li>
+<li>Record your lines and put them in the <b>voice</b> folder (wav, mp3 or m4a, any names, e.g. <code>01_mishti.wav</code>).</li>
+<li>Open <b>scenes.xlsx</b> and write one row per shot (see below). The row under the headings explains every column, and the dropdowns help you pick places and moods. <b>Save and close Excel.</b></li>
+<li>Double-click <b>2 - Preview Video (fast)</b> to check it, fix rows, and preview again. When it’s right, double-click <b>3 - Make Final Video</b> for the full HD 1080×1920 file. Videos are saved in your project’s <code>output</code> folder.</li>
+</ol>
+<p>Speed: a 60-second preview takes about 1–3 minutes on a normal laptop; the final video about 5–15 minutes (more CPU cores = faster).</p>
+
+<h2 id="sheet">The scene sheet</h2>
+<p>Each row is one shot. Empty cells are fine: most columns fall back to something sensible or to the shot before.</p>
+<table>
+<tr><th>Column</th><th>What to write</th><th>Example</th></tr>
+<tr><td>Place</td><td>A place name from the Places list, or <code>title</code> for a title card, or an image file from your <code>images</code> folder.</td><td><code>school-classroom</code></td></tr>
+<tr><td>View</td><td>Which part of the place to show: <code>left</code>, <code>center</code>, <code>right</code>, or 0–100.</td><td><code>right</code></td></tr>
+<tr><td>Time</td><td><code>day</code>, <code>evening</code> or <code>night</code>.</td><td><code>night</code></td></tr>
+<tr><td>Camera</td><td><code>auto</code>, <code>wide</code>, <code>medium</code>, <code>close</code>, <code>push-in</code>, <code>pull-out</code>, <code>pan-left</code>, <code>pan-right</code>, <code>follow</code>. Add <code>shake</code> for a shaky camera.</td><td><code>close shake</code></td></tr>
+<tr><td>Focus</td><td>Who the camera looks at. Default: whoever speaks.</td><td><code>mishti</code></td></tr>
+<tr><td>Cast</td><td>Who is in the shot and where, separated by commas. Positions: <code>far-left left center right far-right</code> or a number −100…100. Extra words: <code>back</code> (further away), <code>front</code> (closer), <code>flip</code> (mirror), <code>hidden</code> (invisible until <i>appear</i>). Empty = same cast as the shot before.</td><td><code>tutul left, mechho right hidden</code></td></tr>
+<tr><td>Actions</td><td><code>who: action</code>, separated by <code>;</code>. Several actions for one character with <code>,</code>. Add <code>@seconds</code> to time them.</td><td><code>mechho: appear @0.5, scared @2; tutul: jump x2</code></td></tr>
+<tr><td>Speaker</td><td>Whose mouth moves with the voice.</td><td><code>tutul</code></td></tr>
+<tr><td>Voice</td><td>The recording in the voice folder. Two clips: <code>a.wav; b.wav @2.5</code> (and two speakers: <code>tutul; mishti</code>).</td><td><code>09_tutul.wav</code></td></tr>
+<tr><td>Subtitle</td><td>The caption. <code>|</code> splits it into two captions shown one after another. Start with <code>^</code> to show it at the bottom instead of the top. Bangla works too.</td><td><code>There’s no fish. | Want a sweet?</code></td></tr>
+<tr><td>Emote</td><td>A symbol above someone’s head: <code>!</code> <code>?</code> <code>heart</code> <code>zzz</code> <code>sweat</code> <code>anger</code> <code>idea</code> <code>music</code> <code>sparkle</code> <code>shock</code>.</td><td><code>mishti: ! @1</code></td></tr>
+<tr><td>SFX</td><td>Sound effects with optional time. Built-in names, or a file you put in the <code>sounds</code> folder.</td><td><code>creak @0.2, thud @1.5</code></td></tr>
+<tr><td>Music</td><td><code>calm spooky comic tense sweet happy none</code>. Empty = keep playing the previous mood.</td><td><code>spooky</code></td></tr>
+<tr><td>Duration</td><td>Seconds. Empty = automatic (voice length plus a little air).</td><td><code>3</code></td></tr>
+<tr><td>Transition</td><td><code>cut</code> or <code>fade</code> (a quick dip to black into this shot).</td><td><code>fade</code></td></tr>
+</table>
+<h3>A tiny story</h3>
+<div class="ex">Place              Time   Camera   Cast                         Actions                    Speaker  Voice         Subtitle
+title              night                                                                                   মেছো ভূত | The Fish-Thief Ghost
+sen-kitchen-night  night  push-in  mishti left                                             mishti   01_mishti.wav Every night, fish goes missing…
+sen-kitchen-night                  mishti far-left, mechho right hidden  mechho: appear @0.3, hold-fish
+rooftop-at-night   night  medium   tutul left, mechho right     mechho: cry                tutul    09_tutul.wav  Uncle, why are you crying?</div>
+<p>Open the demo project’s <code>scenes.xlsx</code> to see a full working version.</p>
+
+<h2 id="lists">Characters, places, actions, sounds</h2>
+<p>Every <code>scenes.xlsx</code> has tabs at the bottom listing everything you can type: <b>Characters</b>, <b>Places</b>, <b>Actions</b> (with emotes and cameras) and <b>Sounds</b> (effects and music moods). The pictures <b>Characters - names to type.png</b> and <b>Places - names to type.png</b> in the main folder show them all.</p>
+<p><b>Mishti</b>, <b>Mechho</b> and <b>Tutul</b> are fully animated puppets: Mishti sits, runs, leaps, meows and hisses; Mechho floats, screams, cries, glows and holds a fish or a sweet; Tutul talks, smiles and offers a sweet. All other characters blink, talk (their mouths move with the voice), walk, jump, shake, bounce, spin, faint, sleep, glow, appear and vanish.</p>
+
+
+<h2 id="moves">Moves, objects and expressions (update 1.2)</h2>
+<p><b>Every human character now has moving arms and legs.</b> Write body moves in the <b>Actions</b> column, exactly like other actions, with <code>@seconds</code> for timing:</p>
+<table>
+<tr><th>Move</th><th>What it looks like</th></tr>
+<tr><td><code>bat-ready</code>, <code>swing</code></td><td>Batting stance; swings the bat.</td></tr>
+<tr><td><code>bowl</code>, <code>throw</code></td><td>Arm windmills over the top.</td></tr>
+<tr><td><code>catch</code>, <code>hold-ball</code>, <code>keeper</code></td><td>Hands up to catch; holds the ball up; wicketkeeper crouch.</td></tr>
+<tr><td><code>cheer</code>, <code>clap</code>, <code>wave</code>, <code>arm-dance</code></td><td>Happy moves.</td></tr>
+<tr><td><code>point</code>, <code>point-left</code>, <code>shrug</code>, <code>think</code>, <code>facepalm</code>, <code>hands-on-hips</code>, <code>cover-face</code></td><td>Acting moves.</td></tr>
+<tr><td><code>six</code>, <code>out</code></td><td>Umpire signals.</td></tr>
+<tr><td><code>eat</code>, <code>magnify</code>, <code>carry-bat</code>, <code>relax</code></td><td>Babai eating, Jhumpa’s magnifier, carrying a bat; <code>relax</code> goes back to normal.</td></tr>
+</table>
+<p>Walking and running (<code>walk-to</code>, <code>run-to</code>, <code>enter-left</code> …) now move the legs and swing the arms. Things a character already holds in the bible (a phone, a kettle, a ruler) move with their hand.</p>
+
+<h3>Objects</h3>
+<p>Built in: <code>ball</code>, <code>bat</code>, <code>stumps</code>. Put an object in the <b>Cast</b> like a character (<code>stumps right back</code>) and give it actions:</p>
+<div class="ex">ball: in-hand mitul, bowl mitul pupu @1.2, hit-up @1.9
+umbrella: in-hand haridas, throw haridas tuli @1.0, in-hand tuli left @1.7
+kite: fly-in pupu @0.5        sign: swing        coin: spin        bag: drop @2</div>
+<p>Object actions: <code>in-hand</code> (add <code>left</code>/<code>right</code>), <code>bowl</code>, <code>throw</code>, <code>hit-up</code>, <code>hit-left</code>, <code>hit-right</code>, <code>fly-in</code>, <code>drop</code>, <code>spin</code>, <code>bounce</code>, <code>swing</code>, <code>appear</code>, <code>vanish</code>. Camera <code>ball</code> follows the ball (or the focus object).</p>
+<p><b>Your own objects:</b> drop an <code>.svg</code> or transparent <code>.png</code> into <code>library\props</code>. The file name is its name. Optional <code>.json</code>: <code>{"name": "Umbrella", "size": "large", "grip": "bottom"}</code> (size: tiny, small, medium, large, huge or a number; grip: where a hand holds it: top, center, bottom).</p>
+
+<h3>Expressions</h3>
+<p>Faces change by themselves: from the line being said (“!”, “?”, “…” and how loud), from what the character is doing, and from emotes. Eyes look at whoever is speaking, and listeners react. To choose one yourself, use the <b>Expression</b> column (the last column): <code>pupu: angry @1.2, mitul: smug</code>.</p>
+<p>Expressions: neutral, happy, excited, laughing, sad, crying, angry, scared, surprised, shocked, confused, thinking, nervous, embarrassed, smug, sleepy, disgusted, love, stern.</p>
+
+<h3>Automatic rigging for new characters</h3>
+<table>
+<tr><th>What you add</th><th>What the app does automatically</th></tr>
+<tr><td>A character made with Claude (update pack)</td><td>Full rig: arms, legs, held objects, expressions. Unzip the pack into <code>library</code> and run <b>5 - Update Library</b>.</td></tr>
+<tr><td>Your own drawing <b>in parts</b> (SVG with groups named <code>head</code>, <code>body</code>, <code>arm-left</code>, <code>arm-right</code>, <code>leg-left</code>, <code>leg-right</code>)</td><td>Full rig: finds the shoulders, hips and neck; arms do every move, legs walk, head nods and talks, hands hold objects.</td></tr>
+<tr><td>A single flat picture (PNG or SVG)</td><td>Simple rig: head nods, tilts and talks; the body breathes, leans and bounces. For moving arms, draw it in parts.</td></tr>
+<tr><td>An object (PNG or SVG in <code>library\props</code>)</td><td>Can be held, thrown, dropped, spun, swung, bounced or placed.</td></tr>
+</table>
+<p><b>How to draw in parts (Inkscape, free):</b> draw the character standing, facing you. Select the arm shapes → Object → Group (Ctrl+G) → Object → Object Properties → set <b>ID</b> to <code>arm-left</code> → Set. Do the same for <code>arm-right</code>, <code>leg-left</code>, <code>leg-right</code>, <code>head</code> and <code>body</code>. Draw arms hanging straight down from the shoulder. Save as Plain SVG into <code>library\characters</code>.</p>
+
+<h2 id="fix">Fixing problems</h2>
+<ul>
+<li><b>Check one shot quickly:</b> double-click <b>4 - Check One Shot (picture)</b>, pick the project, type the shot number. You get a picture in seconds.</li>
+<li><b>Preview only some shots:</b> in <b>2 - Preview Video</b>, type e.g. <code>3-5</code> when it asks “Which shots?”.</li>
+<li><b>Something is in the wrong place:</b> change the position (<code>left</code> → <code>-60</code>), the View, or the Camera, then check again.</li>
+<li><b>Timing is off:</b> add <code>@seconds</code> to actions, emotes and sounds, or set a Duration.</li>
+<li><b>A red message appears:</b> it tells you the row and what’s wrong (for example an unknown name, with suggestions). Fix that cell and run again.</li>
+<li><b>“Permission denied” on scenes.xlsx:</b> close it in Excel first.</li>
+</ul>
+<div class="note">The app can’t judge how a video looks: it does exactly what the sheet says. For brand-new drawings, poses or features, ask Claude, and you’ll get a library update pack or an engine update.</div>
+
+<h2 id="library">Changing or updating the bible</h2>
+<p>The cast and places are <b>not locked inside the program</b>. They live in libraries, so you can grow or change the bible any time:</p>
+<table>
+<tr><th>You want to…</th><th>Do this</th></tr>
+<tr><td>Add your own character</td><td>Put a standing, full-body <code>.svg</code> or transparent <code>.png</code> in <code>library\characters</code>. The file name is the name you type. Optional <code>.json</code> with the same name: <code>{"name": "Dadu", "bn": "দাদু", "size": "adult"}</code> (sizes: adult, tall, kid, small-kid, big-animal, animal, small-animal, or a number). Then run <b>5 - Update Library</b>.</td></tr>
+<tr><td>Add your own place</td><td>Put an <code>.svg</code>, <code>.png</code> or <code>.jpg</code> (landscape works best) in <code>library\places</code>. Optional <code>.json</code>: <code>{"name": "Dadu’s shop", "floor": 0.88}</code>. Then run <b>5 - Update Library</b>.</td></tr>
+<tr><td>Use a changed bible</td><td>Put the changed bible board files (<code>.dc.html</code>/<code>.html</code>) in <code>library\bible-import</code> and run <b>5 - Update Library</b>. Characters and places with the same names are replaced; new ones are added; blinking and lip-sync are set up automatically.</td></tr>
+<tr><td>Get an update from Claude</td><td>Ask for a “Rongpat Studio library update pack”. Unzip it into the <code>library</code> folder and run <b>5 - Update Library</b>.</td></tr>
+<tr><td>Undo a change</td><td>Delete the file from <code>library</code> and run <b>5 - Update Library</b>. The built-in version comes back.</td></tr>
+</table>
+<p><b>5 - Update Library</b> also refreshes the Characters and Places lists inside all your projects’ <code>scenes.xlsx</code> (close Excel first).</p>
+
+<h2 id="help">Help</h2>
+<ul>
+<li><b>Nothing happens / window closes:</b> make sure the <code>python</code>, <code>engine</code> and <code>library</code> folders are next to the .bat files.</li>
+<li><b>Antivirus blocks it:</b> allow the RongpatStudio folder. It contains Python, ffmpeg (video maker) and resvg (drawing), all open-source.</li>
+<li><b>Very slow:</b> use previews while working; close other big programs; the final video uses all but one CPU core.</li>
+<li>The folder layout: <code>engine</code> = the program, <code>library</code> = your additions, <code>projects</code> = your stories, <code>python</code> = the built-in Python (don’t change).</li>
+</ul>
+<p style="color:var(--muted);margin-top:40px">Rongpat Studio 1.2 · fonts: Hind Siliguri, Rozha One, Inter (SIL Open Font License) · ffmpeg (GPL), resvg, Python, NumPy, SciPy, Pillow, openpyxl (open-source licences).</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<defs><pattern id="chhotu--a1-myna" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#1C1410"/><circle cx="8" cy="8" r="2.2" fill="#E3A92B"/></pattern></defs><g transform="translate(-19.6,165) scale(1.1)">
+
+
+
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M90 374 L356 374" stroke-width="16"/><path d="M90 374 L356 374" stroke="#8A3B12" stroke-width="9"/>
+<path d="M200 316 L196 368 M196 368 L184 376 M196 368 L204 378 M232 316 L234 368 M234 368 L222 376 M234 368 L244 378" stroke="#E3A92B" stroke-width="6"/>
+<path d="M300 258 L372 296 L360 320 L294 292Z" fill="#1C1410"/>
+<ellipse cx="212" cy="256" rx="102" ry="74" fill="url(#chhotu--a1-myna)"/>
+<path d="M180 232 Q262 192 322 252 Q262 272 190 270Z" fill="#3A2A3E"/>
+<path d="M282 240 L312 250 L292 262Z" fill="#FBF5E9" stroke-width="3"/>
+<path d="M150 204 L256 300" stroke-width="12"/><path d="M150 204 L256 300" stroke="#2C3E8C" stroke-width="6"/>
+<rect x="222" y="270" width="40" height="22" fill="#FBF5E9" stroke-width="3" transform="rotate(-8 242 280)"/>
+<rect x="212" y="282" width="68" height="48" rx="6" fill="#C8341F"/>
+<path d="M212 296 L280 296" fill="none"/>
+<circle cx="132" cy="172" r="58" fill="#1C1410"/>
+<path d="M96 162 Q120 136 152 152 Q148 178 122 182 Q100 180 96 162Z" fill="#E3A92B"/>
+<path d="M102 162 Q122 146 142 162 Q122 172 102 162Z" fill="#FBF5E9" stroke-width="3"/>
+<circle cx="114" cy="161" r="6.5" fill="#1C1410" stroke="none"/>
+<path d="M98 160 Q122 142 146 160" fill="none" stroke-width="6"/>
+<path d="M82 176 L42 186 L84 192Z" fill="#E3A92B"/>
+<path d="M84 194 L50 200 L86 202Z" fill="#E3A92B"/>
+
+</g>
+<circle cx="116" cy="158" r="2.2" fill="#FBF5E9"/>
+
+</g>

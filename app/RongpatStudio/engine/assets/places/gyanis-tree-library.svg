@@ -1,0 +1,23 @@
+
+<defs><pattern id="pl-gyanis-tree-library--x3-ring" width="60" height="60" patternUnits="userSpaceOnUse"><rect width="60" height="60" fill="#6B3A1F"/><circle cx="30" cy="30" r="22" fill="none" stroke="#5A2E18" stroke-width="2"/><circle cx="30" cy="30" r="12" fill="none" stroke="#5A2E18" stroke-width="2"/></pattern>
+<pattern id="pl-gyanis-tree-library--x3-books" width="60" height="44" patternUnits="userSpaceOnUse"><rect width="60" height="44" fill="#3A1F10"/><rect x="2" y="6" width="10" height="38" fill="#C8341F"/><rect x="13" y="10" width="8" height="34" fill="#E3A92B"/><rect x="22" y="4" width="12" height="40" fill="#2C3E8C"/><rect x="35" y="12" width="9" height="32" fill="#3E7A3A"/><rect x="45" y="8" width="11" height="36" fill="#E58BA0"/></pattern></defs>
+<rect width="800" height="450" fill="#2A160C"/>
+<path d="M40 450 Q20 220 120 80 Q400 -60 680 80 Q780 220 760 450Z" fill="url(#pl-gyanis-tree-library--x3-ring)" stroke="#1C1410" stroke-width="5"/>
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M80 170 L260 170 L260 350 L70 350Z" fill="url(#pl-gyanis-tree-library--x3-books)"/>
+<path d="M80 170 L260 170 M76 214 L260 214 M72 258 L260 258 M70 302 L260 302 M70 350 L260 350" stroke="#8A3B12" stroke-width="6"/>
+<path d="M540 170 L720 170 L730 350 L540 350Z" fill="url(#pl-gyanis-tree-library--x3-books)"/>
+<path d="M540 170 L720 170 M540 214 L724 214 M540 258 L728 258 M540 302 L730 302 M540 350 L730 350" stroke="#8A3B12" stroke-width="6"/>
+<circle cx="400" cy="220" r="80" fill="#22305F" stroke="#8A3B12" stroke-width="10"/>
+<circle cx="420" cy="200" r="24" fill="#F3E6C8"/>
+<g fill="#F3E6C8" stroke="none"><circle cx="370" cy="190" r="2.5"/><circle cx="380" cy="250" r="2"/><circle cx="440" cy="250" r="2.5"/></g>
+<path d="M280 80 Q276 130 284 170 M320 60 Q316 110 324 140 M480 60 Q484 110 476 150 M520 80 Q526 120 518 160" fill="none" stroke="#3A2A12" stroke-width="5"/>
+<path d="M200 90 L200 120" stroke-width="2"/><path d="M188 120 L212 120 L216 146 L184 146Z" fill="#FFC94A"/>
+<path d="M600 90 L600 120" stroke-width="2"/><path d="M588 120 L612 120 L616 146 L584 146Z" fill="#FFC94A"/>
+<path d="M300 450 L340 160 M360 450 L380 160 M314 380 L362 380 M322 320 L368 320 M330 260 L372 260 M336 200 L376 200" fill="none" stroke="#C98B5E" stroke-width="7"/>
+<path d="M440 380 Q440 360 500 360 Q560 360 560 380 L556 450 L444 450Z" fill="#8A3B12"/>
+<ellipse cx="500" cy="372" rx="58" ry="14" fill="#C98B5E"/>
+<path d="M470 368 Q485 356 500 366 Q515 356 530 368 L530 374 Q515 364 500 374 Q485 364 470 374Z" fill="#FBF5E9" stroke-width="2.5"/>
+<rect x="538" y="344" width="10" height="22" fill="#FBF5E9" stroke-width="2"/><path d="M543 344 Q538 334 543 328 Q548 334 543 344Z" fill="#FFC94A" stroke-width="1.5"/>
+</g>
+<g><circle cx="200" cy="133" r="36" fill="#FFC94A" opacity="0.18"/><circle cx="600" cy="133" r="36" fill="#FFC94A" opacity="0.18"/><circle cx="300" cy="300" r="3" fill="#FFC94A"/><circle cx="460" cy="320" r="3" fill="#FFC94A"/><circle cx="420" cy="110" r="2.5" fill="#FFC94A"/></g>

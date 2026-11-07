@@ -1,0 +1,23 @@
+
+<defs><pattern id="pl-river-ghat--hz-river" width="40" height="18" patternUnits="userSpaceOnUse"><rect width="40" height="18" fill="#1F7A78"/><path d="M0 10 Q10 2 20 10 T40 10" stroke="#9CC7C9" stroke-width="2" fill="none"/></pattern></defs>
+<rect width="528" height="330" fill="#E58BA0"/>
+<circle cx="420" cy="214" r="46" fill="#E07A2E"/>
+<g fill="none" stroke="#1C1410" stroke-width="2.5" stroke-linecap="round"><path d="M330 70 L338 76 L346 70"/><path d="M360 56 L366 61 L372 56"/><path d="M300 90 L306 95 L312 90"/></g>
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<rect x="14" y="70" width="150" height="86" fill="#F3E6C8"/>
+<path d="M30 156 L30 112 Q46 92 62 112 L62 156Z M74 156 L74 112 Q90 92 106 112 L106 156Z M118 156 L118 112 Q134 92 150 112 L150 156Z" fill="#6B3A1F"/>
+<path d="M0 74 Q89 30 178 74 L172 84 Q89 46 6 84Z" fill="#B5482A"/>
+<rect x="0" y="156" width="190" height="16" fill="#D9C8A8"/>
+<rect x="0" y="172" width="220" height="16" fill="#D9C8A8"/>
+<rect x="0" y="188" width="250" height="16" fill="#D9C8A8"/>
+<rect x="0" y="204" width="280" height="16" fill="#D9C8A8"/>
+<rect x="0" y="220" width="310" height="16" fill="#D9C8A8"/>
+</g>
+<rect y="232" width="528" height="98" fill="url(#pl-river-ghat--hz-river)"/>
+<path d="M380 250 L460 250 M396 264 L444 264" stroke="#E3A92B" stroke-width="4" stroke-linecap="round"/>
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M210 266 Q310 302 410 262 L392 284 Q310 312 230 286Z" fill="#6B3A1F"/>
+<path d="M270 276 Q300 236 340 276Z" fill="#E3A92B"/>
+<path d="M276 270 L334 270 M286 258 L326 258" stroke="#8A3B12" stroke-width="2"/>
+<path d="M214 270 Q180 250 160 232" fill="none" stroke="#C98B5E" stroke-width="3"/>
+</g>

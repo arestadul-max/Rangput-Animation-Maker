@@ -1,0 +1,31 @@
+
+<defs>
+<pattern id="pl-sen-house-outside--hz-rail" width="16" height="32" patternUnits="userSpaceOnUse"><rect width="16" height="32" fill="#9CC7C9"/><path d="M8 0 L8 32" stroke="#1C1410" stroke-width="2.5"/><circle cx="8" cy="16" r="4" fill="none" stroke="#1C1410" stroke-width="2"/></pattern>
+<pattern id="pl-sen-house-outside--hz-louv2" width="30" height="7" patternUnits="userSpaceOnUse"><rect width="30" height="7" fill="#3E7A3A"/><path d="M0 4 L30 4" stroke="#1E4A20" stroke-width="2"/></pattern>
+<pattern id="pl-sen-house-outside--hz-grill" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#22305F"/><path d="M6 0 L6 12 M0 6 L12 6" stroke="#9CC7C9" stroke-width="2"/></pattern>
+</defs>
+<rect width="528" height="330" fill="#F3E6C8"/>
+<g fill="none" stroke="#E3D3AE" stroke-width="3"><circle cx="70" cy="80" r="40"/><circle cx="70" cy="80" r="24"/><circle cx="460" cy="230" r="40"/><circle cx="460" cy="230" r="24"/></g>
+<rect y="294" width="528" height="36" fill="#B5482A"/>
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<rect x="318" y="18" width="50" height="40" rx="6" fill="#1C1410"/>
+<path d="M200 56 L200 20 M188 28 L212 28 M192 36 L208 36" stroke-width="3"/>
+<rect x="150" y="68" width="230" height="228" fill="#9CC7C9"/>
+<rect x="140" y="54" width="250" height="16" fill="#F3E6C8"/>
+<path d="M150 96 Q265 114 380 96" fill="none" stroke-width="2"/>
+<path d="M180 100 L210 101 L208 140 L182 140Z" fill="#C8341F" stroke-width="3"/>
+<path d="M300 104 L322 103 L326 132 L298 132Z" fill="#E3A92B" stroke-width="3"/>
+<rect x="232" y="78" width="44" height="58" fill="url(#pl-sen-house-outside--hz-louv2)"/>
+<rect x="336" y="78" width="30" height="58" fill="url(#pl-sen-house-outside--hz-louv2)"/>
+<rect x="140" y="118" width="250" height="32" fill="url(#pl-sen-house-outside--hz-rail)"/>
+<rect x="130" y="150" width="270" height="10" fill="#F3E6C8"/>
+<rect x="170" y="190" width="54" height="56" fill="url(#pl-sen-house-outside--hz-grill)"/>
+<rect x="244" y="208" width="52" height="88" fill="#3E7A3A"/>
+<path d="M270 208 L270 296" stroke-width="3"/>
+<rect x="314" y="214" width="34" height="18" fill="#FBF5E9" stroke-width="2.5"/>
+<path d="M346 256 L374 256 L370 276 L350 276Z M382 256 L410 256 L406 276 L386 276Z" fill="#B5482A"/>
+<g fill="#3E7A3A" stroke-width="2"><circle cx="352" cy="248" r="8"/><circle cx="366" cy="246" r="9"/><circle cx="390" cy="244" r="10"/><circle cx="404" cy="250" r="7"/></g>
+<path d="M160 52 Q166 44 172 52 L178 50 L172 56Z" fill="#1C1410" stroke-width="2"/>
+</g>
+<text x="331" y="227" text-anchor="middle" font-family="Hind Siliguri, sans-serif" font-size="12" font-weight="700" fill="#1C1410">সেন</text>
+<circle cx="164" cy="50" r="1.5" fill="#E3A92B"/>

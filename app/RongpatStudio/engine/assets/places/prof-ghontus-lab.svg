@@ -1,0 +1,29 @@
+
+<defs><pattern id="pl-prof-ghontus-lab--x2-spiral" width="30" height="30" patternUnits="userSpaceOnUse"><rect width="30" height="30" fill="#E58BA0"/><path d="M15 15 Q15 11 19 12 Q22 15 18 19 Q12 21 10 15 Q10 8 17 7 Q25 8 25 16" stroke="#1C1410" stroke-width="2" fill="none"/></pattern></defs>
+<rect width="800" height="450" fill="#1F4A4A"/>
+<rect y="360" width="800" height="90" fill="#3A2A2A"/>
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M0 30 L800 30 M0 50 L560 50 Q580 50 580 70 L580 110" fill="none" stroke="#B5482A" stroke-width="12"/>
+<path d="M0 30 L800 30 M0 50 L560 50 Q580 50 580 70 L580 110" fill="none" stroke="#E07A2E" stroke-width="6"/>
+<rect x="40" y="80" width="220" height="130" fill="#2F4F3A" stroke="#6B3A1F" stroke-width="8"/>
+<rect x="40" y="250" width="220" height="10" fill="#6B3A1F"/>
+<g stroke-width="3"><rect x="56" y="210" width="30" height="40" rx="4" fill="#9BD06A"/><rect x="96" y="220" width="26" height="30" rx="4" fill="#E58BA0"/><rect x="132" y="200" width="34" height="50" rx="4" fill="#E3A92B"/><rect x="176" y="214" width="26" height="36" rx="4" fill="#9CC7C9"/><rect x="212" y="206" width="30" height="44" rx="4" fill="#C8341F"/></g>
+<g fill="#FBF5E9" stroke-width="1.5"><circle cx="70" cy="200" r="4"/><circle cx="76" cy="188" r="3"/><circle cx="150" cy="190" r="4"/><circle cx="144" cy="178" r="3"/><circle cx="226" cy="196" r="4"/></g>
+<rect x="330" y="140" width="250" height="210" rx="10" fill="#8C8C9A"/>
+<circle cx="400" cy="210" r="44" fill="#E3A92B" stroke-dasharray="10 6" stroke-width="10"/><circle cx="400" cy="210" r="16" fill="#1C1410"/>
+<circle cx="480" cy="250" r="30" fill="#C9D1D6" stroke-dasharray="8 5" stroke-width="8"/><circle cx="480" cy="250" r="10" fill="#1C1410"/>
+<circle cx="530" cy="180" r="22" fill="#FBF5E9"/><path d="M530 180 L540 168" stroke-width="3"/>
+<path d="M600 140 Q620 130 600 120 Q580 110 600 100 Q620 90 600 80 Q580 70 600 60" fill="none" stroke="#E3A92B" stroke-width="6"/>
+<path d="M590 150 L610 150 L610 350 L590 350Z" fill="#5A5A66"/>
+<path d="M350 300 L330 250" stroke-width="8"/><circle cx="328" cy="246" r="9" fill="#C8341F"/>
+<path d="M610 50 L630 36 L620 60 L644 46" fill="none" stroke="#FFC94A" stroke-width="5"/>
+<path d="M300 120 L316 100 L310 126 L330 110" fill="none" stroke="#FFC94A" stroke-width="5"/>
+<path d="M360 330 L560 330" stroke-width="3"/>
+<rect x="650" y="250" width="140" height="16" fill="#6B3A1F"/><path d="M660 266 L660 360 M780 266 L780 360" stroke="#6B3A1F" stroke-width="8"/>
+<path d="M670 250 L690 220 L700 226 L684 250Z" fill="#8C8C9A" stroke-width="3"/><circle cx="740" cy="238" r="12" fill="#C8341F" stroke-width="3"/>
+<path d="M720 60 L720 110" stroke-width="2"/><circle cx="720" cy="120" r="12" fill="#FFC94A"/>
+<path d="M240 380 L560 380 L600 430 L200 430Z" fill="url(#pl-prof-ghontus-lab--x2-spiral)"/>
+</g>
+<circle cx="720" cy="120" r="44" fill="#FFC94A" opacity="0.2"/>
+<g fill="#D9D2C3" opacity="0.8"><circle cx="460" cy="120" r="16"/><circle cx="486" cy="100" r="12"/><circle cx="506" cy="84" r="8"/></g>
+<g font-family="Hind Siliguri, sans-serif" font-weight="700" fill="#F3E6C8"><text x="60" y="120" font-size="22">E = mc² ?</text><text x="60" y="152" font-size="18">ভূত + বিজ্ঞান = !!</text><text x="60" y="186" font-size="18">312 → 313</text></g>

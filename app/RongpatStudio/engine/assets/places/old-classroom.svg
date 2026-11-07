@@ -1,0 +1,22 @@
+
+<rect width="800" height="450" fill="#E9DDB0"/>
+<rect y="360" width="800" height="90" fill="#B5482A"/>
+<path d="M60 70 L130 70 L230 360 L100 360Z" fill="#FFF3C4" opacity="0.45"/>
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<rect x="40" y="70" width="90" height="120" fill="#FFF3C4"/><path d="M85 70 L85 190 M40 130 L130 130" stroke="#3E7A3A" stroke-width="5"/>
+<path d="M600 0 L600 24" stroke-width="5"/><path d="M600 30 L530 22 Q522 24 528 30 Q550 36 600 34Z M600 30 L670 22 Q678 24 672 30 Q650 36 600 34Z" fill="#6B3A1F"/><circle cx="600" cy="30" r="8" fill="#E9C98A"/>
+<rect x="190" y="70" width="420" height="200" fill="#6B3A1F"/>
+<rect x="204" y="84" width="392" height="172" fill="#2F4F3A"/>
+<rect x="190" y="266" width="420" height="10" fill="#8A3B12"/>
+<rect x="250" y="262" width="16" height="6" fill="#FBF5E9" stroke-width="1.5"/>
+<circle cx="700" cy="110" r="30" fill="#FBF5E9"/><path d="M700 110 L700 90 M700 110 L716 118" stroke-width="3"/>
+<rect x="590" y="300" width="180" height="20" fill="#6B3A1F"/>
+<rect x="600" y="320" width="160" height="60" fill="#8A3B12"/>
+<circle cx="640" cy="270" r="24" fill="#1F7A78"/><path d="M620 262 Q640 254 660 262 M622 280 Q640 274 658 278" fill="none" stroke="#7FB34A" stroke-width="4"/>
+<path d="M640 294 L640 300 M626 300 L654 300" stroke-width="4"/>
+<rect x="690" y="284" width="60" height="16" fill="#C8341F"/><rect x="694" y="270" width="52" height="14" fill="#2C3E8C"/>
+<g fill="#C98B5E"><rect x="20" y="360" width="250" height="18"/><rect x="300" y="360" width="250" height="18"/></g>
+<path d="M30 378 L30 450 M260 378 L260 450 M310 378 L310 450 M540 378 L540 450" stroke="#6B3A1F" stroke-width="10"/>
+<g fill="#C98B5E"><rect x="0" y="410" width="290" height="20"/><rect x="320" y="410" width="290" height="20"/></g>
+</g>
+<g font-family="Hind Siliguri, sans-serif" font-weight="700" fill="#F3E6C8"><text x="240" y="150" font-size="52">অ আ ই</text><text x="430" y="150" font-size="40">২+২=৪</text><text x="240" y="220" font-size="28">A B C · 1 2 3</text></g>

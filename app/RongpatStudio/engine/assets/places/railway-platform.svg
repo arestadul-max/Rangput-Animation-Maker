@@ -1,0 +1,27 @@
+
+<defs><pattern id="pl-railway-platform--t3-trk" width="30" height="40" patternUnits="userSpaceOnUse"><rect width="30" height="40" fill="#8C7A6A"/><rect x="4" y="0" width="22" height="40" fill="#6B4A34"/></pattern></defs>
+<rect width="800" height="450" fill="#E3A92B"/>
+<rect y="356" width="800" height="94" fill="url(#pl-railway-platform--t3-trk)"/>
+<path d="M0 380 L800 380 M0 420 L800 420" stroke="#5A5A66" stroke-width="6"/>
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<rect x="560" y="170" width="260" height="190" rx="10" fill="#3E7A3A"/>
+<rect x="560" y="190" width="260" height="10" fill="#E3A92B"/>
+<g fill="#1C1410"><rect x="590" y="216" width="40" height="44"/><rect x="650" y="216" width="40" height="44"/><rect x="710" y="216" width="40" height="44"/></g>
+<path d="M590 238 L630 238 M650 238 L690 238 M710 238 L750 238" stroke="#5A5A66" stroke-width="2"/>
+<rect x="0" y="320" width="560" height="40" fill="#D9C8A8"/>
+<rect x="0" y="352" width="560" height="10" fill="#E3A92B"/>
+<path d="M-10 70 L570 70 L540 100 L-10 100Z" fill="#7A1F1F"/>
+<path d="M0 100 L540 100" stroke-width="3"/>
+<g fill="#3E7A3A"><rect x="60" y="100" width="14" height="220"/><rect x="250" y="100" width="14" height="220"/><rect x="440" y="100" width="14" height="220"/></g>
+<path d="M74 140 Q100 110 74 110 M250 140 Q224 110 250 110 M264 140 Q290 110 264 110 M440 140 Q414 110 440 110" fill="none" stroke-width="3"/>
+<path d="M150 100 L150 128 M180 100 L180 128" stroke-width="3"/>
+<rect x="128" y="128" width="74" height="22" fill="#E3A92B" stroke-width="3"/>
+<path d="M340 100 L340 130" stroke-width="3"/>
+<circle cx="340" cy="152" r="22" fill="#FBF5E9"/>
+<path d="M340 152 L340 138 M340 152 L350 158" stroke-width="3"/>
+<rect x="100" y="210" width="130" height="50" fill="#E3A92B"/>
+<path d="M120 260 L120 320 M210 260 L210 320" stroke-width="5"/>
+<rect x="320" y="282" width="110" height="10" fill="#6B3A1F"/><rect x="320" y="262" width="110" height="8" fill="#6B3A1F"/>
+<path d="M328 292 L328 320 M422 292 L422 320" stroke-width="5"/>
+</g>
+<g font-family="Hind Siliguri, sans-serif" font-weight="700" text-anchor="middle" fill="#1C1410"><text x="165" y="234" font-size="20">নন্দনপুর</text><text x="165" y="254" font-size="14">NANDANPUR</text><text x="165" y="145" font-size="12">PLATFORM 1</text></g>

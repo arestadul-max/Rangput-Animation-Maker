@@ -1,0 +1,18 @@
+
+<rect width="800" height="450" fill="#1A2448"/>
+<circle cx="560" cy="140" r="100" fill="#F3E6C8"/>
+<g fill="#E3D3AE" opacity="0.6"><circle cx="530" cy="120" r="14"/><circle cx="590" cy="170" r="10"/><circle cx="600" cy="110" r="7"/></g>
+<rect y="360" width="800" height="90" fill="#0F1630"/>
+<g fill="#0B0F1E" stroke="#0B0F1E" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M150 380 Q160 280 170 220 Q190 200 240 200 Q290 200 300 220 Q310 280 330 380Z"/>
+<ellipse cx="240" cy="120" rx="250" ry="100"/>
+<ellipse cx="420" cy="170" rx="120" ry="60"/>
+</g>
+<g fill="none" stroke="#0B0F1E" stroke-width="4" stroke-linecap="round"><path d="M40 170 Q36 250 44 330"/><path d="M70 190 Q66 270 76 360"/><path d="M110 200 Q104 260 112 300"/><path d="M360 200 Q366 270 356 340"/><path d="M400 220 Q406 280 398 330"/><path d="M450 220 Q456 270 448 300"/><path d="M500 200 Q506 250 498 290"/></g>
+<g stroke="#5A5A66" stroke-width="3" stroke-linecap="round"><path d="M396 230 L392 300 M420 230 L424 300"/></g>
+<path d="M388 300 L408 304 L404 312" fill="none" stroke="#6B3A1F" stroke-width="7" stroke-linecap="round"/>
+<g fill="#FFC94A"><path d="M226 150 Q234 142 242 150 Q234 156 226 150Z M250 150 Q258 142 266 150 Q258 156 250 150Z"/></g>
+<g fill="#FBF5E9" opacity="0.35"><rect x="0" y="330" width="800" height="22" rx="11"/><rect x="100" y="370" width="520" height="16" rx="8"/><rect x="300" y="400" width="500" height="14" rx="7"/></g>
+<circle cx="640" cy="378" r="40" fill="#FFC94A" opacity="0.25"/>
+<g stroke="#1C1410" stroke-width="3" stroke-linejoin="round"><path d="M630 360 L650 360 L654 388 L626 388Z" fill="#FFC94A"/><path d="M624 356 L656 356 L640 344Z" fill="#C8341F"/><rect x="622" y="388" width="36" height="8" fill="#C8341F"/></g>
+<g fill="#0B0F1E"><path d="M640 60 Q650 50 660 60 Q670 50 680 60 Q670 64 660 66 Q650 64 640 60Z"/><path d="M700 100 Q708 92 716 100 Q724 92 732 100 Q724 104 716 106 Q708 104 700 100Z"/><path d="M470 60 Q478 52 486 60 Q494 52 502 60 Q494 64 486 66 Q478 64 470 60Z"/></g>

@@ -1,0 +1,19 @@
+
+<defs><pattern id="pl-village-at-noon--n2-pond" width="40" height="14" patternUnits="userSpaceOnUse"><rect width="40" height="14" fill="#1F7A78"/><path d="M0 8 Q10 2 20 8 T40 8" stroke="#9CC7C9" stroke-width="2" fill="none"/></pattern>
+<pattern id="pl-village-at-noon--n2-thatch" width="8" height="16" patternUnits="userSpaceOnUse"><rect width="8" height="16" fill="#E3A92B"/><path d="M3 0 L4 16" stroke="#8A3B12" stroke-width="1.5"/></pattern></defs>
+<rect width="800" height="450" fill="#9CC7C9"/>
+<g transform="translate(300,-6)" stroke="#1C1410" stroke-width="4" stroke-linejoin="round"><path d="M110 40 L116 18 L122 40Z M110 120 L116 142 L122 120Z M76 80 L54 86 L76 92Z M156 80 L178 86 L156 92Z" fill="#E07A2E"/><circle cx="116" cy="80" r="36" fill="#E3A92B"/></g>
+<path d="M210 70 Q210 52 230 54 Q236 38 256 44 Q270 30 288 42 Q306 40 306 58 Q318 62 314 72Z" fill="#FBF5E9" stroke="#1C1410" stroke-width="3"/>
+<g fill="#2F6A2C" stroke="#1C1410" stroke-width="4"><path d="M0 220 Q20 170 60 186 Q80 150 120 170 Q150 140 190 166 Q230 150 260 176 Q300 156 340 180 Q380 160 420 182 Q460 150 500 176 Q540 156 580 180 Q620 150 660 172 Q700 156 740 178 Q770 164 800 180 L800 230 L0 230Z"/></g>
+<rect y="228" width="800" height="222" fill="#7FB34A"/>
+<g fill="none" stroke="#3E7A3A" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 12"><path d="M0 250 L800 250"/><path d="M0 276 L800 276"/><path d="M0 310 L800 310"/><path d="M0 352 L800 352"/><path d="M0 402 L800 402"/></g>
+<path d="M300 450 Q340 380 420 340 Q480 310 520 250 L560 250 Q520 320 460 352 Q390 392 380 450Z" fill="#C98B5E" stroke="#1C1410" stroke-width="4"/>
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<rect x="580" y="214" width="90" height="46" fill="#B5482A"/><path d="M566 220 L625 176 L684 220 Q625 228 566 220Z" fill="url(#pl-village-at-noon--n2-thatch)"/><rect x="614" y="230" width="20" height="30" fill="#1C1410"/>
+<rect x="690" y="226" width="70" height="36" fill="#B5482A"/><path d="M680 230 L725 196 L770 230 Q725 236 680 230Z" fill="url(#pl-village-at-noon--n2-thatch)"/>
+<path d="M90 260 Q84 200 104 150 L114 152 Q96 200 100 260Z" fill="#8A3B12"/>
+<g fill="none" stroke-width="9"><path d="M110 152 Q76 128 46 156"/><path d="M110 152 Q144 126 176 150"/><path d="M110 152 Q84 160 72 196"/><path d="M110 152 Q140 160 150 194"/></g>
+<g fill="none" stroke="#3E7A3A" stroke-width="5"><path d="M110 152 Q76 128 46 156"/><path d="M110 152 Q144 126 176 150"/><path d="M110 152 Q84 160 72 196"/><path d="M110 152 Q140 160 150 194"/></g>
+<ellipse cx="190" cy="390" rx="120" ry="34" fill="url(#pl-village-at-noon--n2-pond)"/>
+<path d="M150 380 Q160 372 170 380 Q160 388 150 380Z" fill="#3E7A3A" stroke-width="2.5"/>
+</g>

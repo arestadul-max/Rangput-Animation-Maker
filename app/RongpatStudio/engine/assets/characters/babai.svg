@@ -1,0 +1,24 @@
+<defs><clipPath id="babai--hcBabai"><rect x="-300" y="-300" width="1000" height="549"/></clipPath></defs><defs><pattern id="babai--k-tri" width="24" height="20" patternUnits="userSpaceOnUse"><rect width="24" height="20" fill="#E07A2E"/><path d="M12 4 L20 16 L4 16Z" fill="#E3A92B" stroke="#8A3B12" stroke-width="1.5"/></pattern></defs><g transform="translate(51.0,190.6) scale(0.74)"><g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M184.0 230 L184.0 264 Q196 270 208.0 264 L208.0 230Z" fill="#C48A5A"/><path d="M168 430 L166 556 L190 556 L192 430Z M200 430 L202 556 L226 556 L224 430Z" fill="#C48A5A"/><ellipse cx="176" cy="558" rx="22" ry="10" fill="#C48A5A"/><path d="M154 566 L204 566" stroke="#2C3E8C" stroke-width="6"/><path d="M170 552 L186 562" stroke="#2C3E8C" stroke-width="4"/><ellipse cx="216" cy="558" rx="22" ry="10" fill="#C48A5A"/><path d="M190 566 L240 566" stroke="#2C3E8C" stroke-width="6"/><path d="M206 552 L222 562" stroke="#2C3E8C" stroke-width="4"/><path d="M148 370 L144 442 L194 442 L196 390 L198 442 L248 442 L244 370Z" fill="#6B5A3A"/><path d="M142 260 Q196 252 250 260 Q264 272 260 312 Q282 340.3 260 406 Q196 414 132 406 Q110 340.3 132 312 Q128 272 142 260Z" fill="url(#babai--k-tri)"/><path d="M140 274 L118 330 L168 356" fill="none" stroke="#1C1410" stroke-width="24"/><path d="M118 330 L168 356" fill="none" stroke="#C48A5A" stroke-width="16"/><path d="M140 274 L118 330" fill="none" stroke="#E07A2E" stroke-width="18"/><circle cx="168" cy="360" r="11" fill="#C48A5A"/><path d="M252 274 L274 330 L224 356" fill="none" stroke="#1C1410" stroke-width="24"/><path d="M274 330 L224 356" fill="none" stroke="#C48A5A" stroke-width="16"/><path d="M252 274 L274 330" fill="none" stroke="#E07A2E" stroke-width="18"/><circle cx="224" cy="360" r="11" fill="#C48A5A"/><path d="M150 352 L242 352 L196 428Z" fill="#F3E6C8"/><path d="M146 354 Q156 330 176 338 Q190 322 210 336 Q232 328 246 354Z" fill="#F3D9A0"/></g><g clip-path="url(#babai--hcBabai)">
+
+
+
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M84 400 Q90 300 150 284 L242 284 Q302 300 308 400Z" fill="url(#babai--k-tri)"/>
+<path d="M176 238 L176 290 Q196 298 216 290 L216 238Z" fill="#C48A5A"/>
+<circle cx="124" cy="190" r="13" fill="#C48A5A"/><circle cx="268" cy="190" r="13" fill="#C48A5A"/>
+<ellipse cx="196" cy="182" rx="72" ry="66" fill="#C48A5A"/>
+<path d="M130 170 Q130 110 196 112 Q262 110 262 170 Q244 138 196 134 Q148 138 130 170Z" fill="#1C1410"/>
+<path d="M198 114 Q206 88 220 98 Q212 104 206 116" fill="none" stroke-width="5"/>
+<path d="M156 156 Q170 148 184 154 M208 154 Q222 148 236 156" fill="none" stroke-width="5"/>
+<path d="M154 178 Q170 190 186 178" fill="none" stroke-width="6"/><path d="M206 178 Q222 190 238 178" fill="none" stroke-width="6"/>
+<path d="M196 176 L192 200 Q196 205 203 201" fill="none"/>
+<path d="M182 224 Q196 234 210 224" fill="none"/>
+<path d="M134 300 L258 300 L196 404Z" fill="#F3E6C8"/>
+<path d="M150 316 L240 316 M160 334 L230 334 M172 352 L220 352" stroke="#8C8C9A" stroke-width="2.5"/>
+<path d="M130 302 Q140 278 160 286 Q168 268 190 278 Q200 262 220 276 Q240 268 248 286 Q266 282 262 302Z" fill="#F3D9A0"/>
+</g>
+<g fill="#E58BA0" opacity="0.7"><ellipse cx="150" cy="206" rx="16" ry="10"/><ellipse cx="242" cy="206" rx="16" ry="10"/></g>
+<g fill="#FBF5E9" stroke="#1C1410" stroke-width="1.5"><ellipse cx="160" cy="284" rx="6" ry="4"/><ellipse cx="178" cy="276" rx="6" ry="4"/><ellipse cx="200" cy="272" rx="6" ry="4"/><ellipse cx="222" cy="278" rx="6" ry="4"/><ellipse cx="240" cy="288" rx="6" ry="4"/><ellipse cx="190" cy="290" rx="6" ry="4"/><ellipse cx="212" cy="292" rx="6" ry="4"/><ellipse cx="170" cy="294" rx="6" ry="4"/><ellipse cx="230" cy="296" rx="6" ry="4"/></g>
+<g stroke="#1C1410" stroke-width="1.5"><rect x="196" y="282" width="5" height="10" fill="#C8341F" transform="rotate(30 198 287)"/><rect x="162" y="290" width="5" height="9" fill="#3E7A3A" transform="rotate(-25 164 294)"/><rect x="234" y="280" width="5" height="9" fill="#3E7A3A" transform="rotate(40 236 284)"/></g>
+<g fill="#F3D9A0" stroke="#1C1410" stroke-width="1"><circle cx="216" cy="242" r="2.5"/><circle cx="178" cy="246" r="2"/></g>
+</g><g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"></g></g>

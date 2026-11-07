@@ -1,0 +1,1273 @@
+[
+ {
+  "slug": "tuli",
+  "name": "Tuli Sen",
+  "bn": "তুলি",
+  "role": "Hero · 19",
+  "board": "Humans1",
+  "desc": "young woman with a long marigold braid, pencil in her hair and red headphones — full body, standing",
+  "tx": 51.0,
+  "ty": 95.9,
+  "sc": 0.74,
+  "face": {
+   "skin": "#C98B5E",
+   "chin": 236,
+   "eyes": [
+    [
+     152.0,
+     188.0,
+     162.0,
+     148.0
+    ],
+    [
+     204.0,
+     240.0,
+     162.0,
+     148.0
+    ]
+   ],
+   "mouth": [
+    196,
+    217
+   ]
+  },
+  "bbox": [
+   114,
+   135,
+   262,
+   610
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "ronju",
+  "name": "Ronju Mia",
+  "bn": "রঞ্জু",
+  "role": "Comic hero · 24",
+  "board": "Humans1",
+  "desc": "curly-haired young man grinning, checked scarf, phone on a selfie stick — full body, standing",
+  "tx": 51.0,
+  "ty": 94.4,
+  "sc": 0.74,
+  "face": {
+   "skin": "#B87A4B",
+   "chin": 238,
+   "eyes": [
+    [
+     152.0,
+     188.0,
+     158.0,
+     140.0
+    ],
+    [
+     204.0,
+     240.0,
+     158.0,
+     140.0
+    ]
+   ],
+   "mouth": [
+    196,
+    219
+   ]
+  },
+  "bbox": [
+   131,
+   53,
+   328,
+   612
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "dida",
+  "name": "Khema Dida",
+  "bn": "ক্ষেমা দিদা",
+  "role": "Storyteller · 74",
+  "board": "Humans1",
+  "desc": "grandmother with a silver bun, gold glasses on a chain and a glowing tablet — full body, standing",
+  "tx": 51.0,
+  "ty": 91.4,
+  "sc": 0.74,
+  "face": {
+   "skin": "#B98258",
+   "chin": 242,
+   "eyes": [
+    [
+     154.0,
+     186.0,
+     166.0,
+     155.0
+    ],
+    [
+     206.0,
+     238.0,
+     166.0,
+     155.0
+    ]
+   ],
+   "mouth": [
+    196,
+    223
+   ]
+  },
+  "bbox": [
+   108,
+   134,
+   288,
+   612
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "pupu",
+  "name": "Pupu",
+  "bn": "পুপু",
+  "role": "Trouble kid · 9",
+  "board": "Humans1",
+  "desc": "grinning boy with a backwards red cap, band-aid, school bag straps and a slingshot — full body, standing",
+  "tx": 51.0,
+  "ty": 195.0,
+  "sc": 0.74,
+  "face": {
+   "skin": "#C48A5A",
+   "chin": 242,
+   "eyes": [
+    [
+     152.0,
+     184.0,
+     172.0,
+     158.0
+    ],
+    [
+     208.0,
+     242.0,
+     172.0,
+     156.0
+    ]
+   ],
+   "mouth": [
+    196,
+    223
+   ]
+  },
+  "bbox": [
+   114,
+   259,
+   260,
+   610
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "moyna",
+  "name": "Moyna Haque",
+  "bn": "ময়না",
+  "role": "Inspector · 31",
+  "board": "Humans2",
+  "desc": "sharp bob haircut, aviators on her head, one raised eyebrow, khaki uniform — full body, standing",
+  "tx": 51.0,
+  "ty": 92.9,
+  "sc": 0.74,
+  "face": {
+   "skin": "#B07548",
+   "chin": 240,
+   "eyes": [
+    [
+     154.0,
+     186.0,
+     165.0,
+     157.0
+    ],
+    [
+     206.0,
+     238.0,
+     164.0,
+     152.0
+    ]
+   ],
+   "mouth": [
+    196,
+    221
+   ]
+  },
+  "bbox": [
+   116,
+   161,
+   268,
+   609
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "ghontu",
+  "name": "Prof. Ghontu Pal",
+  "bn": "ঘণ্টু",
+  "role": "Inventor · 60",
+  "board": "Humans2",
+  "desc": "wild white hair, brass goggles, one huge eye and a bushy white mustache, lab coat — full body, standing",
+  "tx": 51.0,
+  "ty": 88.5,
+  "sc": 0.74,
+  "face": {
+   "skin": "#C29068",
+   "chin": 246,
+   "eyes": [
+    [
+     156.0,
+     184.0,
+     172.0,
+     162.0
+    ],
+    [
+     202.0,
+     246.0,
+     172.0,
+     146.0
+    ]
+   ],
+   "mouth": [
+    196,
+    227
+   ]
+  },
+  "bbox": [
+   122,
+   107,
+   307,
+   612
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "bhombol",
+  "name": "Bhombol Chowdhury",
+  "bn": "ভোম্বল",
+  "role": "Comic rival · 52",
+  "board": "Humans2",
+  "desc": "bald man with a giant curled mustache, gold sunglasses, diamond-patterned shawl and a ring light behind him — full body, standing",
+  "tx": 51.0,
+  "ty": 90.0,
+  "sc": 0.74,
+  "face": {
+   "skin": "#C79066",
+   "chin": 244,
+   "eyes": [],
+   "mouth": [
+    196,
+    225
+   ]
+  },
+  "bbox": [
+   104,
+   122,
+   287,
+   609
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "kalo-megh",
+  "name": "Kalo Megh",
+  "bn": "কালো মেঘ",
+  "role": "Villain · 45",
+  "board": "Humans2",
+  "desc": "long-faced man with slicked hair and a silver streak, narrow eyes, black suit, red tie and a crow-feather pin, in front of a red sun — full body, standing",
+  "tx": 51.0,
+  "ty": 67.8,
+  "sc": 0.74,
+  "face": {
+   "skin": "#A86F48",
+   "chin": 244,
+   "eyes": [
+    [
+     156.0,
+     188.0,
+     166.0,
+     159.0
+    ],
+    [
+     204.0,
+     236.0,
+     168.0,
+     159.0
+    ]
+   ],
+   "mouth": [
+    196,
+    225
+   ]
+  },
+  "bbox": [
+   133,
+   127,
+   266,
+   609
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "shubho",
+  "name": "Shubho Das",
+  "bn": "শুভ",
+  "role": "Husband · 29",
+  "board": "Families",
+  "desc": "young husband with side-parted hair, rectangular glasses, a sheepish smile, grid-pattern shirt and yellow tie, holding a laptop — full body, standing",
+  "tx": 51.0,
+  "ty": 94.4,
+  "sc": 0.74,
+  "face": {
+   "skin": "#B98258",
+   "chin": 238,
+   "eyes": [
+    [
+     156.0,
+     186.0,
+     166.0,
+     154.0
+    ],
+    [
+     206.0,
+     236.0,
+     166.0,
+     154.0
+    ]
+   ],
+   "mouth": [
+    196,
+    219
+   ]
+  },
+  "bbox": [
+   118,
+   149,
+   264,
+   612
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "rini",
+  "name": "Rini Das",
+  "bn": "রিনি",
+  "role": "Wife · 27",
+  "board": "Families",
+  "desc": "young wife with a messy top bun holding a wooden spoon, flour on her cheek, one eyebrow raised, teal sari and a petal-pattern apron — full body, standing",
+  "tx": 51.0,
+  "ty": 94.4,
+  "sc": 0.74,
+  "face": {
+   "skin": "#C48A5A",
+   "chin": 238,
+   "eyes": [
+    [
+     154.0,
+     186.0,
+     166.0,
+     154.0
+    ],
+    [
+     206.0,
+     238.0,
+     164.0,
+     150.0
+    ]
+   ],
+   "mouth": [
+    196,
+    219
+   ]
+  },
+  "bbox": [
+   129,
+   102,
+   264,
+   612
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "baba",
+  "name": "Haripada Sen",
+  "bn": "বাবা",
+  "role": "Father · 58",
+  "board": "Families",
+  "desc": "laughing father with a rolled-up maroon knitted cap, neat grey mustache, muffler, stitched shawl, umbrella hooked on his shoulder and a newspaper — full body, standing",
+  "tx": 51.0,
+  "ty": 90.0,
+  "sc": 0.74,
+  "face": {
+   "skin": "#B98258",
+   "chin": 244,
+   "eyes": [],
+   "mouth": [
+    196,
+    225
+   ]
+  },
+  "bbox": [
+   109,
+   153,
+   275,
+   612
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "ma",
+  "name": "Mallika Sen",
+  "bn": "মা",
+  "role": "Mother · 52",
+  "board": "Families",
+  "desc": "mother with sindoor in her parting, a big red bindi, one raised eyebrow, alpana-pattern sari, a bunch of keys on her shoulder and a buzzing phone — full body, standing",
+  "tx": 51.0,
+  "ty": 91.4,
+  "sc": 0.74,
+  "face": {
+   "skin": "#B07548",
+   "chin": 242,
+   "eyes": [
+    [
+     156.0,
+     186.0,
+     168.0,
+     160.0
+    ],
+    [
+     206.0,
+     238.0,
+     166.0,
+     152.0
+    ]
+   ],
+   "mouth": [
+    196,
+    223
+   ]
+  },
+  "bbox": [
+   126,
+   164,
+   268,
+   612
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "mitul",
+  "name": "Mitul",
+  "bn": "মিতুল",
+  "role": "Cricket captain · 10",
+  "board": "Kids",
+  "desc": "determined girl with looped braids and red ribbons, a red sweatband, striped jersey and a cricket bat on her shoulder — full body, standing",
+  "tx": 51.0,
+  "ty": 196.5,
+  "sc": 0.74,
+  "face": {
+   "skin": "#B07548",
+   "chin": 240,
+   "eyes": [
+    [
+     154.0,
+     186.0,
+     192.0,
+     180.0
+    ],
+    [
+     206.0,
+     238.0,
+     192.0,
+     180.0
+    ]
+   ],
+   "mouth": [
+    196,
+    221
+   ]
+  },
+  "bbox": [
+   121,
+   273,
+   329,
+   610
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "babai",
+  "name": "Babai",
+  "bn": "বাবাই",
+  "role": "Foodie · 8",
+  "board": "Kids",
+  "desc": "chubby boy with eyes closed in bliss, a cowlick, triangle-print shirt and a paper cone overflowing with puffed-rice snack — full body, standing",
+  "tx": 51.0,
+  "ty": 190.6,
+  "sc": 0.74,
+  "face": {
+   "skin": "#C48A5A",
+   "chin": 248,
+   "eyes": [],
+   "mouth": [
+    196,
+    229
+   ]
+  },
+  "bbox": [
+   129,
+   259,
+   262,
+   612
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "jhumpa",
+  "name": "Jhumpa",
+  "bn": "ঝুম্পা",
+  "role": "Little scientist · 11",
+  "board": "Kids",
+  "desc": "girl with a short bob, freckles and braces, holding a magnifying glass that makes one eye huge, star-print dress — full body, standing",
+  "tx": 51.0,
+  "ty": 195.0,
+  "sc": 0.74,
+  "face": {
+   "skin": "#A86F48",
+   "chin": 242,
+   "eyes": [
+    [
+     154.0,
+     182.0,
+     178.0,
+     166.0
+    ]
+   ],
+   "mouth": [
+    196,
+    223
+   ]
+  },
+  "bbox": [
+   133,
+   273,
+   279,
+   612
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "tutul-card",
+  "name": "Tutul",
+  "bn": "টুটুল",
+  "role": "The littlest · 5",
+  "board": "Kids",
+  "desc": "tiny boy with a bowl haircut and big upward-looking eyes, holding a kite spool, his red kite flying above — full body, standing",
+  "tx": 51.0,
+  "ty": 187.6,
+  "sc": 0.74,
+  "face": {
+   "skin": "#C29068",
+   "chin": 252,
+   "eyes": [
+    [
+     150.0,
+     186.0,
+     192.0,
+     172.0
+    ],
+    [
+     206.0,
+     242.0,
+     192.0,
+     172.0
+    ]
+   ],
+   "mouth": [
+    196,
+    233
+   ]
+  },
+  "bbox": [
+   120,
+   215,
+   303,
+   612
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "mishti-card",
+  "name": "Mishti",
+  "bn": "মিষ্টি",
+  "role": "Narrator cat · channel mascot",
+  "board": "Animals1",
+  "desc": "ginger cat with pointed ears, half-closed green eyes and a red collar with a bell, under a crescent moon",
+  "tx": -19.6,
+  "ty": 165.0,
+  "sc": 1.1,
+  "face": null,
+  "bbox": [
+   97,
+   250,
+   341,
+   620
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "bagha",
+  "name": "Bagha",
+  "bn": "বাঘা",
+  "role": "Gentle giant · tiger",
+  "board": "Animals1",
+  "desc": "big worried tiger with leaf-vein stripes and a checked scarf, a small thundercloud overhead — full body, standing",
+  "tx": 9.8,
+  "ty": 71.1,
+  "sc": 0.95,
+  "face": null,
+  "bbox": [
+   99,
+   145,
+   342,
+   614
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "gyani",
+  "name": "Gyani",
+  "bn": "জ্ঞানী",
+  "role": "Mentor · owl librarian",
+  "board": "Animals1",
+  "desc": "horned owl with gold round spectacles perched on a stack of books",
+  "tx": -19.6,
+  "ty": 165.0,
+  "sc": 1.1,
+  "face": null,
+  "bbox": [
+   79,
+   231,
+   316,
+   613
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "chhotu",
+  "name": "Chhotu",
+  "bn": "ছোটু",
+  "role": "Messenger · myna bird",
+  "board": "Animals1",
+  "desc": "black myna bird with a yellow eye mask, a tiny red messenger bag and a speech bubble",
+  "tx": -19.6,
+  "ty": 165.0,
+  "sc": 1.1,
+  "face": null,
+  "bbox": [
+   24,
+   288,
+   391,
+   585
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "rupoli",
+  "name": "Rupoli",
+  "bn": "রুপোলি",
+  "role": "Diva · hilsa fish",
+  "board": "Animals2",
+  "desc": "glamorous silver hilsa fish with long lashes, red lips and a tiny gold tiara, surrounded by sparkles",
+  "tx": -19.6,
+  "ty": 165.0,
+  "sc": 1.1,
+  "face": null,
+  "bbox": [
+   11,
+   253,
+   380,
+   550
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "shiyal",
+  "name": "Shiyal Pandit",
+  "bn": "শিয়াল পণ্ডিত",
+  "role": "Trickster · fox",
+  "board": "Animals2",
+  "desc": "sly fox with a gold monocle, indigo flame-pattern waistcoat and cream kurta — full body, standing",
+  "tx": 54.9,
+  "ty": 90.9,
+  "sc": 0.72,
+  "face": null,
+  "bbox": [
+   129,
+   134,
+   303,
+   609
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "dhol",
+  "name": "Dhol",
+  "bn": "ঢোল",
+  "role": "Festival DJ · elephant",
+  "board": "Animals2",
+  "desc": "happy elephant with flower-painted ears, teal headphones and a drumstick in his trunk above a red drum — full body, standing",
+  "tx": 19.6,
+  "ty": 79.4,
+  "sc": 0.9,
+  "face": null,
+  "bbox": [
+   58,
+   153,
+   333,
+   609
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "kumir",
+  "name": "Kumir Babu",
+  "bn": "কুমির বাবু",
+  "role": "Moneylender · crocodile",
+  "board": "Animals2",
+  "desc": "crocodile with a toothy grin, a gold tooth and gold pince-nez, an indigo coat, a red ledger and coins — full body, standing",
+  "tx": 9.8,
+  "ty": 65.4,
+  "sc": 0.95,
+  "face": null,
+  "bbox": [
+   43,
+   187,
+   365,
+   635
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "petni",
+  "name": "Petni Pori",
+  "bn": "পেত্নী পরী",
+  "role": "Shy ghost · tamarind tree",
+  "board": "Spirits",
+  "desc": "shy pale ghost girl with huge kohl eyes and long black hair sitting on a tamarind branch with a tiny ring light",
+  "tx": -19.6,
+  "ty": 165.0,
+  "sc": 1.1,
+  "face": null,
+  "bbox": [
+   0,
+   250,
+   391,
+   593
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "bot-dadu",
+  "name": "Bot-Dadu",
+  "bn": "বট-দাদু",
+  "role": "Wise spirit · banyan tree",
+  "board": "Spirits",
+  "desc": "ancient banyan tree with a kind face and glowing eyes in its trunk, a root beard and heart-shaped leaves, a tiny glowing door at its base",
+  "tx": -19.6,
+  "ty": 165.0,
+  "sc": 1.1,
+  "face": null,
+  "bbox": [
+   42,
+   200,
+   349,
+   611
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "jol-konya",
+  "name": "Jol-Konya",
+  "bn": "জল-কন্যা",
+  "role": "River spirit · guardian",
+  "board": "Spirits",
+  "desc": "teal-skinned river spirit with wave-shaped indigo hair and a pink lotus, her body melting into the river, small fish around her — full body, standing",
+  "tx": 51.0,
+  "ty": 97.4,
+  "sc": 0.74,
+  "face": null,
+  "bbox": [
+   79,
+   145,
+   312,
+   628
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "anko-sir",
+  "name": "Anko Sir",
+  "bn": "অঙ্ক স্যার",
+  "role": "Maths teacher · 52",
+  "board": "Townsfolk1",
+  "desc": "bald maths teacher with grey side tufts, thick round glasses, bushy grey brows, grey mustache and a frown, panjabi printed with plus and times signs, holding a ruler and chalk — full body, standing",
+  "tx": 51.0,
+  "ty": 94.4,
+  "sc": 0.74,
+  "face": {
+   "skin": "#C29068",
+   "chin": 238,
+   "eyes": [
+    [
+     156.0,
+     186.0,
+     166.0,
+     154.0
+    ],
+    [
+     206.0,
+     236.0,
+     166.0,
+     154.0
+    ]
+   ],
+   "mouth": [
+    196,
+    219
+   ]
+  },
+  "bbox": [
+   80,
+   139,
+   268,
+   609
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "mitali",
+  "name": "Mitali Bose",
+  "bn": "বিজ্ঞান দিদিমণি",
+  "role": "Science teacher · 38",
+  "board": "Townsfolk1",
+  "desc": "science teacher with a bun skewered by a pencil, cat-eye glasses, a small red bindi and a big smile, white lab coat over a teal sari printed with hexagons, holding a glowing green flask — full body, standing",
+  "tx": 51.0,
+  "ty": 94.4,
+  "sc": 0.74,
+  "face": {
+   "skin": "#B98258",
+   "chin": 238,
+   "eyes": [
+    [
+     156.0,
+     186.0,
+     166.0,
+     154.0
+    ],
+    [
+     206.0,
+     236.0,
+     166.0,
+     154.0
+    ]
+   ],
+   "mouth": [
+    196,
+    219
+   ]
+  },
+  "bbox": [
+   85,
+   133,
+   274,
+   612
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "ghonta-da",
+  "name": "Ghonta-da",
+  "bn": "ঘণ্টাদা",
+  "role": "School peon · 60",
+  "board": "Townsfolk1",
+  "desc": "thin old school peon with cropped grey hair, crinkled happy eyes and a gap-toothed grin, khaki shirt, white dhoti and a ring-patterned gamchha, holding the school gong and a mallet — full body, standing",
+  "tx": 51.0,
+  "ty": 94.4,
+  "sc": 0.74,
+  "face": {
+   "skin": "#8E5B3A",
+   "chin": 238,
+   "eyes": [],
+   "mouth": [
+    196,
+    219
+   ]
+  },
+  "bbox": [
+   69,
+   148,
+   333,
+   612
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "robin",
+  "name": "Robin Sardar",
+  "bn": "রবিন সর্দার",
+  "role": "Security guard · 45",
+  "board": "Townsfolk1",
+  "desc": "sleepy night security guard with a navy peaked cap, heavy-lidded eyes and a thick black mustache, navy uniform, moon-and-star muffler, whistle, bamboo lathi and a torch — full body, standing",
+  "tx": 51.0,
+  "ty": 94.4,
+  "sc": 0.74,
+  "face": {
+   "skin": "#A87452",
+   "chin": 238,
+   "eyes": [
+    [
+     156.0,
+     186.0,
+     166.0,
+     154.0
+    ],
+    [
+     206.0,
+     236.0,
+     166.0,
+     154.0
+    ]
+   ],
+   "mouth": [
+    196,
+    219
+   ]
+  },
+  "bbox": [
+   124,
+   158,
+   297,
+   609
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "montu",
+  "name": "Montu-da",
+  "bn": "মন্টুদা (চা-ওয়ালা)",
+  "role": "Tea seller · 40",
+  "board": "Townsfolk2",
+  "desc": "tea seller with wavy black hair, a thin mustache and a huge toothy smile, white vest, green checked lungi and a red check gamchha, holding a steaming kettle and a stack of clay cups — full body, standing",
+  "tx": 51.0,
+  "ty": 94.4,
+  "sc": 0.74,
+  "face": {
+   "skin": "#A87452",
+   "chin": 238,
+   "eyes": [
+    [
+     156.0,
+     186.0,
+     166.0,
+     154.0
+    ],
+    [
+     206.0,
+     236.0,
+     166.0,
+     154.0
+    ]
+   ],
+   "mouth": [
+    196,
+    219
+   ]
+  },
+  "bbox": [
+   59,
+   160,
+   275,
+   612
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "kashem",
+  "name": "Kashem Mia",
+  "bn": "কাশেম মিয়া",
+  "role": "Rickshaw puller · 35",
+  "board": "Townsfolk2",
+  "desc": "lean rickshaw puller with short hair under a red check gamchha headband, stubble and a friendly smile, white vest, rickshaw-art flower lungi folded to the knee, holding a brass bulb horn and waving — full body, standing",
+  "tx": 51.0,
+  "ty": 94.4,
+  "sc": 0.74,
+  "face": {
+   "skin": "#8E5B3A",
+   "chin": 238,
+   "eyes": [
+    [
+     156.0,
+     186.0,
+     166.0,
+     154.0
+    ],
+    [
+     206.0,
+     236.0,
+     166.0,
+     154.0
+    ]
+   ],
+   "mouth": [
+    196,
+    219
+   ]
+  },
+  "bbox": [
+   95,
+   165,
+   307,
+   612
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "bablu",
+  "name": "Bablu Ustad",
+  "bn": "বাবলু ওস্তাদ",
+  "role": "Bus driver · 48",
+  "board": "Townsfolk2",
+  "desc": "big-bellied bus driver with a comb-over, yellow mirrored aviators, thick brows, a black mustache and paan-red lips, triangle-patterned red shirt and a towel round his neck, gripping a steering wheel — full body, standing",
+  "tx": 51.0,
+  "ty": 95.9,
+  "sc": 0.74,
+  "face": {
+   "skin": "#B98258",
+   "chin": 236,
+   "eyes": [
+    [
+     156.0,
+     186.0,
+     166.0,
+     154.0
+    ],
+    [
+     206.0,
+     236.0,
+     166.0,
+     154.0
+    ]
+   ],
+   "mouth": [
+    196,
+    217
+   ]
+  },
+  "bbox": [
+   129,
+   171,
+   262,
+   609
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "pintu",
+  "name": "Pintu",
+  "bn": "পিন্টু (ফুচকাওয়ালা)",
+  "role": "Fuchka seller · 24",
+  "board": "Townsfolk2",
+  "desc": "young fuchka seller with spiky hair and a cheeky lopsided grin, a big basket of golden puris balanced on his head, red polka-dot kurta and rolled jeans, holding up one puri dripping tamarind water — full body, standing",
+  "tx": 51.0,
+  "ty": 94.4,
+  "sc": 0.74,
+  "face": {
+   "skin": "#C29068",
+   "chin": 238,
+   "eyes": [
+    [
+     156.0,
+     186.0,
+     166.0,
+     154.0
+    ],
+    [
+     206.0,
+     236.0,
+     166.0,
+     154.0
+    ]
+   ],
+   "mouth": [
+    196,
+    219
+   ]
+  },
+  "bbox": [
+   116,
+   113,
+   281,
+   610
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "dr-ruksana",
+  "name": "Dr. Ruksana Ahmed",
+  "bn": "ডাক্তার রুকসানা",
+  "role": "Doctor · 40",
+  "board": "Townsfolk3",
+  "desc": "kind doctor with side-swept black hair in a low bun, warm smile and small stud earrings, white coat over a heartbeat-line kameez, stethoscope round her neck, holding a clipboard and pen — full body, standing",
+  "tx": 51.0,
+  "ty": 94.4,
+  "sc": 0.74,
+  "face": {
+   "skin": "#C29068",
+   "chin": 238,
+   "eyes": [
+    [
+     156.0,
+     186.0,
+     166.0,
+     154.0
+    ],
+    [
+     206.0,
+     236.0,
+     166.0,
+     154.0
+    ]
+   ],
+   "mouth": [
+    196,
+    219
+   ]
+  },
+  "bbox": [
+   126,
+   164,
+   269,
+   609
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "shefali",
+  "name": "Sister Shefali",
+  "bn": "সিস্টার শেফালি",
+  "role": "Nurse · 30",
+  "board": "Townsfolk3",
+  "desc": "brisk nurse with neat middle-parted hair, a folded white cap with a teal stripe, one raised eyebrow and a pen behind her ear, white sari with teal border, carrying a medicine tray and a clipboard — full body, standing",
+  "tx": 51.0,
+  "ty": 94.4,
+  "sc": 0.74,
+  "face": {
+   "skin": "#B98258",
+   "chin": 238,
+   "eyes": [
+    [
+     156.0,
+     186.0,
+     166.0,
+     154.0
+    ],
+    [
+     206.0,
+     236.0,
+     166.0,
+     154.0
+    ]
+   ],
+   "mouth": [
+    196,
+    219
+   ]
+  },
+  "bbox": [
+   111,
+   143,
+   265,
+   609
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "gopal",
+  "name": "Havildar Gopal Dhar",
+  "bn": "হাবিলদার গোপাল",
+  "role": "Police constable · 50",
+  "board": "Townsfolk3",
+  "desc": "round-faced police constable with a khaki-brown beret, small eyes, bushy brows and a droopy mustache with muri crumbs, chevron khaki uniform with a big belly, lathi over his shoulder and a paper cone of jhalmuri — full body, standing",
+  "tx": 51.0,
+  "ty": 97.4,
+  "sc": 0.74,
+  "face": {
+   "skin": "#A87452",
+   "chin": 234,
+   "eyes": [
+    [
+     156.0,
+     186.0,
+     166.0,
+     154.0
+    ],
+    [
+     206.0,
+     236.0,
+     166.0,
+     154.0
+    ]
+   ],
+   "mouth": [
+    196,
+    215
+   ]
+  },
+  "bbox": [
+   88,
+   157,
+   272,
+   609
+  ],
+  "kind": "card"
+ },
+ {
+  "slug": "haridas",
+  "name": "Haridas the postman",
+  "bn": "ডাকপিয়ন হরিদাস",
+  "role": "Postman · 58",
+  "board": "Townsfolk3",
+  "desc": "cheerful old postman with a khaki peaked cap, white hair and a big white mustache, half-moon glasses low on his nose, khaki uniform with a red envelope-print mailbag, closed black umbrella, holding up a letter — full body, standing",
+  "tx": 51.0,
+  "ty": 94.4,
+  "sc": 0.74,
+  "face": {
+   "skin": "#C29068",
+   "chin": 238,
+   "eyes": [
+    [
+     156.0,
+     186.0,
+     166.0,
+     154.0
+    ],
+    [
+     206.0,
+     236.0,
+     166.0,
+     154.0
+    ]
+   ],
+   "mouth": [
+    196,
+    219
+   ]
+  },
+  "bbox": [
+   114,
+   161,
+   296,
+   609
+  ],
+  "kind": "card"
+ }
+]

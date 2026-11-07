@@ -1,0 +1,31 @@
+<defs><clipPath id="tutul-card--hcTutul"><rect x="-300" y="-300" width="1000" height="553"/></clipPath></defs><defs><pattern id="tutul-card--k-kite" width="24" height="28" patternUnits="userSpaceOnUse"><rect width="24" height="28" fill="#E58BA0"/><path d="M12 3 L19 12 L12 21 L5 12Z" fill="#E3A92B" stroke="#C8341F" stroke-width="1.5"/><path d="M12 21 Q15 24 12 28" stroke="#C8341F" stroke-width="1.2" fill="none"/></pattern></defs><g transform="translate(51.0,187.6) scale(0.74)"><g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M184.0 234 L184.0 268 Q196 274 208.0 268 L208.0 234Z" fill="#C29068"/><path d="M168 424 L166 556 L190 556 L194 424Z M198 424 L202 556 L226 556 L224 424Z" fill="#F3B6C4"/><ellipse cx="176" cy="562" rx="22" ry="10" fill="#C29068"/><ellipse cx="216" cy="562" rx="22" ry="10" fill="#C29068"/><path d="M144 266 L248 266 Q268 304 272 474 Q196 490 120 474 Q124 304 144 266Z" fill="url(#tutul-card--k-kite)"/><path d="M146 278 L120 354 L124 414" fill="none" stroke="#1C1410" stroke-width="24"/><path d="M146 278 L120 354 L124 414" fill="none" stroke="#E58BA0" stroke-width="16"/><circle cx="124" cy="418" r="11" fill="#C29068"/><rect x="100" y="420" width="46" height="50" rx="4" fill="#8A3B12"/><ellipse cx="123" cy="420" rx="27" ry="7" fill="#E3A92B"/><ellipse cx="123" cy="470" rx="27" ry="7" fill="#E3A92B"/><path d="M123 414 Q200 224 300 136" fill="none" stroke-width="1.5"/><path d="M246 278 L270 354 L262 414" fill="none" stroke="#1C1410" stroke-width="24"/><path d="M246 278 L270 354 L262 414" fill="none" stroke="#E58BA0" stroke-width="16"/><circle cx="262" cy="418" r="11" fill="#C29068"/></g><g clip-path="url(#tutul-card--hcTutul)">
+
+
+
+
+<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+<path d="M300 40 L340 88 L300 136 L260 88Z" fill="#C8341F"/>
+<path d="M300 40 L300 136 M260 88 L340 88" stroke="#E3A92B" stroke-width="3"/>
+<path d="M300 136 Q290 156 304 172 Q318 188 306 206" fill="none" stroke-width="2.5"/>
+<path d="M296 154 L304 160 L294 164Z M306 186 L314 192 L304 196Z" fill="#E3A92B" stroke-width="2"/>
+<path d="M104 400 Q108 318 160 304 L232 304 Q284 318 288 400Z" fill="url(#tutul-card--k-kite)"/>
+<path d="M180 248 L180 308 Q196 314 212 308 L212 248Z" fill="#C29068"/>
+<path d="M160 304 Q196 326 232 304" fill="none"/>
+<rect x="86" y="326" width="54" height="56" rx="4" fill="#8A3B12"/>
+<ellipse cx="113" cy="326" rx="31" ry="9" fill="#E3A92B"/><ellipse cx="113" cy="382" rx="31" ry="9" fill="#E3A92B"/>
+<path d="M96 344 L130 344 M96 360 L130 360" stroke="#E3A92B" stroke-width="3"/>
+<circle cx="130" cy="196" r="12" fill="#C29068"/><circle cx="262" cy="196" r="12" fill="#C29068"/>
+<ellipse cx="196" cy="190" rx="64" ry="62" fill="#C29068"/>
+<path d="M130 196 Q126 120 196 118 Q266 120 262 196 L254 172 L138 172Z" fill="#1C1410"/>
+<path d="M152 160 Q166 150 180 158" fill="none" stroke="#C29068" stroke-width="0"/>
+<path d="M150 192 Q168 172 186 192 Q168 204 150 192Z" fill="#FBF5E9" stroke-width="3"/>
+<path d="M206 192 Q224 172 242 192 Q224 204 206 192Z" fill="#FBF5E9" stroke-width="3"/>
+<circle cx="174" cy="186" r="8" fill="#1C1410" stroke="none"/><circle cx="230" cy="186" r="8" fill="#1C1410" stroke="none"/>
+<path d="M146 190 Q168 168 190 190" fill="none" stroke-width="5"/><path d="M202 190 Q224 168 246 190" fill="none" stroke-width="5"/>
+<path d="M196 192 L193 212 Q196 216 201 213" fill="none"/>
+
+<ellipse cx="200" cy="234" rx="8" ry="9" fill="#1C1410"/>
+</g>
+<circle cx="177" cy="183" r="2.6" fill="#FBF5E9"/><circle cx="233" cy="183" r="2.6" fill="#FBF5E9"/>
+<g fill="#E58BA0" opacity="0.6"><ellipse cx="156" cy="214" rx="11" ry="6"/><ellipse cx="238" cy="214" rx="11" ry="6"/></g>
+</g><g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"></g></g>
