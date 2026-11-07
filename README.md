@@ -37,7 +37,8 @@ No internet, no AI service, no accounts, no subscriptions. It runs on a normal W
 | **Lip-sync** | Mouths move with your voice recordings. Characters blink and breathe on their own. |
 | **Objects** | Ball, bat and stumps built in; any picture you add can be held, thrown, dropped, spun or swung. |
 | **Camera** | Wide, medium, close-up, push-in, pull-out, pans, follow, follow-the-ball, camera shake. |
-| **Sound** | 6 music moods made from Bengali folk instruments (dotara, tabla, bansuri, bells) that automatically get quieter under voices, plus 23 sound effects. You can add your own sounds. |
+| **Sound** | 6 music moods made from Bengali folk instruments (dotara, tabla, bansuri, bells) that sit well under the voices and duck smoothly while someone speaks, plus 23 sound effects. You can add your own sounds. |
+| **Cinematic look** | Day, evening and night colour grades, a soft key light on the character the shot is about, background haze, soft-focus close-ups, and a film-style camera that frames faces. |
 | **Subtitles** | English and Bangla, burned into the video. |
 | **Your own art** | Add your own characters, objects and places. They rig themselves automatically. |
 
@@ -162,6 +163,8 @@ How the automatic choice works:
 - **What they do:** cheering means excited, covering the face means scared, a facepalm means embarrassed, hands on hips means stern.
 - **Emotes:** "!" means surprised, "anger" means angry, "sweat" means nervous.
 - **Listening:** listeners react to strong lines, and eyes follow the speaker.
+
+Sweat drops, anger marks, "!", "?" and hearts are placed and sized from each character's head, so they stay on the face.
 
 ![Expressions](docs/images/expressions.png)
 

@@ -373,7 +373,7 @@ def gated_rms(x, thr_db=-40):
     return float(np.sqrt(np.mean(keep ** 2))) if len(keep) else 1e-9
 
 
-def mix(total, voices, music_segs, sfx_events, music_db=-7.0):
+def mix(total, voices, music_segs, sfx_events, music_db=-15.0, sfx_db=-8.0):
     """voices: [(start, samples)]; music_segs: [(start, end, mood)]; sfx_events: [(time, name, gain)]."""
     n = int(total * SR) + SR
     v = np.zeros(n)
@@ -396,17 +396,23 @@ def mix(total, voices, music_segs, sfx_events, music_db=-7.0):
             k2 = int(0.12 * SR)
             ve = np.sqrt(np.convolve(v ** 2, np.ones(k2) / k2, mode='same'))
             act = np.clip(ve / (vr * 0.25), 0, 1)
-            act = np.convolve(act, np.ones(int(0.25 * SR)) / int(0.25 * SR), mode='same')
-            m *= 1 - 0.55 * np.clip(act * 1.5, 0, 1)
+            # duck: fast down when someone speaks, slow back up after the line (no pumping)
+            hop = SR // 100
+            a100 = act[:len(act) // hop * hop].reshape(-1, hop).max(axis=1)
+            w = 60                                           # keep ducked for 0.6 s after speech
+            held = np.lib.stride_tricks.sliding_window_view(np.pad(a100, (w - 1, 0)), w).max(axis=1)
+            held = np.convolve(held, np.ones(20) / 20, mode='same')
+            act = np.interp(np.arange(len(act)), np.arange(len(held)) * hop, held)
+            m *= 1 - 0.68 * np.clip(act * 1.5, 0, 1)        # about -10 dB under dialogue
     fx = np.zeros(n)
     for t, name, gain in sfx_events:
         if name in SFX:
             at(fx, SFX[name][1]() * gain, t)
     if np.any(fx):
-        fx *= (vr * 0.45) / gated_rms(fx)
+        fx *= (vr * 10 ** (sfx_db / 20)) / gated_rms(fx)
         vp = np.abs(v).max() if np.any(v) else 0.5
-        if np.abs(fx).max() > 0.8 * vp:
-            fx *= 0.8 * vp / np.abs(fx).max()
+        if np.abs(fx).max() > 0.7 * vp:
+            fx *= 0.7 * vp / np.abs(fx).max()
     out = v + m + fx
     out = out[:int(total * SR)]
     pk = np.abs(out).max()

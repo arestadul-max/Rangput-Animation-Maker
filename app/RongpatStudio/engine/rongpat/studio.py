@@ -22,6 +22,7 @@ def _init(blob, px):
     shots, = pickle.loads(blob)
     _movie = E.Movie(shots, E.Library())
     _px = px
+    E.PREVIEW[0] = px[0] < 1000
 
 
 def _render(f):
@@ -126,12 +127,12 @@ def make(project, preview=False, shots_sel=None, jobs=None):
     if preview:
         cmd = [ff, '-y', '-v', 'error', '-f', 'image2pipe', '-framerate', str(E.FPS), '-c:v', 'png', '-i', '-', '-i', wav,
                '-c:v', 'libx264', '-preset', 'ultrafast', '-crf', '26', '-pix_fmt', 'yuv420p',
-               '-af', 'loudnorm=I=-13:TP=-1.5:LRA=11', '-c:a', 'aac', '-b:a', '160k', '-shortest', '-movflags', '+faststart', out]
+               '-af', 'loudnorm=I=-14:TP=-1.5:LRA=11', '-c:a', 'aac', '-b:a', '160k', '-shortest', '-movflags', '+faststart', out]
     else:
         cmd = [ff, '-y', '-v', 'error', '-f', 'image2pipe', '-framerate', str(E.FPS), '-c:v', 'png', '-i', '-', '-loop', '1', '-i', grain, '-i', wav,
                '-filter_complex', '[1:v]format=rgb24,scale=1080:1920[g];[0:v]format=rgb24[v];[v][g]blend=all_mode=overlay:all_opacity=0.16:shortest=1,format=yuv420p[o]',
                '-map', '[o]', '-map', '2:a', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18',
-               '-af', 'loudnorm=I=-13:TP=-1.5:LRA=11', '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', out]
+               '-af', 'loudnorm=I=-14:TP=-1.5:LRA=11', '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', out]
     jobs = jobs or max(1, cpu_count() - 1)
     print(f'Drawing {movie.nframes} frames on {jobs} CPU cores ({"preview" if preview else "full HD"}) ...')
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE, **A._noconsole())

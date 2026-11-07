@@ -71,10 +71,38 @@ def detect_face(inner, transform):
     clip = inner[inner.find('clip-path='):] if 'clip-path=' in inner else inner
     eyes = [(float(m.group(1)), float(m.group(5)), float(m.group(2)), float(m.group(4))) for m in EYE.finditer(clip)][:2]
     fm = FACE.search(clip)
+    closed = False
+    if not eyes and fm:
+        eyes, closed = closed_eyes(clip, fm), True
     if not eyes or not fm:
         return None
     chin = float(fm.group(1)) + float(fm.group(3))
-    return dict(skin=fm.group(4), chin=chin, eyes=eyes, mouth=[196, chin - 19])
+    out = dict(skin=fm.group(4), chin=chin, eyes=eyes, mouth=[196, chin - 19])
+    if closed:
+        out['closed'] = True
+    return out
+
+
+ARC = re.compile(r'<path d="M([0-9.]+) ([0-9.]+) Q([0-9.]+) ([0-9.]+) ([0-9.]+) ([0-9.]+)" fill="none" stroke-width="[5-7]"/>')
+
+
+def closed_eyes(clip, fm):
+    """Cards drawn with shut eyes (two lid arcs): give the app open eyes it can animate."""
+    cy, ry = float(fm.group(1)), float(fm.group(3))
+    arcs = []
+    for m in ARC.finditer(clip):
+        x0, y0, qx, qy, x1, y1 = map(float, m.groups())
+        if abs(y0 - y1) < 1 and 24 <= x1 - x0 <= 44 and cy - ry * 0.5 < y0 < cy + ry * 0.3 and abs(qy - y0) > 6:
+            arcs.append((x0, x1, y0, qy))
+    left = [a for a in arcs if a[1] <= 198]
+    right = [a for a in arcs if a[0] >= 194]
+    if not left or not right:
+        return []
+    out = []
+    for x0, x1, y0, qy in (left[0], right[0]):
+        y = y0 + (5 if qy > y0 else 3)
+        out.append((x0, x1, y, y - 12))
+    return out
 
 
 # ------------------------------------------------------------------ bible boards -> library

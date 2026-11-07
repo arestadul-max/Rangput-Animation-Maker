@@ -37,6 +37,17 @@ def ik(S, T, L1, L2, out):
     return E, H
 
 
+def leg_solve(Hj, F, L, sgn, squat=False):
+    """Cartoon legs: straight and planted when standing or stepping (a lifted foot just shortens the leg, as if it
+    comes toward the camera); the knees only open outward in a real squat, never inward."""
+    d = math.hypot(F[0] - Hj[0], F[1] - Hj[1])
+    if squat:                                # squat / crouch: knees out like a wicketkeeper
+        K, F2 = ik(Hj, F, L, L, sgn)
+        return K, F2
+    K = ((Hj[0] + F[0]) / 2 + sgn * 2.5, (Hj[1] + F[1]) / 2)
+    return K, F
+
+
 def P(p):
     return f'{p[0]:.1f} {p[1]:.1f}'
 
@@ -90,12 +101,12 @@ def prop_at(name, hand, angle):
 
 # ------------------------------------------------------------------ rig specs
 def _kid(slug, skin, chin, sleeve, legs, socks, shoe, shorts, torso, behind='', front='', shoulders=(148, 244), props=None,
-         head_strip=(), head_add='', eyes=None, mouth=None, arm_w=16):
+         head_strip=(), head_add='', eyes=None, mouth=None, arm_w=16, hip_half=22):
     sy = chin + 12
     return dict(slug=slug, skin=skin, chin=chin, sy=sy, hip=sy + 130, feet=sy + 300, sleeve=sleeve, short=True,
                 legcol=legs, socks=socks, shoe=shoe, lower=shorts, torso=torso, behind=behind, front=front,
                 sh=((shoulders[0], sy + 14), (shoulders[1], sy + 14)), L1=66, L2=64, arm_w=arm_w,
-                hipx=(180, 212), props=props or {}, head_strip=head_strip, head_add=head_add, eyes=eyes, mouth=mouth)
+                hipx=(196 - hip_half, 196 + hip_half), props=props or {}, head_strip=head_strip, head_add=head_add, eyes=eyes, mouth=mouth)
 
 
 def _shorts(top, bottom, fill, w):
@@ -122,7 +133,7 @@ def specs():
                       _tunic(sy, 140, 'url(#mitul--k-stripe)', flare=2, half=52))
     sy = 260
     S['babai'] = _kid('babai', '#C48A5A', 248, '#E07A2E', '#C48A5A', None, '#2C3E8C', _shorts(sy + 110, sy + 182, '#6B5A3A', 44),
-                      _tunic(sy, 146, 'url(#babai--k-tri)', flare=4, half=60, belly=18), shoulders=(140, 252))
+                      _tunic(sy, 146, 'url(#babai--k-tri)', flare=4, half=60, belly=18), shoulders=(140, 252), hip_half=26)
     sy = 254
     lens = [r'<path d="M252 204 L298 268" stroke-width="16"/><path d="M252 204 L298 268" stroke="#8A3B12" stroke-width="9"/>',
             r'<circle cx="228" cy="178" r="42" fill="#DCEFF4"/>', r'<path d="M196 178 Q228 144 260 178 Q228 200 196 178Z" fill="#FBF5E9" stroke-width="4"/>',
@@ -131,7 +142,7 @@ def specs():
             r'<circle cx="233" cy="170" r="4.5" fill="#FBF5E9"/>']
     S['jhumpa'] = _kid('jhumpa', '#A86F48', 242, '#2C3E8C', '#A86F48', None, '#E3A92B', '',
                        _tunic(sy, 200, 'url(#jhumpa--k-star)', flare=22, half=50) + f'<path d="M160 {sy} Q196 {sy + 28} 232 {sy}" fill="none" stroke="#FBF5E9" stroke-width="6"/>',
-                       shoulders=(146, 246), head_strip=lens,
+                       shoulders=(146, 246), hip_half=18, head_strip=lens,
                        head_add=('<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">'
                                  '<path d="M210 178 Q224 166 238 178 Q224 186 210 178Z" fill="#FBF5E9" stroke-width="3"/><circle cx="226" cy="177" r="5.5" fill="#1C1410" stroke="none"/>'
                                  '<path d="M206 176 Q224 162 242 176" fill="none" stroke-width="5"/><path d="M210 160 Q224 150 240 158" fill="none" stroke-width="5"/></g>'
@@ -187,7 +198,7 @@ def _ease(u):
 # each pose function: (R, u seconds since start, t absolute) -> partial pose dict. Durations: None = held until another pose.
 def p_bat_ready(R, u, t):
     (lx, ly), (rx, ry) = R['sh']
-    return dict(lh=(rx - 10, ly + 96), rh=(rx + 2, ly + 104), bat=('r', 200 + 4 * math.sin(t * 3)), dy=10, lean=-4, head=-4)
+    return dict(lh=(rx - 10, ly + 96), rh=(rx + 2, ly + 104), bat=('r', 200 + 4 * math.sin(t * 3)), dy=5, lean=-4, head=-4)
 
 
 def p_swing(R, u, t):
@@ -326,6 +337,21 @@ POSES = {
 }
 
 
+def _gesture(R, n, t):
+    (lx, ly), (rx, ry) = R['sh']
+    L = R['L1'] + R['L2']
+    b = 6 * math.sin(t * 5)
+    if n == 0:   # right hand open, palm up
+        return dict(rh=(rx + 50, ry + 46 + b))
+    if n == 1:   # both hands out: "what can I do?"
+        return dict(lh=(lx - 46, ly + 58 - b), rh=(rx + 46, ry + 58 + b))
+    if n == 2:   # left hand explains
+        return dict(lh=(lx - 50, ly + 44 - b))
+    if n == 3:   # hand on the chest: "me"
+        return dict(rh=((lx + rx) / 2 + 10, ry + 46 + b * 0.3))
+    return dict(rh=(rx + 34, ry + 70 + b), lh=(lx - 20, ly + L - 24))   # small beat with the hand
+
+
 def pose_at(R, slug, acts, t, moving=None, talk=0.0):
     """acts: list of (name, start) for pose actions, sorted. Returns final pose dict."""
     base = idle_auto(R, t) if R.get('auto') else _idle(R, t)
@@ -351,11 +377,22 @@ def pose_at(R, slug, acts, t, moving=None, talk=0.0):
         u = t - cur[1]
         w = _ease(u / 0.12) * _ease((dur - u) / 0.15)
         pose = _mix(pose, fn(R, u, t), w)
-    if talk > 0.1 and not cur and not (hold and hold[0] not in ('hands-on-hips', 'keeper')):
-        (rx, ry) = R['sh'][1]
-        g = 0.5 + 0.5 * math.sin(t * 4.2)
-        pose = _mix(pose, dict(rh=(rx + 40 + 16 * g, ry + 50 - 40 * g)), 0.8)
-        pose['head'] = pose.get('head', 0) + 3 * math.sin(t * 7) * talk
+    free = not cur and not (hold and hold[0] not in ('hands-on-hips', 'keeper'))
+    if talk > 0.1 and free:
+        # talking with the hands, the way 2D cartoon actors do: a new gesture every beat, eased in and out
+        seg = 1.5
+        k = int(t / seg)
+        u = (t - k * seg) / seg
+        g = _gesture(R, (k * 7 + len(slug)) % 5, t)
+        w = _ease(u / 0.25) * _ease((1 - u) / 0.25)
+        pose = _mix(pose, g, 0.85 * w)
+        pose['head'] = pose.get('head', 0) + 4 * math.sin(t * 6.5) * talk
+        pose['lean'] = pose.get('lean', 0) + 2.5 * w
+    elif free and not hold:
+        # standing still is never frozen: weight shifts and small head turns
+        ph = len(slug) * 0.9
+        pose['lean'] = pose.get('lean', 0) + 1.6 * math.sin(t * 0.55 + ph)
+        pose['head'] = pose.get('head', 0) + 2.0 * math.sin(t * 0.37 + ph)
     if moving:
         run, ph = moving
         sw = math.sin(ph * math.pi * 2)
@@ -381,14 +418,15 @@ def draw(R, head_defs, head_svg, pose, props, blink=0.0, talk=0.0, face=None):
     out = ''
     # legs (IK from hip to foot, knees bend outward)
     legs = ''
+    LT = (feet - 6 - (hip + 34)) / 2
     for side, hx, lift_k, sgn in (('l', hx0, 'lf_lift', -1), ('r', hx1, 'rf_lift', 1)):
         Hj = (hx, hip + 34 + dy)
         lift = pose.get(lift_k, 0.0)
-        F = (hx - sgn * lift * 0.25, feet - 6 - lift)
-        K, F2 = ik(Hj, F, LT, LT, sgn)
+        F = (hx + sgn * (4 + max(0.0, dy) * 0.6), feet - 6 - lift)
+        K, F2 = leg_solve(Hj, F, LT, sgn, dy > 8)
         legs += limb(Hj, K, F2, R['legcol'], 22, R['socks'], 0.55)
         shoe = R['shoe']
-        legs += f'<ellipse cx="{F2[0] + sgn * 4:.1f}" cy="{F2[1] + 4:.1f}" rx="20" ry="10" fill="{shoe}"/>'
+        legs += f'<ellipse cx="{F2[0] + sgn * 7:.1f}" cy="{F2[1] + 4:.1f}" rx="20" ry="10" fill="{shoe}"/>'
     # upper body group, leaning around the hip centre and moved by dy
     up_tf = f'translate(0,{dy:.1f}) rotate({lean:.1f} 196 {hip:.1f})'
     torso = R['torso']
@@ -532,13 +570,13 @@ def draw_auto(R, head_defs, head_svg, pose, blink=0.0, talk=0.0, face=None):
         w, gap = lg['w'], lg['gap']
         top = lg['top']
         fo = R.get('foot') or {}
-        LT = (feet - 8 - (top + 10)) / 2 + 3
+        LT = (feet - 8 - (top + 10)) / 2
         for sgn, lift_k in ((-1, 'lf_lift'), (1, 'rf_lift')):
             hx = 196 + sgn * (gap + w / 2)
             Hj = (hx, top + 10 + dy)
             lift = pose.get(lift_k, 0.0)
-            F = (hx + sgn * 2 - sgn * lift * 0.25, feet - 8 - lift)
-            K, F2 = ik(Hj, F, LT, LT, sgn)
+            F = (hx + sgn * (3 + max(0.0, dy) * 0.6), feet - 8 - lift)
+            K, F2 = leg_solve(Hj, F, LT, sgn, dy > 8)
             legs += limb(Hj, K, F2, lg['fill'], max(18, w * 0.8))
             spread = fo.get('spread', 24)
             legs += _shoe(F2[0], F2[1] + 6, fo.get('kind'), fo.get('color', INK), fo.get('skin', R['skin']), sgn)

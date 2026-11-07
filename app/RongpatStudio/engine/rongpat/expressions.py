@@ -10,7 +10,7 @@ CONCH = '#FBF5E9'
 
 # brow: (inner lift, outer lift, angle bias); lid: top lid closure 0..1; low: lower lid raise; eye: eye size;
 # pupil: pupil size; mouth: smile curve (-1 frown .. 1 big smile), open: base mouth opening 0..1, wide: width factor
-BASE = dict(brow_in=0.0, brow_out=0.0, lid=0.0, low=0.0, eye=1.0, pupil=1.0, smile=0.15, open=0.0, wide=1.0,
+BASE = dict(brow_in=0.0, brow_out=0.0, lid=0.0, low=0.0, eye=1.1, pupil=1.0, smile=0.15, open=0.0, wide=1.0,
             teeth=0.0, blush=0.0, sweat=0.0, tears=0.0, vein=0.0, wobble=0.0, tilt=0.0)
 EXPR = {
     'neutral': {},
@@ -151,6 +151,7 @@ def draw_face(face, e, blink, talk, gaze=(0, 0), t=0.0):
     if len(eyes) == 1:
         eyes = []          # one visible eye (e.g. behind a magnifier): leave the eyes as drawn
     lid = max(e['lid'], blink)
+    closed = bool(face.get('closed'))
     for i, (x0, x1, y, yt) in enumerate(eyes):
         cx = (x0 + x1) / 2
         w = (x1 - x0) / 2 * e['eye']
@@ -159,7 +160,10 @@ def draw_face(face, e, blink, talk, gaze=(0, 0), t=0.0):
         sgn = -1 if i == 0 else 1
         # redraw the eye so the pupils can look around and change size
         almond = f'M{cx - w:.1f} {y:.1f} Q{cx:.1f} {y - up * 1.9:.1f} {cx + w:.1f} {y:.1f} Q{cx:.1f} {y + dn * 1.6:.1f} {cx - w:.1f} {y:.1f}Z'
-        out += f'<path d="M{x0 - 3:.1f} {y + 1:.1f} Q{cx:.1f} {yt - 8:.1f} {x1 + 3:.1f} {y + 1:.1f} Q{cx:.1f} {y + 9:.1f} {x0 - 3:.1f} {y + 1:.1f}Z" fill="{skin}" stroke="none"/>'
+        # hide the eye (and brow) painted on the card, so the redrawn one never doubles up into a dark "mask"
+        top = yt - (22 if closed else 12)
+        out += (f'<ellipse cx="{cx:.1f}" cy="{(top + y + 11) / 2:.1f}" rx="{(x1 - x0) / 2 + 9:.1f}" ry="{(y + 11 - top) / 2:.1f}" '
+                f'fill="{skin}" stroke="none"/>')
         out += f'<path d="{almond}" fill="{CONCH}" stroke="{INK}" stroke-width="3"/>'
         pr = 5.5 * e['pupil']
         px, py = cx + gaze[0] + e['tilt'] * 0.0, y - up * 0.25 + gaze[1]
@@ -175,7 +179,7 @@ def draw_face(face, e, blink, talk, gaze=(0, 0), t=0.0):
             out += f'<path d="M{cx - w:.1f} {y + 3:.1f} Q{cx:.1f} {y - 4 * e["low"]:.1f} {cx + w:.1f} {y + 3:.1f}" fill="none" stroke="{INK}" stroke-width="2.5"/>'
         # brow: inner end near the nose, outer end away from it
         bi, bo = e['brow_in'], e['brow_out']
-        by = yt - 14
+        by = yt - (16 if closed else 14)
         inner_x, outer_x = (x1, x0) if i == 0 else (x0, x1)
         tilt = e['tilt'] * (6 if i == 1 else -1)
         out += (f'<path d="M{outer_x + sgn * 2:.1f} {by - bo - tilt:.1f} Q{cx:.1f} {by - (bi + bo) / 2 - 4 - tilt:.1f} {inner_x - sgn * 2:.1f} {by - bi - tilt:.1f}" '
@@ -206,16 +210,5 @@ def draw_face(face, e, blink, talk, gaze=(0, 0), t=0.0):
             out += f'<path d="M{mx - w * 0.8:.1f} {top + 1:.1f} L{mx + w * 0.8:.1f} {top + 1:.1f} L{mx + w * 0.7:.1f} {top + 5:.1f} L{mx - w * 0.7:.1f} {top + 5:.1f}Z" fill="{CONCH}" stroke="none"/>'
         if h > 9:
             out += f'<ellipse cx="{mx:.1f}" cy="{bot_c - 4:.1f}" rx="{w * 0.5:.1f}" ry="{min(5, h * 0.25):.1f}" fill="#C8341F" stroke="none"/>'
-    mx0, my0 = face['mouth']
-    ref = eyes[-1] if eyes else (mx0 + 6, mx0 + 34, my0 - 44, my0 - 56)
-    if e['sweat'] > 0.1:
-        (x0, x1, y, yt) = ref
-        k = (t * 0.8) % 1
-        out += f'<path d="M{x1 + 18:.1f} {yt - 4 + 10 * k:.1f} q-7 12 0 17 q7 -5 0 -17Z" fill="#BFE3EE" stroke="{INK}" stroke-width="2" opacity="{e["sweat"]:.2f}"/>'
-    if e['vein'] > 0.3:
-        (x0, x1, y, yt) = ref
-        vx, vy = x1 + 6, yt - 34
-        out += (f'<path d="M{vx - 8} {vy - 2} Q{vx - 2} {vy} {vx - 3} {vy + 6} M{vx + 8} {vy - 2} Q{vx + 2} {vy} {vx + 3} {vy + 6} '
-                f'M{vx - 8} {vy + 12} Q{vx - 2} {vy + 10} {vx - 3} {vy + 4} M{vx + 8} {vy + 12} Q{vx + 2} {vy + 10} {vx + 3} {vy + 4}" '
-                f'fill="none" stroke="#C8341F" stroke-width="3" opacity="{e["vein"]:.2f}"/>')
+    # sweat drops and anger marks are drawn by the scene on the head itself (engine.draw_emote)
     return out

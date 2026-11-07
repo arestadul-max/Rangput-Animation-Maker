@@ -495,6 +495,24 @@ def base_scale(c):
     return {'mishti': 0.36, 'mechho': 0.82, 'tutul': 0.46}[c['slug']]
 
 
+def head_anchor(info):
+    """Head centre and radius in character space (feet at 0,0, before scaling): emotes, sweat and anger marks
+    attach here, and close-ups frame it."""
+    k = info['kind']
+    if k == 'puppet':
+        h = char_height(info)
+        return {'mishti': (10, -h * 0.72, h * 0.2), 'mechho': (0, -h * 0.78, h * 0.26)}.get(info['slug'], (0, -h * 0.88, h * 0.11))
+    if k == 'prop':
+        return (0, -10, 10)
+    f = info.get('face')
+    if f and 'tx' in info:
+        sc_i = info.get('sc', 1.0)
+        return (info['tx'] + 196 * sc_i - 196, info['ty'] + (f['chin'] - 64) * sc_i - 605, 64 * sc_i)
+    x0, top, x1, _ = info.get('bbox', (150, 200, 242, 605))
+    hgt = 605 - top
+    return ((x0 + x1) / 2 - 196, top + hgt * 0.13 - 605, hgt * 0.12)
+
+
 def char_height(c):
     if c['kind'] in ('card', 'rig', 'layered'):
         return (605 - c['bbox'][1])
@@ -594,6 +612,8 @@ def draw_character(lib, s, c, st, t, night):
     h = char_height(info) * sc
     x = st['x']
     y = st['y']
+    ax, ay, ar = head_anchor(info)
+    hands['_head'] = (x + ax * sc * flip, y + ay * sc, ar * sc)
     shadow = f'<ellipse cx="0" cy="2" rx="{70 * sc / 0.7:.1f}" ry="{9 * sc / 0.7:.1f}" fill="#1C1410" opacity="{0.22 * st["alpha"]:.2f}" stroke="none"/>' if c['slug'] != 'mechho' else ''
     glow = ''
     if st['glow'] > 0:
@@ -610,7 +630,7 @@ def _puppet(slug, st, t, talk, bl):
         if st['pose'] == 'leap':
             pose = 'leap'
         mouth = 'hiss' if st['hiss'] else ('meow' if talk > 0.1 else 'none')
-        eo = 0.0 if st['sleep'] else (1.0 if st['mood'] == 'scared' else 0.45) * (1 - bl)
+        eo = 0.0 if st['sleep'] else (1.0 if st['mood'] == 'scared' else 0.8) * (1 - bl)
         g = P.mishti(t, eo, (0, 0), 3.0, 0, mouth, talk, 8 * math.sin(t * 2), t * 20, pose, t * 3)
         if pose != 'sit' and st['dirx'] > 0:
             g = f'<g transform="scale(-1,1)">{g}</g>'
@@ -623,33 +643,51 @@ def _puppet(slug, st, t, talk, bl):
         return f'<g transform="translate(0,-150)">{g}</g>'
     if slug == 'tutul':
         mouth = 'talk' if talk > 0.1 else ('smile' if st['mood'] == 'happy' else 'o' if st['mood'] == 'scared' else 'smile')
-        eo = 0.0 if st['sleep'] else 0.6 * (1 - bl)
+        eo = 0.0 if st['sleep'] else 0.95 * (1 - bl)
         return P.tutul_full(t, eo, (0, -4), mouth, talk, offer=st['offer'], step=t * 2.6 if st['moving'] else 0)
     return ''
 
 
 EMOTE_SVG = {
-    '!': '<circle cx="0" cy="-36" r="26" fill="#FBF5E9"/><path d="M-5 -54 L5 -54 L3 -30 L-3 -30Z" fill="#C8341F" stroke-width="2"/><circle cx="0" cy="-20" r="4" fill="#C8341F" stroke="none"/>',
-    '?': '<circle cx="0" cy="-36" r="26" fill="#FBF5E9"/><path d="M-8 -44 Q-8 -54 0 -54 Q9 -54 9 -46 Q9 -38 1 -35 L1 -27" fill="none" stroke="#2C3E8C" stroke-width="5"/><circle cx="1" cy="-17" r="3.5" fill="#2C3E8C"/>',
-    'heart': '<path d="M0 -8 Q-30 -30 -18 -48 Q-6 -60 0 -44 Q6 -60 18 -48 Q30 -30 0 -8Z" fill="#E58BA0"/>',
-    'zzz': '<text x="-6" y="-20" font-family="Rozha One" font-size="30" fill="#FBF5E9" stroke="#1C1410" stroke-width="2" paint-order="stroke">z</text><text x="12" y="-44" font-family="Rozha One" font-size="22" fill="#FBF5E9" stroke="#1C1410" stroke-width="2" paint-order="stroke">z</text><text x="26" y="-62" font-family="Rozha One" font-size="16" fill="#FBF5E9" stroke="#1C1410" stroke-width="2" paint-order="stroke">z</text>',
-    'sweat': '<path d="M28 -40 Q40 -20 32 -12 Q22 -8 22 -20 Q22 -30 28 -40Z" fill="#BFE3EE"/>',
-    'anger': '<path d="M-14 -40 Q-4 -36 -6 -26 M14 -40 Q4 -36 6 -26 M-14 -14 Q-4 -18 -6 -28 M14 -14 Q4 -18 6 -28" fill="none" stroke="#C8341F" stroke-width="6"/>',
-    'idea': '<circle cx="0" cy="-40" r="18" fill="#FFC94A"/><rect x="-8" y="-24" width="16" height="10" fill="#8C8C9A"/><path d="M-30 -40 L-38 -40 M30 -40 L38 -40 M0 -66 L0 -74 M-22 -60 L-28 -66 M22 -60 L28 -66" stroke="#FFC94A" stroke-width="4"/>',
-    'music': '<path d="M-14 -16 L-14 -50 L12 -56 L12 -22" fill="none" stroke-width="4"/><ellipse cx="-19" cy="-16" rx="7" ry="5" fill="#1C1410"/><ellipse cx="7" cy="-22" rx="7" ry="5" fill="#1C1410"/>',
-    'sparkle': '<path d="M0 -60 L5 -42 L22 -36 L5 -30 L0 -12 L-5 -30 L-22 -36 L-5 -42Z" fill="#FFC94A"/><path d="M26 -62 L28 -56 L34 -54 L28 -52 L26 -46 L24 -52 L18 -54 L24 -56Z" fill="#FBF5E9"/>',
-    'shock': '<path d="M-34 -10 L-50 -26 M-38 -36 L-58 -44 M34 -10 L50 -26 M38 -36 L58 -44 M0 -50 L0 -70" fill="none" stroke="#1C1410" stroke-width="5"/>',
+    # bubbles sit on top of the head (origin = bottom of the bubble)
+    '!': '<circle cx="0" cy="-30" r="26" fill="#FBF5E9"/><path d="M-5 -48 L5 -48 L3 -24 L-3 -24Z" fill="#C8341F" stroke-width="2"/><circle cx="0" cy="-14" r="4" fill="#C8341F" stroke="none"/>',
+    '?': '<circle cx="0" cy="-30" r="26" fill="#FBF5E9"/><path d="M-8 -38 Q-8 -48 0 -48 Q9 -48 9 -40 Q9 -32 1 -29 L1 -21" fill="none" stroke="#2C3E8C" stroke-width="5"/><circle cx="1" cy="-11" r="3.5" fill="#2C3E8C"/>',
+    'heart': '<path d="M0 0 Q-30 -22 -18 -40 Q-6 -52 0 -36 Q6 -52 18 -40 Q30 -22 0 0Z" fill="#E58BA0"/>',
+    'zzz': '<text x="-6" y="-6" font-family="Rozha One" font-size="30" fill="#FBF5E9" stroke="#1C1410" stroke-width="2" paint-order="stroke">z</text><text x="12" y="-30" font-family="Rozha One" font-size="22" fill="#FBF5E9" stroke="#1C1410" stroke-width="2" paint-order="stroke">z</text><text x="26" y="-48" font-family="Rozha One" font-size="16" fill="#FBF5E9" stroke="#1C1410" stroke-width="2" paint-order="stroke">z</text>',
+    'idea': '<circle cx="0" cy="-34" r="18" fill="#FFC94A"/><rect x="-8" y="-18" width="16" height="10" fill="#8C8C9A"/><path d="M-30 -34 L-38 -34 M30 -34 L38 -34 M0 -60 L0 -68 M-22 -54 L-28 -60 M22 -54 L28 -60" stroke="#FFC94A" stroke-width="4"/>',
+    'music': '<path d="M-14 -4 L-14 -38 L12 -44 L12 -10" fill="none" stroke-width="4"/><ellipse cx="-19" cy="-4" rx="7" ry="5" fill="#1C1410"/><ellipse cx="7" cy="-10" rx="7" ry="5" fill="#1C1410"/>',
+    'sparkle': '<path d="M0 -48 L5 -30 L22 -24 L5 -18 L0 0 L-5 -18 L-22 -24 L-5 -30Z" fill="#FFC94A"/><path d="M26 -50 L28 -44 L34 -42 L28 -40 L26 -34 L24 -40 L18 -42 L24 -44Z" fill="#FBF5E9"/>',
+    # marks that touch the head (origin = the mark's own centre)
+    'sweat': '<path d="M0 -15 Q12 3 5 11 Q-5 15 -6 3 Q-6 -6 0 -15Z" fill="#BFE3EE"/><path d="M-1 -4 Q-3 2 0 6" fill="none" stroke="#FBF5E9" stroke-width="2.5"/>',
+    'anger': '<path d="M-14 -13 Q-4 -9 -6 1 M14 -13 Q4 -9 6 1 M-14 13 Q-4 9 -6 -1 M14 13 Q4 9 6 -1" fill="none" stroke="#C8341F" stroke-width="6"/>',
 }
+ABOVE = ('!', '?', 'heart', 'zzz', 'idea', 'music', 'sparkle')
 
 
-def draw_emote(kind, x, y, u):
-    if u < 0 or u > 1.8:
+def draw_emote(kind, head, u, flip=1):
+    """head = (x, y, r) in world units. Everything is sized and placed from the head, so marks stay on the face."""
+    if u < 0 or u > 1.8 or not head:
         return ''
+    hx, hy, r = head
+    k = max(0.35, min(1.6, r / 46))
     a = P.clamp(u / 0.15)
     pop = 1 + 0.25 * math.sin(math.pi * P.clamp(u / 0.3)) if u < 0.3 else 1.0
     fade = 1 - P.clamp((u - 1.5) / 0.3)
-    bob = -4 * math.sin(u * 5)
-    return (f'<g transform="translate({x:.1f},{y + bob:.1f}) scale({a * pop:.2f})" opacity="{fade:.2f}">'
+    side = 1 if flip >= 0 else -1
+    if kind == 'shock':
+        lines = ''
+        for ang in (-150, -120, -90, -60, -30):
+            c, s_ = math.cos(math.radians(ang)), math.sin(math.radians(ang))
+            r0, r1 = r * (1.18 + 0.06 * math.sin(u * 30)), r * 1.55
+            lines += f'M{hx + c * r0:.1f} {hy + s_ * r0:.1f} L{hx + c * r1:.1f} {hy + s_ * r1:.1f} '
+        return (f'<path d="{lines}" fill="none" stroke="#1C1410" stroke-width="5" stroke-linecap="round" opacity="{a * fade:.2f}"/>')
+    if kind == 'sweat':
+        x, y = hx + side * r * 0.92, hy - r * 0.35 + r * 0.25 * P.clamp(u / 1.5)
+    elif kind == 'anger':
+        x, y = hx + side * r * 0.62, hy - r * 0.68
+    else:
+        x, y = hx + side * r * 0.55, hy - r * 1.02 - 4 * math.sin(u * 5) * k
+    return (f'<g transform="translate({x:.1f},{y:.1f}) scale({k * a * pop:.3f})" opacity="{fade:.2f}">'
             f'<g stroke="#1C1410" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">{EMOTE_SVG[kind]}</g></g>')
 
 
@@ -762,6 +800,15 @@ def caption(s, t):
     lines = wrap(cur, 22 if bn else 24)[:3]
     fs = 32
     y0 = 820 - (len(lines) - 1) * fs * 1.15 if top else 250
+    if not top:
+        # keep the words off faces: if a head sits under the top caption band, move the caption down
+        cx, cy, z = getattr(s, '_cam', (270, 480, 1.0))
+        band = (y0 - fs, y0 + len(lines) * fs * 1.15)
+        for hx, hy, hr in getattr(s, '_heads', {}).values():
+            sx, sy, sr = (hx - cx) * z + 270, (hy - cy) * z + 480, hr * z
+            if -sr < sx < 540 + sr and sy + sr * 1.1 > band[0] and sy - sr * 1.6 < band[1]:
+                y0 = 820 - (len(lines) - 1) * fs * 1.15
+                break
     out = ''
     for i, ln in enumerate(lines):
         out += (f'<text x="270" y="{y0 + i * fs * 1.15:.1f}" text-anchor="middle" font-family="{fam}" font-weight="700" font-size="{fs}" '
@@ -799,7 +846,30 @@ def camera(s, t, lib, world, positions):
     spread = (max(xs) - min(xs)) if xs else 0
     zm = 1.32 if spread * 1.32 < 380 else max(1.0, 380 / max(spread, 1))
     med = ((gx if spread * zm < 380 else P.lerp(gx, fx, 0.55)), fy - fh * 0.5, zm)
+    hds = getattr(s, '_heads', {})
+    talkers = {v['speaker'] for v in s.voices if v.get('speaker')} | ({s.focus} if s.focus else set())
+    near = {k: v for k, v in hds.items() if k in talkers}
+    if near and len(near) < len(hds):
+        xs_ = [v[0] for v in near.values()]
+        # also keep anyone standing between / right next to the people the shot is about
+        near = {k: v for k, v in hds.items() if min(xs_) - max(v[2] * 3, 230) <= v[0] <= max(xs_) + max(v[2] * 3, 230)}
+        hds = near
+    if hds:
+        # medium shot: knees up, heads in the upper third, everyone in the group fits
+        hy = sum(h[1] for h in hds.values()) / len(hds)
+        hr = max(h[2] for h in hds.values())
+        hxs = [h[0] for h in hds.values()]
+        sp = max(hxs) - min(hxs) + hr * 4
+        zh = 960 / max(1.0, (fy - hy) * 1.25)
+        zmed = max(1.0, min(zh, 540 / max(sp, 1), 2.6))
+        gx2 = (max(hxs) + min(hxs)) / 2
+        mx = gx2 if (max(hxs) - min(hxs)) * zmed < 420 else P.lerp(gx2, fx, 0.55)
+        med = (mx, hy + 0.27 * 960 / zmed, zmed)
     close = (fx, fy - fh * 0.8, 2.2)
+    hd = getattr(s, '_heads', {}).get(s.focus)
+    if hd:
+        hzx = max(1.8, min(4.2, 540 / (hd[2] * 2 * 3.2)))
+        close = (hd[0], hd[1] + 0.13 * 960 / hzx, hzx)
     if mode == 'wide':
         c = wide
     elif mode == 'medium':
@@ -829,6 +899,58 @@ def camera(s, t, lib, world, positions):
         cx += 5 * math.sin(t * 47) / z
         cy += 5 * math.cos(t * 39) / z
     return cx, cy, z
+
+
+# ---------------------------------------------------------------- cinematic light
+PREVIEW = [False]     # the fast preview skips the background blur
+HAZE = {'day': ('#E4EEF2', 0.10), 'evening': ('#FFD9A8', 0.09), 'night': ('#1E2850', 0.12)}
+GRADE = {
+    # (top colour, bottom colour, multiply strength), key light colour and strength, vignette strength
+    'day': ('#FFF4DC', '#E9D6B8', 0.10, '#FFF1CF', 0.16, 0.42),
+    'evening': ('#FFD29A', '#D49A86', 0.20, '#FFCF8C', 0.30, 0.46),
+    'night': ('#6A78C0', '#2A3266', 0.14, '#FFE3A8', 0.20, 0.52),
+}
+
+
+def depth_back(back, s, cx, cy, z):
+    """Atmospheric depth: the background sits a little behind a light haze, and goes softly out of focus in
+    close-ups, so the characters stand out like in a film."""
+    col, op = HAZE.get(s.time, HAZE['day'])
+    hw, hh = 270 / z + 40, 480 / z + 40
+    x, y, w, h = cx - hw, cy - hh, 2 * hw, 2 * hh
+    out = back
+    if z > 1.5 and not PREVIEW[0]:
+        sd = 0.9 * (z - 1.4) / z
+        out = (f'<defs><filter id="dof" filterUnits="userSpaceOnUse" x="{x:.0f}" y="{y:.0f}" width="{w:.0f}" height="{h:.0f}">'
+               f'<feGaussianBlur stdDeviation="{sd:.2f}"/></filter></defs><g filter="url(#dof)">{back}</g>')
+    op = op * (1.0 + 0.6 * min(1.0, max(0.0, z - 1.0)))
+    return out + f'<rect x="{x:.0f}" y="{y:.0f}" width="{w:.0f}" height="{h:.0f}" fill="{col}" opacity="{min(0.32, op):.3f}" stroke="none"/>'
+
+
+def lighting(s, t):
+    """Time-of-day colour grade, a soft key light on whoever the shot is about, and a vignette that pulls the
+    eye to them."""
+    top, bot, mul, key, key_op, vig = GRADE.get(s.time, GRADE['day'])
+    kx, ky = 270, 520
+    cx, cy, z = getattr(s, '_cam', (270, 480, 1.0))
+    heads = getattr(s, '_heads', {})
+    who = s.focus if s.focus in heads else (next(iter(heads)) if len(heads) == 1 else None)
+    if who:
+        hx, hy, _ = heads[who]
+        kx = max(80, min(460, (hx - cx) * z + 270))
+        ky = max(160, min(800, (hy - cy) * z + 480 + 40))
+    fx, fy = kx / 540 * 100, ky / 960 * 100
+    return (f'<defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{top}"/><stop offset="1" stop-color="{bot}"/></linearGradient>'
+            f'<radialGradient id="lk" cx="{fx:.1f}%" cy="{fy:.1f}%" r="55%"><stop offset="0" stop-color="{key}" stop-opacity="1"/>'
+            f'<stop offset="1" stop-color="{key}" stop-opacity="0"/></radialGradient>'
+            f'<radialGradient id="vg" cx="{fx:.1f}%" cy="{fy:.1f}%" r="80%"><stop offset="45%" stop-color="#000" stop-opacity="0"/>'
+            f'<stop offset="100%" stop-color="#05070F" stop-opacity="{vig:.2f}"/></radialGradient>'
+            f'<linearGradient id="lf" x1="0" y1="0" x2="0" y2="1"><stop offset="0.78" stop-color="#000" stop-opacity="0"/>'
+            f'<stop offset="1" stop-color="#000" stop-opacity="0.22"/></linearGradient></defs>'
+            f'<rect width="540" height="960" fill="url(#lg)" opacity="{mul:.2f}" style="mix-blend-mode:multiply"/>'
+            f'<rect width="540" height="960" fill="url(#lk)" opacity="{key_op:.2f}" style="mix-blend-mode:screen"/>'
+            f'<rect width="540" height="960" fill="url(#lf)"/>'
+            f'<rect width="540" height="960" fill="url(#vg)"/>')
 
 
 def vignette(strength=0.55):
@@ -877,7 +999,7 @@ class Movie:
             body = title_card(s, t)
         else:
             body = self.scene(s, t)
-        body += vignette(0.55)
+        body += lighting(s, t) if s.place_kind != 'title' else vignette(0.55)
         body += caption(s, t)
         fade = 0.0
         if s.transition in ('fade', 'dip') and t < 0.35:
@@ -898,7 +1020,7 @@ class Movie:
         back, front, xmin, xmax, floor = world
         night = {'day': 0.0, 'evening': 0.15, 'night': 0.5}[s.time]
         # first pass: positions for camera focus
-        states, positions = [], {}
+        states, positions, heads = [], {}, {}
         cam0x = None
         for c in s.cast:
             st = char_state(s, c, t, lib)
@@ -911,7 +1033,11 @@ class Movie:
             info = lib.chars[c['slug']]
             sc = base_scale(info) * (0.82 if c.get('back') else 1.12 if c.get('front') else 1.0)
             positions[c['slug']] = (base_x + st['x'], self._feet(s, c, floor), char_height(info) * sc)
+            ax, ay, ar = head_anchor(info)
+            if info['kind'] != 'prop':
+                heads[c['slug']] = (base_x + st['x'] + ax * sc * (-1 if c.get('flip') else 1), self._feet(s, c, floor) + ay * sc, ar * sc)
         s._positions = positions
+        s._heads = heads
         stage = ''
         emotes = ''
         all_hands = {}
@@ -924,13 +1050,23 @@ class Movie:
                 continue
             g, h, hands = draw_character(lib, s, c, st, t, night)
             stage += f'<g transform="translate({base_x:.1f},{fy:.1f})">{g}</g>'
+            hd = hands.pop('_head', None)
             all_hands[c['slug']] = {k: (base_x + v[0], fy + v[1]) for k, v in hands.items()}
             all_hands[c['slug']]['_body'] = (base_x + st['x'], fy + st['y'] - h * 0.55, h)
+            head = (base_x + hd[0], fy + hd[1], hd[2]) if hd else None
+            fl = -1 if st['flip'] else 1
             for e in s.emotes:
                 if e['slug'] == c['slug']:
-                    emotes += draw_emote(e['kind'], base_x + st['x'] + h * 0.22, fy + st['y'] - h * 0.98, t - e['t'])
+                    emotes += draw_emote(e['kind'], head, t - e['t'], fl)
             if st['sleep']:
-                emotes += draw_emote('zzz', base_x + st['x'] + h * 0.2, fy + st['y'] - h * 0.95, 0.5 + (t % 1.0) * 0.0)
+                emotes += draw_emote('zzz', head, 0.5, fl)
+            if head and lib.chars[c['slug']]['kind'] != 'prop' and not st['sleep']:
+                ex = X.mix(X.auto_expression(s, c['slug'], t, talk_amount(s, c['slug'], t)))
+                active = {e['kind'] for e in s.emotes if e['slug'] == c['slug'] and 0 <= t - e['t'] <= 1.8}
+                if ex['sweat'] > 0.3 and 'sweat' not in active:
+                    emotes += draw_emote('sweat', head, 0.3 + (t * 0.9) % 1.2, fl)
+                if ex['vein'] > 0.3 and 'anger' not in active:
+                    emotes += draw_emote('anger', head, 0.6, fl)
         ball = ''
         props_back = ''
         for c, st in states:
@@ -946,8 +1082,9 @@ class Movie:
                     else:
                         props_back += g
         cx, cy, z = camera(s, t, lib, world, positions)
+        s._cam = (cx, cy, z)
         cam = f'translate(270,480) scale({z:.4f}) translate({-cx:.2f},{-cy:.2f})'
-        return f'<g transform="{cam}">{back}{props_back}{stage}{ball}{front}{emotes}</g>'
+        return f'<g transform="{cam}">{depth_back(back, s, cx, cy, z)}{props_back}{stage}{ball}{front}{emotes}</g>'
 
     def _feet(self, s, c, floor):
         y = floor
