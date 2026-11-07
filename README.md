@@ -266,6 +266,8 @@ app/RongpatStudio/engine/
 
 ## Licences and credits
 
-- Program code: MIT licence (see [`LICENSE`](LICENSE)).
-- Rongpat character bible, places and artwork: see [`LICENSE`](LICENSE).
+**Free to use, not to sell.** You can download, use, change and share Rangput Animation Maker for free for any non-commercial purpose. Selling it, selling the artwork, or making money with it or its videos needs written permission from the author. Please credit "Rangput Animation Maker / Rongpat by arestadul-max" when you share.
+
+- Program code: [PolyForm Noncommercial 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0/) (see [`LICENSE`](LICENSE)).
+- Rongpat character bible, places, artwork, music and demos: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) (see [`LICENSE`](LICENSE)).
 - Third-party software and fonts bundled in the Windows release: see [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md). This includes ffmpeg (GPL), resvg (MPL-2.0/Apache-2.0), Python (PSF), NumPy/SciPy/Pillow/openpyxl (BSD/MIT-style), and the Hind Siliguri, Rozha One and Inter fonts (SIL Open Font License).
