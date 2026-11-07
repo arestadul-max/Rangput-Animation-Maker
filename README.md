@@ -1,5 +1,7 @@
 # Rangput Animation Maker
 
+> **Pre-release (beta).** This is an early version and is still being improved. Expect rough edges: some animations can look stiff and some features are unfinished. Bug reports and ideas are welcome on the [Issues](../../issues) page.
+
 **An offline cartoon maker for Windows.** Write your story in a spreadsheet, add voice recordings (optional), double-click, and get a finished vertical video (1080×1920, YouTube Shorts / Reels / TikTok size) in the hand-drawn **Rongpat** style, inspired by Bengali folk art (Kalighat pat, Gond, Madhubani and modern Bengali illustration).
 
 No internet, no AI service, no accounts, no subscriptions. It runs on a normal Windows laptop, with no graphics card needed.
