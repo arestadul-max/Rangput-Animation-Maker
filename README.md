@@ -38,6 +38,7 @@ No internet, no AI service, no accounts, no subscriptions. It runs on a normal W
 | **Objects** | Ball, bat and stumps built in; any picture you add can be held, thrown, dropped, spun or swung. |
 | **Camera** | Wide, medium, close-up, push-in, pull-out, pans, follow, follow-the-ball, camera shake. |
 | **Sound** | 6 music moods made from Bengali folk instruments (dotara, tabla, bansuri, bells) that sit well under the voices and duck smoothly while someone speaks, plus 23 sound effects. You can add your own sounds. |
+| **Real cricket** | A `cricket-pitch` place filmed down the pitch like TV: the bowler runs in and bowls, the ball bounces, the batter swings and hits (or the keeper catches it). Batter, bowler, keeper and fielders are worked out automatically. |
 | **Cinematic look** | Day, evening and night colour grades, a soft key light on the character the shot is about, background haze, soft-focus close-ups, and a film-style camera that frames faces. |
 | **Subtitles** | English and Bangla, burned into the video. |
 | **Your own art** | Add your own characters, objects and places. They rig themselves automatically. |

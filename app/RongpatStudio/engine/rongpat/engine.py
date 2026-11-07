@@ -2,6 +2,7 @@
 import json, math, os, random, re, difflib
 from . import puppets as P
 from . import sets as SETS
+from . import pitch as PITCH
 from . import rig as RIG
 from . import expressions as X
 
@@ -224,6 +225,12 @@ def build_plan(rows, lib, project_dir, audio_mod=None):
                 s.cast.append(c)
         elif prev and prev.place == s.place:
             s.cast = [dict(c) for c in prev.cast_end]
+        elif prev:
+            # back at a place seen before: the cast as it was there; on the cricket pitch: whoever was last on screen
+            same = [q for q in shots if q.place == s.place and q.place_kind != 'title']
+            src = same[-1] if same and s.place_kind != 'pitch' else next((q for q in reversed(shots) if q.cast_end), None)
+            if src:
+                s.cast = [dict(c) for c in src.cast_end]
         
         # voices
         s.voices = []
@@ -727,6 +734,8 @@ def place_world(lib, s):
         fr, spill = SETS.fridge(0.0, True, 'full', night=n, light=1.0, t=0)
         ck = SETS.cooker(150, 604, 0, 0, night=n * 0.9)
         return bg + ck + fr + spill, '', -200, 820, H * p['floor']
+    if kind == 'pitch':
+        return PITCH.background(PITCH.view_of(s)), '', 0, 540, PITCH.Y_H + 340
     if kind == 'set' and s.place == 'stairwell':
         return SETS.stairs_bg(max(night, 0.45), 1.0, 0) + SETS.stairs_steps(), SETS.stairs_rail(), -260, 900, SETS.LAND_Y
     return '', '', 0, W, H * 0.9
@@ -838,6 +847,14 @@ def camera(s, t, lib, world, positions):
     mode = s.camera
     if mode == 'auto':
         mode = 'medium' if (s.voices and s.voices[0]['speaker'] and len(s.cast) > 1) else 'wide'
+    if s.place_kind == 'pitch' and mode not in ('close', 'medium', 'follow'):
+        cx, cy, z = 270.0, 480.0, 1.0
+        if mode == 'push-in':
+            z = 1 + 0.25 * u
+        if s.cam_shake:
+            cx += 5 * math.sin(t * 47)
+            cy += 5 * math.cos(t * 39)
+        return cx, cy, z
     gx = sum(p[0] for p in positions.values()) / len(positions) if positions else fx
     hmax = max([p[2] for p in positions.values()] + [300])
     wz = max(1.0, min(1.45, 960 * 0.5 / max(hmax, 1)))
@@ -1014,7 +1031,60 @@ class Movie:
             body += f'<rect width="540" height="960" fill="#000" opacity="{fade:.3f}"/>'
         return finalize(body, px_w, px_h)
 
+    def pitch_scene(self, s, t):
+        """Cricket seen down the pitch (place cricket-pitch, view batting or bowling)."""
+        lib = self.lib
+        view = PITCH.view_of(s)
+        world = self.world(s)
+        night = {'day': 0.0, 'evening': 0.15, 'night': 0.5}[s.time]
+        placed, plan, roles_ = PITCH.place_cast(s, t, lib, view)
+        items, positions, heads, emotes = [], {}, {}, ''
+        for pe in (0.0, 20.0):
+            g = PITCH.stumps(view, pe)
+            if g:
+                items.append((PITCH.depth(view, pe), g))
+        for slug, p, X, extra in placed:
+            c = next(c for c in s.cast if c['slug'] == slug)
+            pr = PITCH.project(view, p, X)
+            if not pr:
+                continue
+            x, y, k = pr
+            st = char_state(s, c, t, lib)
+            st['x'] = 0.0
+            st['poses'] = PITCH.auto_poses(slug, roles_, plan, st['poses'])
+            if extra.get('run'):
+                st['walk'] = (True, extra['phase'])
+                st['y'] -= abs(math.sin(extra['phase'] * math.pi)) * 6
+            st['sc'] *= k
+            c2 = {kk: v for kk, v in c.items() if kk not in ('back', 'front')}
+            g, h, hands = draw_character(lib, s, c2, st, t, night)
+            hd = hands.pop('_head', None)
+            items.append((PITCH.depth(view, p), f'<g transform="translate({x:.1f},{y:.1f})">{g}</g>'))
+            positions[slug] = (x, y, h)
+            if hd:
+                head = (x + hd[0], y + hd[1], hd[2])
+                heads[slug] = head
+                fl = -1 if st['flip'] else 1
+                for e in s.emotes:
+                    if e['slug'] == slug:
+                        emotes += draw_emote(e['kind'], head, t - e['t'], fl)
+        b3 = PITCH.ball_3d(plan, t)
+        bsvg, bz = PITCH.ball_svg(view, b3, t, plan)
+        if bsvg:
+            items.append((bz - 0.01, bsvg))
+            bp = PITCH.project(view, *b3)
+            positions['ball'] = (bp[0], bp[1] + 200, 400)
+        items.sort(key=lambda it: -it[0])
+        s._positions, s._heads = positions, heads
+        cx, cy, z = camera(s, t, lib, world, positions)
+        s._cam = (cx, cy, z)
+        cam = f'translate(270,480) scale({z:.4f}) translate({-cx:.2f},{-cy:.2f})'
+        stage = ''.join(svg for _, svg in items)
+        return f'<g transform="{cam}">{depth_back(world[0], s, cx, cy, z)}{stage}{emotes}</g>'
+
     def scene(self, s, t):
+        if s.place_kind == 'pitch':
+            return self.pitch_scene(s, t)
         lib = self.lib
         world = self.world(s)
         back, front, xmin, xmax, floor = world

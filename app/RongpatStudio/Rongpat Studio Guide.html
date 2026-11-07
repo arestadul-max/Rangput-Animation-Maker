@@ -103,6 +103,18 @@ kite: fly-in pupu @0.5        sign: swing        coin: spin        bag: drop @2<
 <p>Faces change by themselves: from the line being said (“!”, “?”, “…” and how loud), from what the character is doing, and from emotes. Eyes look at whoever is speaking, and listeners react. To choose one yourself, use the <b>Expression</b> column (the last column): <code>pupu: angry @1.2, mitul: smug</code>.</p>
 <p>Expressions: neutral, happy, excited, laughing, sad, crying, angry, scared, surprised, shocked, confused, thinking, nervous, embarrassed, smug, sleepy, disgusted, love, stern.</p>
 
+<h3>Cricket matches (update 1.3)</h3>
+<p>Use the place <code>cricket-pitch</code> for real batting and bowling, filmed down the pitch like cricket on TV. The <b>View</b> column picks the camera:</p>
+<table>
+<tr><th>View</th><th>What you see</th></tr>
+<tr><td><code>batting</code></td><td>The batter faces us at the crease, stumps and keeper behind, fielders around. The ball comes in, bounces, and is hit or goes to the keeper.</td></tr>
+<tr><td><code>bowling</code></td><td>The bowler runs in towards us, jumps and bowls; the ball comes at the camera (or flies back over the bowler after a big hit).</td></tr>
+</table>
+<p>You only write who bowls to whom and when. Everything else is automatic: the batter takes guard and swings at the right moment, the bowler runs in and bowls, the keeper crouches, everyone else becomes a fielder. The Cast can stay empty (it uses whoever was on screen before).</p>
+<div class="ex">Place: cricket-pitch · View: bowling · Actions: ball: bowl mitul pupu @1.6
+Place: cricket-pitch · View: batting · Actions: babai: keeper; ball: bowl mitul pupu @0.05, hit-up @0.75</div>
+<p>After the ball: <code>hit-up</code> (big hit into the sky), <code>hit-left</code> / <code>hit-right</code> (along the ground), or nothing (the keeper catches it). A good order is: batting view (the batter gets ready), bowling view (the run-up), batting view (the hit).</p>
+
 <h3>Looks and sound (update 1.3)</h3>
 <ul>
 <li><b>Natural legs:</b> characters stand with straight legs and planted feet; knees only bend outward in a real squat (keeper, crouch), never inward.</li>

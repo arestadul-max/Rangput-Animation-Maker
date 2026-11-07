@@ -416,6 +416,16 @@
   "desc": "Low steps, full railings and the roof door at the top."
  },
  {
+  "slug": "cricket-pitch",
+  "name": "Cricket pitch (real batting and bowling)",
+  "bn": "ক্রিকেট পিচ",
+  "kind": "pitch",
+  "w": 540,
+  "h": 960,
+  "floor": 0.67,
+  "desc": "A cricket match seen down the pitch like on TV. View \"batting\": the batter faces us with stumps and keeper behind, the ball comes in, bounces and is hit. View \"bowling\": the bowler runs in towards us and bowls. Who bats, bowls and keeps is worked out from the Actions (bat-ready / bowl / keeper, or \"ball: bowl mitul pupu\")."
+ },
+ {
   "slug": "title",
   "name": "Title card",
   "bn": "শিরোনাম",
