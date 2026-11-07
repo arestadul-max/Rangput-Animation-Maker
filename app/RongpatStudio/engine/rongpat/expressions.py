@@ -11,7 +11,7 @@ CONCH = '#FBF5E9'
 # brow: (inner lift, outer lift, angle bias); lid: top lid closure 0..1; low: lower lid raise; eye: eye size;
 # pupil: pupil size; mouth: smile curve (-1 frown .. 1 big smile), open: base mouth opening 0..1, wide: width factor
 BASE = dict(brow_in=0.0, brow_out=0.0, lid=0.0, low=0.0, eye=1.1, pupil=1.0, smile=0.15, open=0.0, wide=1.0,
-            teeth=0.0, blush=0.0, sweat=0.0, tears=0.0, vein=0.0, wobble=0.0, tilt=0.0)
+            teeth=0.0, blush=0.0, sweat=0.0, tears=0.0, vein=0.0, wobble=0.0, tilt=0.0, ghoul=0.0)
 EXPR = {
     'neutral': {},
     'happy': dict(smile=0.8, low=0.25, brow_in=2, brow_out=2, blush=0.3),
@@ -32,7 +32,11 @@ EXPR = {
     'disgusted': dict(smile=-0.7, lid=0.4, low=0.4, brow_in=-6, brow_out=2, tilt=0.5),
     'love': dict(smile=0.7, lid=0.3, low=0.3, blush=1.0, brow_in=4, brow_out=3),
     'stern': dict(smile=-0.25, lid=0.25, brow_in=-6, brow_out=2),
+    # horror: black eyes with burning pupils, no blush
+    'evil': dict(smile=0.4, lid=0.3, brow_in=-10, brow_out=7, pupil=0.7, ghoul=1.0, tilt=0.4),
+    'haunting': dict(smile=-0.1, eye=1.25, pupil=0.55, brow_in=-4, brow_out=4, ghoul=1.0),
 }
+GHOSTS = {'petni', 'jol-konya', 'kalo-megh', 'bot-dadu'}
 
 EMOTE_EXPR = {'!': 'surprised', '?': 'confused', 'heart': 'love', 'zzz': 'sleepy', 'sweat': 'nervous', 'anger': 'angry',
               'idea': 'excited', 'music': 'happy', 'sparkle': 'excited', 'shock': 'shocked'}
@@ -164,10 +168,17 @@ def draw_face(face, e, blink, talk, gaze=(0, 0), t=0.0):
         top = yt - (22 if closed else 12)
         out += (f'<ellipse cx="{cx:.1f}" cy="{(top + y + 11) / 2:.1f}" rx="{(x1 - x0) / 2 + 9:.1f}" ry="{(y + 11 - top) / 2:.1f}" '
                 f'fill="{skin}" stroke="none"/>')
-        out += f'<path d="{almond}" fill="{CONCH}" stroke="{INK}" stroke-width="3"/>'
+        g = e.get('ghoul', 0.0)
+        out += f'<path d="{almond}" fill="{CONCH if g < 0.5 else "#0B0708"}" stroke="{INK}" stroke-width="3"/>'
         pr = 5.5 * e['pupil']
         px, py = cx + gaze[0] + e['tilt'] * 0.0, y - up * 0.25 + gaze[1]
-        out += f'<circle cx="{px:.1f}" cy="{py:.1f}" r="{pr:.1f}" fill="{INK}" stroke="none"/><circle cx="{px + pr * 0.4:.1f}" cy="{py - pr * 0.45:.1f}" r="1.8" fill="{CONCH}" stroke="none"/>'
+        if g >= 0.5:      # burning pupils in black eyes
+            fl = 0.75 + 0.25 * math.sin(t * 13 + i)
+            out += (f'<circle cx="{px:.1f}" cy="{py:.1f}" r="{pr * 2.4:.1f}" fill="#FF2A1A" opacity="{0.25 * fl:.2f}" stroke="none"/>'
+                    f'<circle cx="{px:.1f}" cy="{py:.1f}" r="{pr * 1.05:.1f}" fill="#FF3B22" stroke="none"/>'
+                    f'<circle cx="{px:.1f}" cy="{py:.1f}" r="{pr * 0.45:.1f}" fill="#FFE9C8" opacity="{fl:.2f}" stroke="none"/>')
+        else:
+            out += f'<circle cx="{px:.1f}" cy="{py:.1f}" r="{pr:.1f}" fill="{INK}" stroke="none"/><circle cx="{px + pr * 0.4:.1f}" cy="{py - pr * 0.45:.1f}" r="1.8" fill="{CONCH}" stroke="none"/>'
         if lid > 0.02:
             ly = (y - up * 1.0) + (up * 1.0 + 2) * lid
             out += (f'<path d="M{cx - w - 3:.1f} {y + 1:.1f} Q{cx:.1f} {y - up * 2.1:.1f} {cx + w + 3:.1f} {y + 1:.1f} L{cx + w + 3:.1f} {ly - 2:.1f} '
@@ -187,7 +198,12 @@ def draw_face(face, e, blink, talk, gaze=(0, 0), t=0.0):
         if e['tears'] > 0.1:
             k = (t * 1.3 + i * 0.5) % 1
             out += f'<path d="M{cx + sgn * w * 0.6:.1f} {y + 6 + 30 * k:.1f} q-5 9 0 13 q5 -4 0 -13Z" fill="#9CC7C9" stroke="{INK}" stroke-width="1.5" opacity="{e["tears"] * (1 - k):.2f}"/>'
-    if e['blush'] > 0.05:
+    if e.get('ghoul', 0) >= 0.5:      # wipe painted blush off a ghost's cheeks, add hollow shadows
+        for (x0, x1, y, yt) in eyes:
+            c_ = (x0 + x1) / 2
+            out += (f'<ellipse cx="{c_:.1f}" cy="{y + 21:.1f}" rx="16" ry="11" fill="{skin}" stroke="none"/>'
+                    f'<path d="M{c_ - 12:.1f} {y + 10:.1f} Q{c_:.1f} {y + 18:.1f} {c_ + 12:.1f} {y + 10:.1f}" fill="none" stroke="#3A3F55" stroke-width="3" opacity="0.6"/>')
+    if e['blush'] > 0.05 and e.get('ghoul', 0) < 0.5:
         for (x0, x1, y, yt) in eyes:
             out += f'<ellipse cx="{(x0 + x1) / 2:.1f}" cy="{y + 20:.1f}" rx="11" ry="6" fill="#E58BA0" opacity="{0.6 * e["blush"]:.2f}" stroke="none"/>'
     # mouth

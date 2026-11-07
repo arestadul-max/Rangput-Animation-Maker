@@ -555,6 +555,8 @@ def talk_amount(s, slug, t):
 
 def face_overlay(s, c, t, face, talk, bl):
     e = X.mix(X.auto_expression(s, c['slug'], t, talk))
+    if c['slug'] in X.GHOSTS and spooky(s):
+        e['ghoul'], e['blush'] = 1.0, 0.0     # in a horror scene a ghost is never cute
     gaze = X.gaze_for(s, c['slug'], t, getattr(s, '_positions', {}))
     return X.draw_face(face, e, bl, talk, gaze, t)
 
@@ -1161,7 +1163,7 @@ class Movie:
                     emotes += draw_emote(e['kind'], head, t - e['t'], fl)
             if st['sleep']:
                 emotes += draw_emote('zzz', head, 0.5, fl)
-            if head and lib.chars[c['slug']]['kind'] != 'prop' and not st['sleep']:
+            if head and lib.chars[c['slug']]['kind'] != 'prop' and not st['sleep'] and not (c['slug'] in X.GHOSTS and spooky(s)):
                 ex = X.mix(X.auto_expression(s, c['slug'], t, talk_amount(s, c['slug'], t)))
                 active = {e['kind'] for e in s.emotes if e['slug'] == c['slug'] and 0 <= t - e['t'] <= 1.8}
                 if ex['sweat'] > 0.3 and 'sweat' not in active:
