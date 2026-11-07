@@ -944,10 +944,41 @@ def depth_back(back, s, cx, cy, z):
     return out + f'<rect x="{x:.0f}" y="{y:.0f}" width="{w:.0f}" height="{h:.0f}" fill="{col}" opacity="{min(0.32, op):.3f}" stroke="none"/>'
 
 
+SPOOKY_PLACES = {'haunted-banyan-grove', 'mangrove-night', 'rooftop-at-night', 'stairwell', 'sen-kitchen-night', 'mansion-grand-hall'}
+
+
+def spooky(s):
+    return s.time == 'night' and (s.place in SPOOKY_PLACES or s.music in ('spooky', 'tense'))
+
+
+def horror_fx(s, t):
+    """Horror atmosphere: cold moonlight, fog creeping along the ground, a flicker, and lightning on thunder."""
+    out = ('<defs><radialGradient id="fg"><stop offset="0" stop-color="#C9D6E6" stop-opacity="0.55"/>'
+           '<stop offset="1" stop-color="#C9D6E6" stop-opacity="0"/></radialGradient>'
+           '<linearGradient id="mn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#BFE8E0" stop-opacity="0.22"/>'
+           '<stop offset="0.6" stop-color="#BFE8E0" stop-opacity="0"/></linearGradient></defs>'
+           '<rect width="540" height="960" fill="url(#mn)" style="mix-blend-mode:screen"/>')
+    for i, (y, w, sp, op) in enumerate(((800, 420, 9, 0.55), (860, 520, -6, 0.6), (900, 380, 12, 0.5), (740, 300, -4, 0.3))):
+        x = (i * 173 + t * sp * 6) % 900 - 180
+        out += f'<ellipse cx="{x:.1f}" cy="{y + 6 * math.sin(t * 0.7 + i):.1f}" rx="{w}" ry="{w * 0.16:.0f}" fill="url(#fg)" opacity="{op:.2f}"/>'
+        out += f'<ellipse cx="{x - 900 if x > 360 else x + 900:.1f}" cy="{y:.1f}" rx="{w}" ry="{w * 0.16:.0f}" fill="url(#fg)" opacity="{op:.2f}"/>'
+    flick = 0.06 * max(0.0, math.sin(t * 23) * math.sin(t * 7.3))
+    out += f'<rect width="540" height="960" fill="#000" opacity="{flick:.3f}"/>'
+    for e in getattr(s, 'sfx', []):
+        if e['name'] == 'thunder':
+            u = t - e['t']
+            if 0 <= u < 0.5:
+                a = (0.85 if u < 0.06 else 0.0) + (0.5 if 0.12 < u < 0.18 else 0.0) + 0.4 * max(0.0, 1 - u / 0.5)
+                out += f'<rect width="540" height="960" fill="#EAF2FF" opacity="{min(0.9, a):.2f}" style="mix-blend-mode:screen"/>'
+    return out
+
+
 def lighting(s, t):
     """Time-of-day colour grade, a soft key light on whoever the shot is about, and a vignette that pulls the
     eye to them."""
     top, bot, mul, key, key_op, vig = GRADE.get(s.time, GRADE['day'])
+    if spooky(s):
+        top, bot, mul, key, key_op, vig = '#7FA0B8', '#1C2A36', 0.18, '#CFF2EA', 0.24, 0.72
     kx, ky = 270, 520
     cx, cy, z = getattr(s, '_cam', (270, 480, 1.0))
     heads = getattr(s, '_heads', {})
@@ -967,7 +998,7 @@ def lighting(s, t):
             f'<rect width="540" height="960" fill="url(#lg)" opacity="{mul:.2f}" style="mix-blend-mode:multiply"/>'
             f'<rect width="540" height="960" fill="url(#lk)" opacity="{key_op:.2f}" style="mix-blend-mode:screen"/>'
             f'<rect width="540" height="960" fill="url(#lf)"/>'
-            f'<rect width="540" height="960" fill="url(#vg)"/>')
+            f'<rect width="540" height="960" fill="url(#vg)"/>') + (horror_fx(s, t) if spooky(s) else '')
 
 
 def vignette(strength=0.55):
